@@ -1,6 +1,4 @@
 import React from 'react';
-import Checkbox from '../ui-components/Checkbox'
-import Tooltip from 'react-tooltip-lite'
 import AuthComponent from '../AuthComponent';
 import ReactTable from "react-table";
 import 'filepond/dist/filepond.min.css';
@@ -61,18 +59,7 @@ class MatrixComponent extends AuthComponent {
   }
 
   renderTechnique(technique) {
-    if (technique == null){
-      return (<div />)
-    } else {
-      return (<Tooltip content={technique.description} direction="down">
-                <Checkbox checked={technique.value}
-                          necessary={technique.necessary}
-                          name={technique.name}
-                          changeHandler={this.props.change}>
-                  {technique.title}
-                </Checkbox>
-              </Tooltip>)
-    }
+    throw new Error('Abstract function');
   };
 
   getTableData = (config) => {
@@ -102,9 +89,10 @@ class MatrixComponent extends AuthComponent {
   };
 
   render() {
-    let tableData = this.getTableData(this.props.configuration);
+    let tableData = this.getTableData(this.props.techniques);
     return (
       <div>
+        {/* TODO: render legend outside*/}
         {this.renderLegend()}
         <div className={"attack-matrix"}>
           <ReactTable columns={tableData['columns']}

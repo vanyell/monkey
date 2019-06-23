@@ -7,6 +7,7 @@ import Collapse from '@kunukn/react-collapse';
 import T1210 from '../attack/techniques/T1210';
 import T1197 from '../attack/techniques/T1197';
 import T1110 from '../attack/techniques/T1110';
+import ReportMatrix from "../attack/ReportMatrixComponent";
 import '../../styles/Collapse.scss'
 
 const tech_components = {
@@ -18,6 +19,64 @@ const tech_components = {
 const classNames = require('classnames');
 
 class AttackReportPageComponent extends AuthComponent {
+
+  // TODO: get from server
+  dataForMatrix = {
+    "credential_access": {
+      "properties": {
+        "T1003": {
+          "description": "Mapped with T1078 Valid Accounts because both techniques require same credential harvesting modules. Credential dumping is the process of obtaining account login and password information, normally in the form of a hash or a clear text password, from the operating system and software.",
+          "title": "T1003 Credential dumping",
+          "status": "UNSCANNED"
+        },
+        "T1110": {
+          "description": "Adversaries may use brute force techniques to attempt access to accounts when passwords are unknown or when password hashes are obtained.",
+          "status": "UNSCANNED",
+          "title": "T1110 Brute force"
+        }
+      },
+      "title": "Credential access",
+      "type": "object"
+    },
+    "defence_evasion": {
+      "properties": {
+        "T1197": {
+          "description": "Adversaries may abuse BITS to download, execute, and even clean up after running malicious code.",
+          "title": "T1197 BITS jobs",
+          "status": "SCANNED"
+        }
+      },
+      "title": "Defence evasion",
+      "type": "object"
+    },
+    "initial_access": {
+      "properties": {
+        "T1078": {
+          "description": "Mapped with T1003 Credential dumping because both techniques require same credential harvesting modules. Adversaries may steal the credentials of a specific user or service account using Credential Access techniques or capture credentials earlier in their reconnaissance process.",
+          "status": "USED",
+          "title": "T1078 Valid accounts"
+        }
+      },
+      "title": "Initial access",
+      "type": "object"
+    },
+    "lateral_movement": {
+      "properties": {
+        "T1075": {
+          "description": "Pass the hash (PtH) is a method of authenticating as a user without having access to the user's cleartext password.",
+          "status": "UNSCANNED",
+          "title": "T1075 Pass the hash"
+        },
+        "T1210": {
+          "description": "Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code.",
+          "status": "UNSCANNED",
+          "title": "T1210 Exploitation of Remote services"
+        }
+      },
+      "title": "Lateral movement",
+      "type": "object"
+    }
+  };
 
   constructor(props) {
     super(props);
@@ -129,6 +188,7 @@ class AttackReportPageComponent extends AuthComponent {
     return (
       <div>
         {this.renderLegend()}
+        <ReportMatrix techniques={this.dataForMatrix} />
         <section className="app">{content}</section>
       </div>
     )
