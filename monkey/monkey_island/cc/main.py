@@ -28,6 +28,8 @@ from monkey_island.cc.database import is_db_server_up, get_db_version
 
 
 def main():
+    print(MONKEY_ASCII_ART)
+
     from tornado.wsgi import WSGIContainer
     from tornado.httpserver import HTTPServer
     from tornado.ioloop import IOLoop
@@ -51,7 +53,6 @@ def main():
         http_server.listen(env.get_island_port())
         logger.info(
             'Monkey Island Server is running on https://{}:{}'.format(local_ip_addresses()[0], env.get_island_port()))
-        print(MONKEY_ASCII_ART)
 
         IOLoop.instance().start()
 
