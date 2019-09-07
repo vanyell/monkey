@@ -51,6 +51,7 @@ def main():
         http_server.listen(env.get_island_port())
         logger.info(
             'Monkey Island Server is running on https://{}:{}'.format(local_ip_addresses()[0], env.get_island_port()))
+        print(MONKEY_ASCII_ART)
 
         IOLoop.instance().start()
 
@@ -79,3 +80,42 @@ def assert_mongo_db_version(mongo_url):
 
 if __name__ == '__main__':
     main()
+
+MONKEY_ASCII_ART = """
+                   _        _    ___ __           _  
+              |\\/|/ \\|\\ ||/|_\\_/  | (_ |  /\\ |\\ || \\ 
+              |  |\\_/| \\||\\|_ |  _|___)|_/--\\| \\||_/
+                           :hmmh:                           
+                           mN-.Nm                           
+            -ymmh/         /mmmm/   `     /hdmy-            
+            hN/.mN.       ` +NN/   /o    .Nm./Nh            
+            -hmmNN-      -d`/NN/ -sm: `  -NNmmh-            
+              `/dNh.  `-ommsmNNmdmNm/s/ .hNd/`              
+                .mNmhhmmNNNNNNNNNNNNNNhhmNm.                
+  -+o/`        `:mNNNNNNNNNNNNNNNNNNNNNNNNm:`        ./o+-  
+ +myodd-     `+dmNNNNNNNNNNNNNNNNNNNNNNNNNNmd+`     -ddoym+ 
+ +Ny+mNmo-``:hNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNd:``-omNd+yN+ 
+  -+o+oydmddmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmddmdyo+o+-  
+        `oNNNNNNNNNmhyyyhdmNNNNNNmdhyyyhdNNNNNNNNNo`        
+    .:/++yNNNNNNms:.`...``-odNNdo-``...`.:smNNNNNNy++/:.    
+ `/hmNNNNNNNNNNd- .ohddddy: `ss` :yddddho. -hNNNNNNNNNNmh/` 
+`yNNNho/dNNNNNm. :mNNmhdNNms    smNNdhmNNm: .mNNNNNd/ohNNNy`
+sNNN+`  mNNNNNy  hNNm.``sNNN-  -NNNs``.mNNh  yNNNNNm  `+NNNs
+hNNm   `mNNNNNd  sNNNo:/dNNm`  .mNNd/:oNNNs  dNNNNNm`   mNNh
+sNNN/`  mNNNNNN+ `sdNNNNNmh-    -hmNNNNNdo` +NNNNNNm  `+NNNs
+`yNNNho/dNNNNNNNy-`.:+oo/-`.+--+.`-/oo+:.`-yNNNNNNNd/ohNNNy`
+ `/hmNNNNNNNNNNNNmho/-`    :+..o/    `-/ohmNNNNNNNNNNNNmh/` 
+    .:+++yNNNNNNNNNNmyy+.`        `.+yyNNNNNNNNNNNy+++:.    
+        `oNNNNNNNNNNm ./syso++/+osys/. mNNNNNNNNNNo`        
+  -+o+oydmddmNNNNNNNm.   `.-::::-.`   -mNNNNNNNmddmdyo+o+-  
+ +my+dNmo-``:dNNNNNNNh`              `hNNNNNNNd:``-omNd+yN+ 
+ +myodd-     `+dmNNNNNd:`          `:dNNNNNmd+`     -ddoym+ 
+  -++/`        `:mNNNNNNho:.````.:ohNNNNNNm:`        `/o+-  
+                .mNmhhmmmNNmmddmmNNmmmhhmNm.                
+              `/dNh.  `-:/+smNNms+/:-`  .hNd/`              
+            -hmmNN-         /NN/         -NNmmh-            
+            hN/.mN.         +NN/         .Nm./Nh            
+            -ymmh/         /mmmm/         /hmmy-            
+                           mN-.Nm                           
+                           :hmmh:                                                               
+"""
