@@ -77,7 +77,7 @@ class NetworkScanner(object):
             LOG.debug("Scanning for potential victims in the network %r", net_range)
             for ip_addr in net_range:
                 if hasattr(net_range, 'domain_name'):
-                    victim = VictimHost(ip_addr, net_range.domain_name)
+                    victim = VictimHost(ip_addr, net_range.host_name)
                 else:
                     victim = VictimHost(ip_addr)
                 if stop_callback and stop_callback():

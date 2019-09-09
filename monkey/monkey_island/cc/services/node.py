@@ -44,7 +44,7 @@ class NodeService:
             # node is uninfected
             new_node = NodeService.node_to_net_node(node, for_report)
             new_node["ip_addresses"] = node["ip_addresses"]
-            new_node["domain_name"] = node["domain_name"]
+            new_node["host_name"] = node["host_name"]
 
         for edge in edges:
             accessible_from_nodes.append(NodeService.get_monkey_label(NodeService.get_monkey_by_id(edge["from"])))
@@ -67,8 +67,8 @@ class NodeService:
     @staticmethod
     def get_node_label(node):
         domain_name = ""
-        if node["domain_name"]:
-            domain_name = " (" + node["domain_name"] + ")"
+        if node["host_name"]:
+            domain_name = " (" + node["host_name"] + ")"
         return node["os"]["version"] + " : " + node["ip_addresses"][0] + domain_name
 
     @staticmethod
@@ -146,7 +146,7 @@ class NodeService:
                 "group": NodeService.get_monkey_group(monkey),
                 "os": NodeService.get_monkey_os(monkey),
                 "dead": is_monkey_dead,
-                "domain_name": "",
+                "host_name": "",
                 "pba_results": monkey["pba_results"] if "pba_results" in monkey else []
             }
 
@@ -191,7 +191,7 @@ class NodeService:
         new_node_insert_result = mongo.db.node.insert_one(
             {
                 "ip_addresses": [ip_address],
-                "domain_name": domain_name,
+                "host_name": domain_name,
                 "exploited": False,
                 "creds": [],
                 "os":
@@ -279,7 +279,7 @@ class NodeService:
     def get_monkey_island_node():
         island_node = NodeService.get_monkey_island_pseudo_net_node()
         island_node["ip_addresses"] = local_ip_addresses()
-        island_node["domain_name"] = socket.gethostname()
+        island_node["host_name"] = socket.gethostname()
         return island_node
 
     @staticmethod

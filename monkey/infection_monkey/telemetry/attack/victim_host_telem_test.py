@@ -17,7 +17,7 @@ class TestVictimHostTelem(TestCase):
 
         expected_data = {
             'machine': {
-                'domain_name': machine.domain_name,
+                'host_name': machine.host_name,
                 'ip_addr': machine.ip_addr
             },
             'status': status.value,

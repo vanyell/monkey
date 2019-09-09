@@ -157,10 +157,10 @@ class SingleIpRange(NetworkRange):
         """
         Converts the string that user entered in "Scan IP/subnet list" to a tuple of domain name and ip
         :param string: String that was entered in "Scan IP/subnet list"
-        :return: A tuple in format (IP, domain_name). Eg. (192.168.55.1, www.google.com)
+        :return: A tuple in format (IP, host_name). Eg. (192.168.55.1, www.google.com)
         """
         # The most common use case is to enter ip/range into "Scan IP/subnet list"
-        domain_name = ''
+        host_name = ''
 
         # Make sure to have unicode string
         user_input = string.decode('utf-8', 'ignore')
@@ -172,11 +172,11 @@ class SingleIpRange(NetworkRange):
             # Exception means that it's a domain name
             try:
                 ip = socket.gethostbyname(string)
-                domain_name = string
+                host_name = string
             except socket.error:
                 LOG.error("Your specified host: {} is not found as a domain name and"
                           " it's not an IP address".format(string))
                 return None, string
         # If a string was entered instead of IP we presume that it was domain name and translate it
-        return ip, domain_name
+        return ip, host_name
 

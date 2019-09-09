@@ -14,7 +14,7 @@ class VictimHostTelem(AttackTelem):
         :param machine: VictimHost obj from model/host.py
         """
         super(VictimHostTelem, self).__init__(technique, status)
-        self.machine = {'domain_name': machine.domain_name, 'ip_addr': machine.ip_addr}
+        self.machine = {'host_name': machine.domain_name, 'ip_addr': machine.ip_addr}
 
     def get_data(self):
         data = super(VictimHostTelem, self).get_data()

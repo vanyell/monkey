@@ -94,7 +94,7 @@ class Telemetry(flask_restful.Resource):
     @staticmethod
     def get_edge_by_scan_or_exploit_telemetry(telemetry_json):
         dst_ip = telemetry_json['data']['machine']['ip_addr']
-        dst_domain_name = telemetry_json['data']['machine']['domain_name']
+        dst_domain_name = telemetry_json['data']['machine']['host_name']
         src_monkey = NodeService.get_monkey_by_guid(telemetry_json['monkey_guid'])
         dst_node = NodeService.get_monkey_by_ip(dst_ip)
         if dst_node is None:
@@ -152,7 +152,7 @@ class Telemetry(flask_restful.Resource):
         edge = Telemetry.get_edge_by_scan_or_exploit_telemetry(telemetry_json)
         data = copy.deepcopy(telemetry_json['data']['machine'])
         ip_address = data.pop("ip_addr")
-        domain_name = data.pop("domain_name")
+        domain_name = data.pop("host_name")
         new_scan = \
             {
                 "timestamp": telemetry_json["timestamp"],
@@ -161,7 +161,7 @@ class Telemetry(flask_restful.Resource):
         mongo.db.edge.update(
             {"_id": edge["_id"]},
             {"$push": {"scans": new_scan},
-             "$set": {"ip_address": ip_address, 'domain_name': domain_name}}
+             "$set": {"ip_address": ip_address, 'host_name': domain_name}}
         )
 
         node = mongo.db.node.find_one({"_id": edge["to"]})

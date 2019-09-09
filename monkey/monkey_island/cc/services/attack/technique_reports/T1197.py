@@ -18,7 +18,7 @@ class T1197(AttackTechnique):
                                                      {'$group': {'_id': {'ip_addr': '$data.machine.ip_addr',
                                                                          'usage': '$data.usage'},
                                                                  'ip_addr': {'$first': '$data.machine.ip_addr'},
-                                                                 'domain_name': {'$first': '$data.machine.domain_name'},
+                                                                 'host_name': {'$first': '$data.machine.host_name'},
                                                                  'usage': {'$first': '$data.usage'},
                                                                  'time': {'$first': '$timestamp'}}
                                                       }])

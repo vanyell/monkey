@@ -134,7 +134,7 @@ class ReportService:
                          (NodeService.get_displayed_node_by_id(edge['from'], True)
                           for edge in EdgeService.get_displayed_edges_by_to(node['id'], True)))),
                     'services': node['services'],
-                    'domain_name': node['domain_name'],
+                    'host_name': node['host_name'],
                     'pba_results': node['pba_results'] if 'pba_results' in node else 'None'
                 })
 
@@ -155,7 +155,7 @@ class ReportService:
             {
                 'label': monkey['label'],
                 'ip_addresses': monkey['ip_addresses'],
-                'domain_name': monkey['domain_name'],
+                'host_name': monkey['host_name'],
                 'exploits': list(set(
                     [ReportService.EXPLOIT_DISPLAY_DICT[exploit['exploiter']] for exploit in monkey['exploits'] if
                      exploit['result']]))
