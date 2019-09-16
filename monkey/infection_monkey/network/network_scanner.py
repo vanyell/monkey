@@ -1,17 +1,17 @@
 import sys
-import itertools
 import time
 import logging
 
-if sys.platform.startswith("win"):
-    from multiprocessing.dummy import Pool
-else:
-    from multiprocessing import Pool
 from common.network.network_range import NetworkRange
 from infection_monkey.config import WormConfiguration
 from infection_monkey.network.info import local_ips, get_interfaces_ranges
 from infection_monkey.model import VictimHost
 from infection_monkey.network import TcpScanner, PingScanner
+
+if sys.platform.startswith("win"):
+    from multiprocessing.dummy import Pool
+else:
+    from multiprocessing import Pool
 
 __author__ = 'itamar'
 
@@ -131,14 +131,12 @@ class NetworkScanner(object):
                 # time.sleep uses seconds, while config is in milliseconds
                 time.sleep(WormConfiguration.tcp_scan_interval / float(1000))
 
-
     @staticmethod
     def _is_any_ip_in_subnet(ip_addresses, subnet_str):
         for ip_address in ip_addresses:
             if NetworkRange.get_range_obj(subnet_str).is_in_range(ip_address):
                 return True
         return False
-
 
     def scan_machine(self, victim):
         """
@@ -152,7 +150,6 @@ class NetworkScanner(object):
             return victim
         else:
             return None
-
 
     def on_island(self, server):
         return bool([x for x in self._ip_addresses if x in server])
