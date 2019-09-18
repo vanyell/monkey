@@ -26,7 +26,6 @@ def generate_victims(net_ranges, chunk_size):
     Generates VictimHosts in chunks from all the netranges
     :param net_ranges: Iterable of network ranges
     :param chunk_size: Maximum size of each chunk
-    :return:
     """
     chunk = []
     for net_range in net_ranges:
@@ -51,7 +50,6 @@ class NetworkScanner(object):
         """
         Set up scanning.
         based on configuration: scans local network and/or scans fixed list of IPs/subnets.
-        :return:
         """
         # get local ip addresses
         self._ip_addresses = local_ips()
@@ -140,7 +138,7 @@ class NetworkScanner(object):
 
     def scan_machine(self, victim):
         """
-        Scans specific machine using given scanner
+        Scans specific machine using instance scanners
         :param victim: VictimHost machine
         :return: Victim or None if victim isn't alive
         """
