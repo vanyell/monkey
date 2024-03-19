@@ -5,7 +5,7 @@ import MonkeyButton, {
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import { agentPluginEndpoints } from '@/redux/features/api/agentPlugins/agentPluginEndpoints';
 import { filterOutDangerousPlugins } from '@/app/(protected)/plugins/_lib/filters/SafetyFilter';
-import LoadingIcon from '@/_components/icons/loading-icon/LoadingIcon';
+import MonkeyLoadingIcon from '@/_components/icons/MonkeyLoadingIcon';
 import { useDispatch } from 'react-redux';
 import useInstallablePlugins from '@/app/(protected)/plugins/_lib/useInstallablePlugins';
 
@@ -46,7 +46,7 @@ const InstallAllSafePluginsButton = () => {
     const isDisabled = installableSafePlugins.length === 0;
 
     const buttonIcon = loading ? (
-        <LoadingIcon sx={{ mr: '5px' }} />
+        <MonkeyLoadingIcon sx={{ mr: '5px' }} />
     ) : (
         <FileDownloadIcon sx={{ mr: '5px' }} />
     );
