@@ -25,6 +25,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - A bug that prevented filtering on certain event types. #3864
 - Link-local IPs are no longer shown under Run Monkey -> Manual in the UI. #3825
 - A bug that would allow tunnels/relays to prematurely close. #3947
+- Inproperly resolved bug that was not running the Agent with whole list of servers. #2593
 
 ### Removed
 - Fingerprinter configuration from UI. #3769, #3826
