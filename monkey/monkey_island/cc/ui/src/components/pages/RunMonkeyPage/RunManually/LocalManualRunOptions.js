@@ -34,7 +34,7 @@ const getContents = (props) => {
 
   const [otp, setOtp] = useState('');
   const [osType, setOsType] = useState(OS_TYPES.WINDOWS_64);
-  const [selectedIp, setSelectedIp] = useState(props.ips[0]);
+  const [selectedIslandIp, setselectedIslandIp] = useState(props.ips[0]);
   const [customUsername, setCustomUsername] = useState('');
   const [commands, setCommands] = useState(generateCommands());
 
@@ -45,10 +45,10 @@ const getContents = (props) => {
 
   useEffect(() => {
     setCommands(generateCommands());
-  }, [osType, selectedIp, customUsername, otp])
+  }, [osType, selectedIslandIp, customUsername, otp])
 
   function setIp(index) {
-    setSelectedIp(props.ips[index]);
+    setselectedIslandIp(props.ips[index]);
   }
 
   function setUsername(inputVal) {
@@ -69,10 +69,10 @@ const getContents = (props) => {
 
   function generateCommands() {
     if (osType === OS_TYPES.WINDOWS_64) {
-      return [{type: 'PowerShell', command: GenerateLocalWindowsPowershell(selectedIp, JS_RUNTIME_PORT, customUsername, otp)}]
+      return [{type: 'PowerShell', command: GenerateLocalWindowsPowershell(selectedIslandIp, props.ips, JS_RUNTIME_PORT, customUsername, otp)}]
     } else {
-      return [{type: 'cURL', command: GenerateLocalLinuxCurl(selectedIp, JS_RUNTIME_PORT, customUsername, otp)},
-        {type: 'Wget', command: GenerateLocalLinuxWget(selectedIp, JS_RUNTIME_PORT, customUsername, otp)}]
+      return [{type: 'cURL', command: GenerateLocalLinuxCurl(selectedIslandIp, props.ips, JS_RUNTIME_PORT, customUsername, otp)},
+        {type: 'Wget', command: GenerateLocalLinuxWget(selectedIslandIp, props.ips, JS_RUNTIME_PORT, customUsername, otp)}]
     }
   }
 
