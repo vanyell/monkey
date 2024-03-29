@@ -70,12 +70,14 @@ class LocalMonkeyRunService:
 
         # run the monkey
         try:
-            ip = self._ips[0]
-            port = self._island_port
-
             process_env = os.environ.copy()
             process_env[AGENT_OTP_ENVIRONMENT_VARIABLE] = otp.get_secret_value()
-            args = [str(dest_path), "m0nk3y", "-s", f"{ip}:{port}"]
+            args = [
+                str(dest_path),
+                "m0nk3y",
+                "-s",
+                ",".join([f"{ip}:{self._island_port}" for ip in self._ips]),
+            ]
             subprocess.Popen(args, cwd=self._data_dir, env=process_env)
         except Exception as exc:
             logger.error("popen failed", exc_info=True)
