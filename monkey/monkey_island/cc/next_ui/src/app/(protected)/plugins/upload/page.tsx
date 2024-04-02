@@ -35,6 +35,7 @@ const UploadNewPlugin = () => {
     }, [errors]);
 
     const onDrop = useCallback((acceptedPlugin, rejectedPlugin) => {
+        setErrors([]);
         if (acceptedPlugin?.length) {
             const reader = new FileReader();
             reader.onload = (e) => {
