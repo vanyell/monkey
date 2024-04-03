@@ -1,6 +1,5 @@
 'use client';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -13,6 +12,7 @@ import MonkeyFileUpload, {
     UploadStatus
 } from '@/_components/file-upload/MonkeyFileUpload';
 import { useUploadPluginMutation } from '@/redux/features/api/agentPlugins/agentPluginEndpoints';
+import MonkeyAlert from '@/_components/alerts/MonkeyAlert';
 
 const UploadNewPlugin = () => {
     const [upload, { isError, error, isLoading, isSuccess }] =
@@ -120,18 +120,18 @@ const UploadNewPlugin = () => {
                 )}
             </MonkeyFileUpload>
 
-            <Box sx={{ mt: '10px' }}>
+            <Box sx={{ mt: '10px', mb: '10px' }}>
                 {showSuccessAlert && (
-                    <Alert
+                    <MonkeyAlert
                         severity="success"
                         onClose={() => setShowSuccessAlert(false)}>
                         <AlertTitle>
                             &apos;{pluginName}&apos; was successfully installed!
                         </AlertTitle>
-                    </Alert>
+                    </MonkeyAlert>
                 )}
                 {showErrors && (
-                    <Alert severity="error" onClose={() => setErrors([])}>
+                    <MonkeyAlert severity="error" onClose={() => setErrors([])}>
                         <AlertTitle>Error uploading Plugin Tar</AlertTitle>
                         <ul id="circle-list">
                             {errors.map((error, index) => (
@@ -140,7 +140,7 @@ const UploadNewPlugin = () => {
                                 </Typography>
                             ))}
                         </ul>
-                    </Alert>
+                    </MonkeyAlert>
                 )}
             </Box>
 
