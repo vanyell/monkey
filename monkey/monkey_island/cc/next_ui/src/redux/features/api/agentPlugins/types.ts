@@ -58,4 +58,4 @@ export type PluginInfo = {
     pluginId: string;
 };
 
-export type PluginTar = BinaryType;
+export type PluginTar = Uint8Array;

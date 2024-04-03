@@ -18,7 +18,9 @@ const baseQuery: BaseQueryFn = fetchBaseQuery({
         if (token) {
             headers.set(AUTHENTICATION_TOKEN_HEADER, token);
         }
-        headers.set('Content-Type', 'application/json');
+        if (!headers.has('Content-Type')) {
+            headers.set('Content-Type', 'application/json');
+        }
         return headers;
     },
     timeout: DEFAULT_QUERY_TIMEOUT

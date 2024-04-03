@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Button from '@mui/material/Button';
@@ -12,10 +12,12 @@ import Box from '@mui/material/Box';
 import MonkeyFileUpload, {
     UploadStatus
 } from '@/_components/file-upload/MonkeyFileUpload';
+import { useUploadPluginMutation } from '@/redux/features/api/agentPlugins/agentPluginEndpoints';
 
 const UploadNewPlugin = () => {
+    const [upload, { isError, error, isLoading, isSuccess }] =
+        useUploadPluginMutation();
     const [plugin, setPlugin] = useState(null);
-    const [loading] = useState(false);
     const [showSuccessAlert, setShowSuccessAlert] = useState(false);
     const [pluginName, setPluginName] = useState('');
     const [errors, setErrors] = useState([]);
@@ -34,8 +36,23 @@ const UploadNewPlugin = () => {
         return errors.length !== 0;
     }, [errors]);
 
+    useEffect(() => {
+        if (isSuccess) {
+            setShowSuccessAlert(true);
+            setPlugin(null);
+        }
+    }, [isSuccess]);
+
+    useEffect(() => {
+        if (isError) {
+            setErrors([error.data]);
+            setPlugin(null);
+        }
+    }, [error]);
+
     const onDrop = useCallback((acceptedPlugin, rejectedPlugin) => {
         setErrors([]);
+        setShowSuccessAlert(false);
         if (acceptedPlugin?.length) {
             const reader = new FileReader();
             reader.onload = (e) => {
@@ -59,7 +76,12 @@ const UploadNewPlugin = () => {
         }
     }, []);
 
-    const uploadPlugin = () => {};
+    const uploadPlugin = () => {
+        if (plugin === null) {
+            return;
+        }
+        upload(plugin);
+    };
 
     const removePlugin = () => {
         setPlugin(null);
@@ -74,7 +96,7 @@ const UploadNewPlugin = () => {
                 maxFiles={1}
                 accept={{ 'application/x-tar': [] }}
                 uploadStatus={uploadStatus}>
-                {plugin === null && !loading && (
+                {plugin === null && !isLoading && (
                     <div>
                         <Typography>
                             Drag &apos;n&apos; drop Plugin Tar here
@@ -84,43 +106,44 @@ const UploadNewPlugin = () => {
                         </Typography>
                     </div>
                 )}
-                {plugin !== null && !loading && (
+                {plugin !== null && !isLoading && (
                     <Typography>
                         &apos;{pluginName}&apos; is ready to be uploaded.
                     </Typography>
                 )}
-                {loading && (
+                {isLoading && (
                     <div>
                         <Typography>
                             Uploading &apos;{pluginName}&apos; to Island!
                         </Typography>
-                        <MonkeyLoadingIcon />
                     </div>
                 )}
             </MonkeyFileUpload>
 
-            {showSuccessAlert && (
-                <Alert
-                    severity="success"
-                    onClose={() => setShowSuccessAlert(false)}>
-                    <AlertTitle>
-                        &apos;{pluginName}&apos; is successfully installed
-                    </AlertTitle>
-                </Alert>
-            )}
-            {showErrors && (
-                <Alert severity="error" onClose={() => setErrors([])}>
-                    <AlertTitle>Error uploading Plugin Tar</AlertTitle>
-                    <ul id="circle-list">
-                        {errors.map((error, index) => (
-                            <Typography key={index} component="li">
-                                {error}
-                            </Typography>
-                        ))}
-                    </ul>
-                </Alert>
-            )}
-            <br />
+            <Box sx={{ mt: '10px' }}>
+                {showSuccessAlert && (
+                    <Alert
+                        severity="success"
+                        onClose={() => setShowSuccessAlert(false)}>
+                        <AlertTitle>
+                            &apos;{pluginName}&apos; was successfully installed!
+                        </AlertTitle>
+                    </Alert>
+                )}
+                {showErrors && (
+                    <Alert severity="error" onClose={() => setErrors([])}>
+                        <AlertTitle>Error uploading Plugin Tar</AlertTitle>
+                        <ul id="circle-list">
+                            {errors.map((error, index) => (
+                                <Typography key={index} component="li">
+                                    {error}
+                                </Typography>
+                            ))}
+                        </ul>
+                    </Alert>
+                )}
+            </Box>
+
             <Grid
                 container
                 direction="row"
@@ -130,8 +153,14 @@ const UploadNewPlugin = () => {
                 <Grid item>
                     <Button
                         variant="contained"
-                        disabled={plugin === null || loading}
-                        startIcon={<FileUploadIcon />}
+                        disabled={plugin === null || isLoading}
+                        startIcon={
+                            isLoading ? (
+                                <MonkeyLoadingIcon />
+                            ) : (
+                                <FileUploadIcon />
+                            )
+                        }
                         onClick={() => uploadPlugin()}>
                         Upload Plugin
                     </Button>
@@ -141,7 +170,7 @@ const UploadNewPlugin = () => {
                         <Button
                             variant="outlined"
                             color="error"
-                            disabled={loading}
+                            disabled={isLoading}
                             startIcon={<DeleteIcon />}
                             onClick={() => removePlugin()}>
                             Cancel

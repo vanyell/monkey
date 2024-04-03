@@ -60,10 +60,8 @@ export const agentPluginEndpoints = islandApiSlice.injectEndpoints({
             query: (pluginTar: PluginTar) => ({
                 url: BackendEndpoints.PLUGIN_INSTALL,
                 method: HTTP_METHODS.PUT,
-                headers: {
-                    'Content-Type': 'application/x-tar'
-                },
-                body: { pluginTar }
+                headers: { 'Content-Type': 'application/octet-stream' },
+                body: pluginTar
             })
         })
     })
@@ -72,5 +70,6 @@ export const agentPluginEndpoints = islandApiSlice.injectEndpoints({
 export const {
     useGetAvailablePluginsQuery,
     useGetInstalledPluginsQuery,
-    useInstallPluginMutation
+    useInstallPluginMutation,
+    useUploadPluginMutation
 } = agentPluginEndpoints;
