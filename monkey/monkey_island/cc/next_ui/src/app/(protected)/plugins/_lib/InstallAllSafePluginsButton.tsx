@@ -3,33 +3,24 @@ import MonkeyButton, {
     ButtonVariant
 } from '@/_components/buttons/MonkeyButton';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import {
-    agentPluginEndpoints,
-    useGetAvailablePluginsQuery,
-    useGetInstalledPluginsQuery
-} from '@/redux/features/api/agentPlugins/agentPluginEndpoints';
-import { filterOutInstalledPlugins } from '@/app/(protected)/plugins/_lib/filters/InstalledPluginFilter';
+import { agentPluginEndpoints } from '@/redux/features/api/agentPlugins/agentPluginEndpoints';
 import { filterOutDangerousPlugins } from '@/app/(protected)/plugins/_lib/filters/SafetyFilter';
 import LoadingIcon from '@/_components/icons/loading-icon/LoadingIcon';
 import { useDispatch } from 'react-redux';
+import useInstallablePlugins from '@/app/(protected)/plugins/_lib/useInstallablePlugins';
 
 const InstallAllSafePluginsButton = () => {
-    const { data: availablePlugins, isLoading: isLoadingAvailablePlugins } =
-        useGetAvailablePluginsQuery();
-    const { data: installedPlugins, isLoading: isLoadingInstalledPlugins } =
-        useGetInstalledPluginsQuery();
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
+    const installablePlugins = useInstallablePlugins();
 
     const installAllSafePlugins = async () => {
-        if (availablePlugins === undefined || installedPlugins === undefined)
-            throw new Error('Available or installed plugins are undefined');
+        if (installablePlugins === undefined)
+            // Should not happen since the button is disabled when installablePlugins is undefined
+            throw new Error('Installable plugins are not loaded yet');
 
         setLoading(true);
-        const installablePlugins = filterOutInstalledPlugins(
-            availablePlugins,
-            installedPlugins
-        );
+
         const safePlugins = filterOutDangerousPlugins(installablePlugins);
         const installationPromises = [];
         safePlugins.forEach((plugin) => {
@@ -53,10 +44,7 @@ const InstallAllSafePluginsButton = () => {
         setLoading(false);
     };
 
-    const isDisabled =
-        isLoadingAvailablePlugins ||
-        isLoadingInstalledPlugins ||
-        !availablePlugins;
+    const isDisabled = installablePlugins === undefined;
 
     const buttonIcon = loading ? (
         <LoadingIcon sx={{ mr: '5px' }} />
