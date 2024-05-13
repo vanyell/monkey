@@ -13,6 +13,10 @@ const InstallAllSafePluginsButton = () => {
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
     const installablePlugins = useInstallablePlugins();
+    const installableSafePlugins =
+        installablePlugins === undefined
+            ? []
+            : filterOutDangerousPlugins(installablePlugins);
 
     const installAllSafePlugins = async () => {
         if (installablePlugins === undefined)
@@ -21,9 +25,8 @@ const InstallAllSafePluginsButton = () => {
 
         setLoading(true);
 
-        const safePlugins = filterOutDangerousPlugins(installablePlugins);
         const installationPromises = [];
-        safePlugins.forEach((plugin) => {
+        installableSafePlugins.forEach((plugin) => {
             installationPromises.push(
                 // @ts-ignore
                 dispatch(
@@ -44,7 +47,7 @@ const InstallAllSafePluginsButton = () => {
         setLoading(false);
     };
 
-    const isDisabled = installablePlugins === undefined;
+    const isDisabled = installableSafePlugins.length === 0;
 
     const buttonIcon = loading ? (
         <LoadingIcon sx={{ mr: '5px' }} />
