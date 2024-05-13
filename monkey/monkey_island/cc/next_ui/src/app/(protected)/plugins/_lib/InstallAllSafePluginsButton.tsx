@@ -19,10 +19,6 @@ const InstallAllSafePluginsButton = () => {
             : filterOutDangerousPlugins(installablePlugins);
 
     const installAllSafePlugins = async () => {
-        if (installablePlugins === undefined)
-            // Should not happen since the button is disabled when installablePlugins is undefined
-            throw new Error('Installable plugins are not loaded yet');
-
         setLoading(true);
 
         const installationPromises = [];
