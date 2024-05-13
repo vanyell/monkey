@@ -6,19 +6,15 @@ import { filterOutInstalledPlugins } from '@/app/(protected)/plugins/_lib/filter
 import { useMemo } from 'react';
 
 function useInstallablePlugins() {
-    const { data: availablePlugins, isLoading: isLoadingAvailablePlugins } =
-        useGetAvailablePluginsQuery();
-    const { data: installedPlugins, isLoading: isLoadingInstalledPlugins } =
-        useGetInstalledPluginsQuery();
+    const { data: availablePlugins } = useGetAvailablePluginsQuery();
+    const { data: installedPlugins } = useGetInstalledPluginsQuery();
 
-    const installablePlugins = useMemo(() => {
-        if (isLoadingAvailablePlugins || isLoadingInstalledPlugins) {
+    return useMemo(() => {
+        if (availablePlugins === undefined || installedPlugins === undefined) {
             return;
         }
         return filterOutInstalledPlugins(availablePlugins, installedPlugins);
     }, [availablePlugins, installedPlugins]);
-
-    return installablePlugins;
 }
 
 export default useInstallablePlugins;
