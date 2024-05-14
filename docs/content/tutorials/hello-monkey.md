@@ -99,17 +99,16 @@ Great! We've installed the SSH Exploiter, but we still need to tell the Monkey t
 
 ![Enable the SSH Exploiter](../../images/tutorials/hello-monkey/12-exploiter-enabled.jpg)
 
-Now that we've told Infection Monkey which exploiter to use, let's try running again. Go navigate to **1. Run Monkey** and select _From Island_ again. Then, let's have another look at the _Infection Map_:
 
-![Network map](../../images/tutorials/hello-monkey/8-map-scanned.jpg)
+We've told Infection Monkey which exploiter to use, but we've still got one more step: the SSH Exploiter requires credentials in order to run, and we haven't provided any. Let's do that now.
 
-Hmm. No change. It _still_ didn't attempt to exploit.
-
-This is because the SSH Exploiter requires credentials in order to run, and we haven't provided any. Let's do that now.
+{{% notice note %}}
+Brute force exploiters, such as the SSH Exploiter, require credentials in order to run.
+{{% /notice %}}
 
 
 #### Tell the Monkey which credentials to use
-Navigate once again to the **Configuration** page. Select the **Propagation** tab, then the **Credentials** subtab.
+From the **Configuration** page, select the **Propagation** tab, then the **Credentials** subtab.
 
 Enter `user` into the **Identity** field, and `password` in the **Password** field, and hit the _Save_ button.
 
