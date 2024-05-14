@@ -139,5 +139,10 @@ Let's take a moment to review what you've learned:
 
 
 ### Next steps
-- Secure the vulnerable machine and try again?
-- ...
+Now that you're more familiar with Infection Monkey, you might try the following:
+
+- Try to secure the vulnerable machine and run the Monkey to verify that your changes work as expected
+- Explore some of the other configuration options
+- Simulate a network breach on a specific machine by [running the Monkey manually](../../usage/running-manually)
+- Explore some of the other Exploiter plugins
+- Try using the Monkey to [simulate a ransomware attack](../../usage/ransomware-simulation)
