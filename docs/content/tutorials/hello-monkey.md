@@ -19,17 +19,28 @@ First, make sure that you have the following installed:
 - `docker` and `docker-compose`
 
 ### Run the environment
-Next, we'll use docker compose to run Infection Monkey along with our vulnerable container.
+Next, we'll use `docker compose` to run Infection Monkey along with our vulnerable container.
 
-Run `docker compose up` to start the environment.
+1. Download the following compose file: [docker-compose.yml](docker/docker-compose.yaml)
 
-Now that the environment is running, open a browser to `https://localhost:5000` to access the Monkey Island web interface. You will be presented with a registration page if you haven't registered. Provide a username and password to log in.
+2. Then, navigate to the directory where you downloaded the file and run the following command to start the environment:
+
+   ```
+   docker compose up
+   ```
+
+Now you should have 3 containers running:
+- `mongo` - database used by Infection Monkey
+- `monkey-island` - the Infection Monkey server
+- `hello` - a vulnerable container
+
+Now that the environment is running, open a browser to [https://localhost:5000](https://localhost:5000) to access the Monkey Island web interface. Since this is the first time you're accessing this Infection Monkey instance, you'll need to register by providing a username and password. Once you do so, you'll be logged in.
 
 ![Infection Monkey login screen](../../images/tutorials/hello-monkey/1-registration-page.jpg)
 ![Getting started page](../../images/tutorials/hello-monkey/2-getting-started-page.jpg)
 
 ### Configure the Monkey
-Now we'll need to configure Infection Monkey to exploit the vulnerable container. Select "Configure Monkey" on the "Getting Started" page (or select _Configuration_ in the navigation sidebar).
+Now we'll need to configure Infection Monkey to exploit the vulnerable container. Select _Configure Monkey_ on the _Getting Started_ page (or select _Configuration_ in the navigation sidebar).
 
 ![Configuration page](../../images/tutorials/hello-monkey/3-configuration-page.jpg)
 
@@ -45,7 +56,7 @@ In our case, we know that the target machine has the hostname `hello`. In order 
 
 ![Network analysis configuration](../../images/tutorials/hello-monkey/4-network-analysis.jpg)
 
-Then, under the "Scan target list" section, click the "+" button to add a target to scan. Enter our target hostname, `hello`, into the input field.
+Then, under the _Scan target list_ section, click the "+" button to add a target to scan. Enter our target hostname, `hello`, into the input field.
 
 ![Scan target list in the Network Analysis configuration](../../images/tutorials/hello-monkey/5-scan-target-list.jpg)
 
@@ -80,7 +91,7 @@ Infection Monkey does not come with exploiters pre-installed. However, it provid
 
 You should now be at the **Plugins** page. Under the _Available Plugins_ tab you'll see a list of all the plugins that can be installed. Infection Monkey has several types of plugins. Since we're interested in installing an exploiter, let's filter this list to only show us exploiters. Select the _Type_ dropdown, and choose **Exploiter**. You should now see that the _Type_ column only has Exploiter.
 
-For this tutorial we're going to install the _SSH Exploiter_. Type "ssh" into the search field, and you should see an exploiter named **SSH**. Click the download button to install that exploiter. The button will change into a loading indicator to show that it's installing, and then to a checkmark when the plugin is installed. You can go to the _Installed Plugins_ tab and see that a plugin named **SSH** of type **Exploiter** is installed.
+For this tutorial we're going to install the _SSH Exploiter_. Type `ssh` into the search field, and you should see an exploiter named **SSH**. Click the download button to install that exploiter. The button will change into a loading indicator to show that it's installing, and then to a checkmark when the plugin is installed. You can go to the _Installed Plugins_ tab and see that a plugin named **SSH** of type **Exploiter** is installed.
 
 ![Filtered plugin list](../../images/tutorials/hello-monkey/11-filtered-plugin-list.jpg)
 
@@ -110,11 +121,13 @@ You should see a new entry appear in the _Saved Credentials_ list:
 
 Make sure you **Submit** the configuration so that the credentials are saved.
 
-Okay, let's give it one more go. Navigate to the _Run Monkey_ page, and run the Monkey _From Island_. Then, switch to the _Infection Map_ and observe the Monkey's progress:
+Okay, let's give it one more go. Navigate to the _Run Monkey_ page, and run the Monkey **From Island**. Then, switch to the _Infection Map_ and observe the Monkey's progress:
 
 ![Network map](../../images/tutorials/hello-monkey/15-map-exploited.jpg)
 
 Huzzah! We've succeeded!
+
+Notice how the arrow from the `monkey-island` to the vulnerable container changed to red? That indicates that Infection Monkey successfully exploited the container. The checkmark on the container means that the Monkey Agent was executed in the container, and the gray arrow from the container to the Island indicates that the Monkey Agent reported back to the Island.
 
 
 ### Review
