@@ -7,12 +7,17 @@
 ![GitHub stars](https://img.shields.io/github/stars/guardicore/monkey)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/guardicore/monkey)
 
-Welcome to Infection Monkey!  We're glad you could swing by.🐒 Here's all the info you'll need to start monkeying around.
-##What is Infection Monkey?
-Infection Monkey is an open-source adversary emulation platform designed to show you your real-world threat profile. Monkey uses various methods to self-propagate across a
-network and reports its activities to a centralized command and control server
-known as the Monkey Island. 🐵🏝️ You know, like malware, but ✨safe.✨
-##What's in it?
+Welcome to Infection Monkey!  We're glad you could swing by.🐒 Here's all the
+info you'll need to start monkeying around.
+
+## What is Infection Monkey?
+Infection Monkey is an open-source adversary emulation platform designed to
+show you your real-world threat profile. Monkey uses various methods to
+self-propagate across a network and reports its activities to a centralized
+command and control server known as the Monkey Island. 🐵🏝️ You know, like
+malware, but ✨safe.✨
+
+## What's in it?
 
 Infection Monkey is comprised of two parts:
 
@@ -20,8 +25,8 @@ Infection Monkey is comprised of two parts:
   data, and deliver payloads.
 * **Monkey Island** - A command and control server used to control and
   visualize the Infection Monkey's progress throughout the simulation.
-  
-###Build up your malware antibodies 💉
+
+### Build up your malware antibodies 💉
 
 ![Malware Vaccine](docs/static/images/monkey-iv.png "Malware Vaccine")
 
@@ -29,15 +34,16 @@ You can think of Infection Monkey as a kind of "malware vaccine." Prior to the
 invention of mRNA vaccines, biological vaccines worked as follows:
 
 1. Collect a sample of the virus.
-2. Through the magic of chemistry, create a weakened or inert form of the virus.
+2. Through the magic of chemistry, create a weakened or inert form of the
+   virus.
 3. Inject the weakened virus into the human body, allowing the immune system to
    built up a defense.
 
-Once the immune system has fortified, it can recognize and fight off
-the real pathogen if it should ever infect the body.
+Once the immune system has fortified, it can recognize and fight off the real
+pathogen if it should ever infect the body.
 
-**Infection Monkey aims to use this same approach to combat computer viruses (or
-other types of malware.)**
+**Infection Monkey aims to use this same approach to combat computer viruses
+(or other types of malware.)**
 
 1. Collect a sample of the malware.
 2. Analyze the malware and understand its behaviors.
@@ -51,7 +57,8 @@ other types of malware.)**
    "build up your immune response" by improving your security tools, policies,
    and processes.
 
-After all, what better defense is there than understanding your adversary? 🤔 Talk about Gorilla warfare.
+After all, what better defense is there than understanding your adversary? 🤔
+Talk about Gorilla warfare.
 
 Be the chimpion of your network. Learn more about the Monkey here:
 [akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey)
