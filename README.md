@@ -23,6 +23,8 @@ Infection Monkey is comprised of two parts:
   
 ###Build up your malware antibodies 💉
 
+![Malware Vaccine](docs/static/images/monkey-iv.png "Malware Vaccine")
+
 You can think of Infection Monkey as a kind of "malware vaccine." Prior to the
 invention of mRNA vaccines, biological vaccines worked as follows:
 
