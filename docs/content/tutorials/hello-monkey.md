@@ -14,6 +14,8 @@ In this tutorial, we will use Infection Monkey to exploit a simple vulnerability
 - Provide Infection Monkey with credentials that it can use when attempting to exploit machines
 - Run the Monkey and observe its progress
 
+You may find the [Getting Started](../../usage/getting-started) guide useful as you progress through this tutorial.
+
 ### Prerequisites
 First, make sure that you have the following installed:
 - `docker` and `docker-compose`
