@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "307eb9ec784d09f19de53f643802775988c8a7a6c20814674e12218ee6b77a9f"
+            "sha256": "79aa0e416b8cb984edf5f326a374040a66940241f1f2d9317c8caaf7d868607d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -770,6 +770,15 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.0.0"
+        },
+        "monkey-plugintoolbox": {
+            "hashes": [
+                "sha256:741a2559d1c0693b53c4f72a49aaf9b29b1879f6c3a56723db82170540b9370b",
+                "sha256:fa19f31f276e097fea778ade1975c4c99cf4912619ef545fd7c17b8d841176a3"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.11' and python_version < '4.0'",
+            "version": "==0.4.0"
         },
         "mypy": {
             "hashes": [
