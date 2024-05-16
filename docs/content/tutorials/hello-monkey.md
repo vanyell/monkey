@@ -145,4 +145,4 @@ Now that you're more familiar with Infection Monkey, you might try the following
 - Explore some of the other configuration options
 - Simulate a network breach on a specific machine by [running the Monkey manually](../../usage/running-manually)
 - Explore some of the other Exploiter plugins
-- Try using the Monkey to [simulate a ransomware attack](../../usage/ransomware-simulation)
+- Try using the Monkey to [simulate a ransomware attack](../ransomware)
