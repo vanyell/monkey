@@ -30,13 +30,18 @@ Next, we'll use `docker compose` to run Infection Monkey along with our vulnerab
    docker compose up
    ```
 
-Then, open a browser to [https://localhost:5000](https://localhost:5000), and login.
+Now you should have 3 containers running:
+- `mongo` - database used by Infection Monkey
+- `monkey-island` - the Infection Monkey server
+- `hello` - a vulnerable container
+
+Finally, open a browser to [https://localhost:5000](https://localhost:5000), and login.
 
 ### Configure the vulnerable container
 For this scenario, we're going to need some valuable data so that it can be held for ransom. We'll create a folder named `vault`, and we'll add a list of passwords to that vault.
 
 {{% notice warning %}}
-Infection Monkey will encrypt the contents of whichever folder we direct it to target. Therefore, when setting up a ransomware scenario, target a folder with dummy data or make sure you have a way to recover the data in the target directory.
+Infection Monkey will encrypt the contents of whichever folder we configure it to target. Therefore, when setting up a ransomware scenario, target a folder with dummy data or make sure you have a way to recover the data in the target directory.
 {{% /notice %}}
 
 Connect to the container:
@@ -86,7 +91,7 @@ Next, we need to enable the Ransomware plugin. Select the **Payloads** tab, and 
 
 We also need to tell the Ransomware plugin which folder to hold for ransom. Select _Ransomware_ in the _Enabled payloads_ list in order to view its settings.
 
-Since the `hello` container is linux-based, and we want to target `/home/user/vault` folder, set the _Linux target directory_ to `/home/user/vault`.
+Since the `hello` container is linux-based, set the _Linux target directory_ to `/home/user/vault` (the directory that we [prepared earlier](#configure-the-vulnerable-container)).
 
 Also make sure that _Leave ransom note_ is checked.
 
@@ -149,7 +154,7 @@ Infection Monkey uses a bit flip algorithm to "encrypt" files. So if you find yo
 ### Review
 What have we learned?
 - Infection Monkey provides a Ransomware plugin that allows one to simulate a ransomware attack
-- How to specify a path for Infection Monkey to target for ransom in every machine that it exploits
+- How to specify a path for Infection Monkey to target for ransom in every machine to whom it successfully propagates
 - The Ransomware report provides a list of all files encrypted by Infection Monkey
 
 ### Next Steps
