@@ -7,7 +7,7 @@ weight: 2
 tags: ["tutorials", "ransomware"]
 ---
 
-In this tutorial, you will learn how to setup and run a ransomware scenario using Infection Monkey.
+In this tutorial, you will learn how to set up and run a ransomware scenario using Infection Monkey.
 This tutorial assumes that you've completed [Tutorial 1: Hello, Monkey](../hello-monkey), since it builds off of the knowledge gained from that tutorial.
 
 You'll learn:
@@ -24,7 +24,7 @@ Next, we'll use `docker compose` to run Infection Monkey along with our vulnerab
 
 1. Download the following compose file: [docker-compose.yml](../hello-monkey/docker/docker-compose.yaml)
 
-2. Then, navigate to the directory where you downloaded the file and run the following command to start the environment:
+2. Navigate to the directory where you downloaded the file and run the following command to start the environment:
 
    ```
    docker compose up
@@ -36,7 +36,7 @@ Then, open a browser to [https://localhost:5000](https://localhost:5000), and lo
 For this scenario, we're going to need some valuable data so that it can be held for ransom. We'll create a folder named `vault`, and we'll add a list of passwords to that vault.
 
 {{% notice warning %}}
-Infection Monkey will encrypt the contents of whichever folder we direct it to target. Therefore, when setting up a ransomware scenario, make sure you have a way to recover that data, or target a folder with dummy data.
+Infection Monkey will encrypt the contents of whichever folder we direct it to target. Therefore, when setting up a ransomware scenario, target a folder with dummy data or make sure you have a way to recover the data in the target directory.
 {{% /notice %}}
 
 Connect to the container:
@@ -57,12 +57,12 @@ supersecretpassword
 EOF
 ```
 
-Now let's see if we can get Infection Monkey to ransom our vault data!
+Now let's see if we can get Infection Monkey to encrypt our data!
 
 ### Configure Infection Monkey
 
 #### Install plugins
-Our first task is to make sure we have the required plugin installed. Of course we'll need to install the Ransomware plugin. We'll still need to exploit the container, so we'll install the SSH exploiter plugin as well.
+Our first task is to make sure we have the required plugins. We'll need to install the Ransomware plugin, and because we'll still need to exploit the container, the SSH exploiter plugin as well.
 
 ![Plugins installed](../../images/tutorials/ransomware/1-plugins-installed.jpg)
 
@@ -101,7 +101,7 @@ Now that we've configured Infection Monkey, let's run it!
 
 Go to the **Run Monkey** page and run the Monkey **From Island**.
 
-If you look at the **Infection Map** you'll see that the `hello` container gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello-monkey).
+If you look at the **Infection Map**, you'll see that the `hello` container gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello-monkey).
 
 You can tell that the run has completed when a checkmark appears next to the **Infection Map** and **Security Report** in the navigation sidebar:
 
@@ -137,12 +137,12 @@ passwords.txt.m0nk3y
 Looks like the Monkey did its job!
 
 {{% notice tip %}}
-Infection Monkey uses a bit flip algorithm to "encrypt" files. So if you find yourself in a situation where you need to reverse the encryption, you can drop the file extension that the monkey adds, and then re-run the ransomware and it will re-flip the bits, returning the files to their original state.
+Infection Monkey uses a bit flip algorithm to "encrypt" files. So if you find yourself in a situation where you need to reverse the encryption, you can drop the file extension that the Monkey adds, and then re-run the ransomware simulation. This will re-flip the bits, returning the files to their original state.
 {{% /notice %}}
 
 ### Review
 What have we learned?
-- Infection Monkey provides a Ransomware plugin which allows one to simulate a ransomware attack
+- Infection Monkey provides a Ransomware plugin that allows one to simulate a ransomware attack
 - How to specify a path for Infection Monkey to target for ransom in every machine that it exploits
 - The Ransomware report provides a list of all files encrypted by Infection Monkey
 
