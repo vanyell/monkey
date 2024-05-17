@@ -125,7 +125,15 @@ README.txt
 passwords.txt.m0nk3y
 ```
 
-`README.txt` is the ransom note that Infection Monkey leaves in the directory targeted by the Ransomware plugin. `passwords.txt.m0nk3y` is our password list (formerly `passwords.txt`) that Infection Monkey encrypted. You can print the contents of the file to verify that the file is indeed encrypted:
+`README.txt` is the ransom note that Infection Monkey leaves in the directory targeted by the Ransomware plugin. `passwords.txt.m0nk3y` is our password list (formerly `passwords.txt`) that Infection Monkey encrypted. First, let's take a peek at the ransom note:
+
+```
+$ cat ~/vault/README.txt
+```
+
+You should see [this](https://raw.githubusercontent.com/guardicore/monkey/develop/monkey/agent_plugins/payloads/ransomware/src/ransomware_readme.txt) printed to the console.
+
+Next, let's print the contents of the encrypted password file to verify that the file is indeed encrypted:
 
 ```shell
 $ cat ~/vault/passwords.txt.m0nk3y
