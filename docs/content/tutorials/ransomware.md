@@ -42,15 +42,13 @@ Infection Monkey will encrypt the contents of whichever folder we direct it to t
 Connect to the container:
 
 ```
-docker exec -it hello bash
+docker exec -it --user user hello bash
 ```
 
 Add a file named `passwords.txt`:
 ```
-su user
-cd
-mkdir vault
-cat << EOF > vault/passwords.txt
+mkdir ~/vault
+cat << EOF > ~/vault/passwords.txt
 password
 P@ssw0rd
 supersecretpassword
@@ -116,9 +114,9 @@ One good place to look is the **Ransomware report**. Navigate to the **Security 
 
 It looks like our passwords are being held for ransom! Let's connect to the container and observe the contents of the vault:
 ```
-docker exec -it hello bash
+docker exec -it --user user hello bash
 
-ls -1 /home/user/vault
+ls -1 ~/vault
 ```
 
 We'll see two files:
@@ -130,7 +128,7 @@ passwords.txt.m0nk3y
 `README.txt` is the ransom note that Infection Monkey leaves in the directory targeted by the Ransomware plugin. `passwords.txt.m0nk3y` is our password list (formerly `passwords.txt`) that Infection Monkey encrypted. You can print the contents of the file to verify that the file is indeed encrypted:
 
 ```shell
-> cat /home/user/vault/passwords.txt.m0nk3y
+$ cat ~/vault/passwords.txt.m0nk3y
 ��������������ύ����������������������
 ```
 
