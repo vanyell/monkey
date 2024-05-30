@@ -54,13 +54,13 @@ Great! The Monkey now knows which machine to target. What happens if we run it? 
 
 ![Run Monkey page](../../images/tutorials/hello-monkey/7-run-monkey.jpg)
 
-Observe that a checkmark appears next to **1. Run Monkey** in the navigation sidebar. This indicates that a Monkey Agent has started.
+Observe that a check mark appears next to **1. Run Monkey** in the navigation sidebar. This indicates that a Monkey Agent has started.
 
 You can see the Monkey's progress by selecting **2. Infection Map** in the navigation sidebar. This brings up a network view (from the Monkey's perspective). You should see an arrow appear between the `monkey-island` machine and the vulnerable container. If you look at the legend, you'll notice that this indicates that the Monkey scanned the container.
 
 ![Network map](../../images/tutorials/hello-monkey/8-map-scanned.jpg)
 
-You should also observe a checkmark appear next to both **2. Infection Map** and **3. Security Reports** in the navigation sidebar. This indicates that the assessment has completed. Also note that while the Monkey was able to scan the container, it was not able to exploit it. In fact, if you select the vulnerable container in the **Infection Map** view, you'll see that it _hasn't even attempted_ to exploit it. This is because we haven't configured the Monkey with any exploiters. We'll do that next.
+You should also observe a check mark appear next to both **2. Infection Map** and **3. Security Reports** in the navigation sidebar. This indicates that the assessment has completed. Also note that while the Monkey was able to scan the container, it was not able to exploit it. In fact, if you select the vulnerable container in the **Infection Map** view, you'll see that it _hasn't even attempted_ to exploit it. This is because we haven't configured the Monkey with any exploiters. We'll do that next.
 
 ![Exploit timeline](../../images/tutorials/hello-monkey/9-exploit-timeline.jpg)
 
@@ -76,7 +76,7 @@ Infection Monkey does not come with exploiters pre-installed. However, it provid
 
 You should now be at the **Plugins** page. Under the _Available Plugins_ tab you'll see a list of all the plugins that can be installed. Infection Monkey has several types of plugins. Since we're interested in installing an exploiter, let's filter this list to only show us exploiters. Select the _Type_ dropdown, and choose **Exploiter**. You should now see that the _Type_ column only has Exploiter.
 
-For this tutorial we're going to install the _SSH Exploiter_. Type `ssh` into the search field, and you should see an exploiter named **SSH**. Click the download button to install that exploiter. The button will change into a loading indicator to show that it's installing, and then to a checkmark when the plugin is installed. You can go to the _Installed Plugins_ tab and see that a plugin named **SSH** of type **Exploiter** is installed.
+For this tutorial we're going to install the _SSH Exploiter_. Type `ssh` into the search field, and you should see an exploiter named **SSH**. Click the download button to install that exploiter. The button will change into a loading indicator to show that it's installing, and then to a check mark when the plugin is installed. You can go to the _Installed Plugins_ tab and see that a plugin named **SSH** of type **Exploiter** is installed.
 
 ![Filtered plugin list](../../images/tutorials/hello-monkey/11-filtered-plugin-list.jpg)
 
@@ -111,7 +111,7 @@ Okay, let's give it one more go. Navigate to the _Run Monkey_ page, and run the 
 
 Huzzah! We've succeeded!
 
-Notice how the arrow from the `monkey-island` to the vulnerable container changed to red? That indicates that Infection Monkey successfully exploited the container. The checkmark on the container means that the Monkey Agent was executed in the container, and the gray arrow from the container to the Island indicates that the Monkey Agent reported back to the Island.
+Notice how the arrow from the `monkey-island` to the vulnerable container changed to red? That indicates that Infection Monkey successfully exploited the container. The check mark on the container means that the Monkey Agent was executed in the container, and the gray arrow from the container to the Island indicates that the Monkey Agent reported back to the Island.
 
 
 ### Review
