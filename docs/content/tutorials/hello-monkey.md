@@ -14,47 +14,30 @@ In this tutorial, we will use Infection Monkey to exploit a simple vulnerability
 - Provide Infection Monkey with credentials that it can use when attempting to exploit machines
 - Run the Monkey and observe its progress
 
-You may find the [Getting Started](../../usage/getting-started) guide useful as you progress through this tutorial.
-
 ### Prerequisites
-First, make sure that you have the following installed:
-- `docker` and `docker-compose`
 
-### Run the environment
-Next, we'll use `docker compose` to run Infection Monkey along with our vulnerable container.
-
-1. Download the following compose file: [docker-compose.yml](docker/docker-compose.yaml)
-
-2. Then, navigate to the directory where you downloaded the file and run the following command to start the environment:
-
-   ```
-   docker compose up
-   ```
-
-Now you should have 3 containers running:
-- `mongo` - database used by Infection Monkey
-- `monkey-island` - the Infection Monkey server
-- `hello` - a vulnerable container
-
-Now that the environment is running, open a browser to [https://localhost:5000](https://localhost:5000) to access the Monkey Island web interface. Since this is the first time you're accessing this Infection Monkey instance, you'll need to register by providing a username and password. Once you do so, you'll be logged in.
-
-![Infection Monkey login screen](../../images/tutorials/hello-monkey/1-registration-page.jpg)
-![Getting started page](../../images/tutorials/hello-monkey/2-getting-started-page.jpg)
+To complete this tutorial, you'll need to have the sandbox environment set up.
+Follow the steps in [Tutorial 0: First steps](../first-steps) if you have not
+done so already.
 
 ### Configure the Monkey
-Now we'll need to configure Infection Monkey to exploit the vulnerable container. Select _Configure Monkey_ on the _Getting Started_ page (or select _Configuration_ in the navigation sidebar).
+Before the Monkey can do anything useful, it needs to be configured. Otherwise,
+it won't know what exploits to attempt, or what machine(s) to attempt to
+breach. To navigate to the configuration page, select _Configure Monkey_
+on the _Getting Started_ page (or select _Configuration_ in the navigation
+sidebar).
 
 ![Configuration page](../../images/tutorials/hello-monkey/3-configuration-page.jpg)
 
-Before the Monkey can do anything useful, it needs to be configured. Otherwise, it won't know what exploits to attempt, or what machine(s) to attempt to breach.
+#### Tell the Monkey which machines to target
+For this tutorial, we're going to configure the Monkey to exploit the
+vulnerable container within the sandbox environment, which has the hostname
+`hello`. In order to tell the Monkey to target that hostname, click the the
+**Propagation** tab and then select the **Network analysis** subtab.
 
 {{% notice note %}}
 The Infection Monkey will only attempt to breach the machines that you've explicitly configured it to target. This helps to ensure that the Monkey doesn't run amok on your network.
 {{% /notice %}}
-
-
-#### Tell the Monkey which machines to target
-In our case, we know that the target machine has the hostname `hello`. In order to tell the Monkey to target that hostname, starting from the **Configuration** page, ensure that the **Propagation** tab is selected, and then select the **Network analysis** subtab.
 
 ![Network analysis configuration](../../images/tutorials/hello-monkey/4-network-analysis.jpg)
 
@@ -67,7 +50,7 @@ You should see a notice indicating that the configuration was submitted successf
 
 ![Submit button](../../images/tutorials/hello-monkey/6-submit-button.jpg)
 
-Great, the Monkey now knows which machine to target. What happens if we run it? Select **1. Run Monkey** in the navigation sidebar to bring up the Run Monkey page. We'll choose the **From Island** option, which will start the Monkey from the Island machine. Go ahead and do that now.
+Great! The Monkey now knows which machine to target. What happens if we run it? Select **1. Run Monkey** in the navigation sidebar to bring up the Run Monkey page. We'll choose the **From Island** option, which will start the Monkey from the Island machine. Go ahead and do that now.
 
 ![Run Monkey page](../../images/tutorials/hello-monkey/7-run-monkey.jpg)
 

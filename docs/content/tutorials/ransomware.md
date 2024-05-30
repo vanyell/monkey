@@ -7,8 +7,8 @@ weight: 2
 tags: ["tutorials", "ransomware"]
 ---
 
-In this tutorial, you will learn how to set up and run a ransomware scenario using Infection Monkey.
-This tutorial assumes that you've completed [Tutorial 1: Hello, Monkey](../hello-monkey), since it builds off of the knowledge gained from that tutorial.
+In this tutorial, we'll configure and run a ransomware simulation using
+Infection Monkey.
 
 You'll learn:
 - How to setup an environment for a ransomware scenario
@@ -16,26 +16,9 @@ You'll learn:
 - How to observe the results of the ransomware attack
 
 ### Prerequisites
-First, make sure that you have the following installed:
-- `docker` and `docker-compose`
-
-### Run the environment
-Next, we'll use `docker compose` to run Infection Monkey along with our vulnerable container.
-
-1. Download the following compose file: [docker-compose.yml](../hello-monkey/docker/docker-compose.yaml)
-
-2. Navigate to the directory where you downloaded the file and run the following command to start the environment:
-
-   ```
-   docker compose up
-   ```
-
-Now you should have 3 containers running:
-- `mongo` - database used by Infection Monkey
-- `monkey-island` - the Infection Monkey server
-- `hello` - a vulnerable container
-
-Finally, open a browser to [https://localhost:5000](https://localhost:5000), and login.
+To complete this tutorial, you'll need to have the sandbox environment set up.
+Follow the steps in [Tutorial 0: First steps](../first-steps) if you have not
+done so already.
 
 ### Configure the vulnerable container
 For this scenario, we're going to need some valuable data so that it can be held for ransom. We'll create a folder named `vault`, and we'll add a list of passwords to that vault.
