@@ -45,18 +45,18 @@ b1c9ac1d3b81   hello           Up 7 seconds
 Now that the environment is running, open a browser to
 [https://localhost:5000](https://localhost:5000) to access the Monkey Island
 web interface. You may see a warning that looks similar to the one shown below. For this tutorial, you can safely ignore this warning by clicking _Advanced_ followed by _Proceed to localhost (unsafe)_.
-![Self-signed certificate warning](../../images/tutorials/first-steps/000-certificate.jpg)
+![Self-signed certificate warning](../../images/tutorials/first-steps/010-certificate.jpg)
 
 Since this is the first time you're accessing this Infection
 Monkey instance, you'll need to register. Provide a username and password, and
 then click _Let's go!_.
 
-![Infection Monkey login screen](../../images/tutorials/first-steps/010-registration-page.jpg)
+![Infection Monkey login screen](../../images/tutorials/first-steps/020-registration-page.jpg)
 
 After registering, you'll be automatically logged in and taken to the _Getting
 Started_ page.
 ![Getting started
-page](../../images/tutorials/first-steps/020-getting-started-page.jpg)
+page](../../images/tutorials/first-steps/030-getting-started-page.jpg)
 🎉 Congratulations 🎉 Your environment is up and running!
 
 ### Review
