@@ -19,7 +19,9 @@ Follow the steps in [Tutorial 0: First steps](../first-steps) if you have not
 done so already.
 
 ### Configure the vulnerable container
-For this scenario, we're going to need some valuable data so that it can be held for ransom. We'll create a folder named `vault`, and we'll add a list of passwords to that vault.
+For this scenario, we're going to need some valuable data so that it can be
+held for ransom. We'll create a directory named `vault`, and we'll add a list
+of passwords to that vault.
 
 Connect to the container:
 
@@ -42,59 +44,93 @@ Now let's see if we can get Infection Monkey to encrypt our data!
 ### Configure Infection Monkey
 
 #### Install plugins
-Our first task is to make sure we have the required plugins. We'll need to install the Ransomware plugin, and because we'll still need to exploit the container, the SSH exploiter plugin as well.
+Our first task is to make sure we have the required plugins installed. In order
+to exploit the vulnerable container, we'll need the SSH exploiter plugin. Then,
+to run the ransomware simulation on the exploited container, we'll need the
+ransomware plugin.
 
-![Plugins installed](../../images/tutorials/ransomware/010-plugins-installed.jpg)
+Navigate to the **Plugins** page by selecting _Plugins_ in the navigation
+sidebar. You'll see a list of all the plugins that can be installed. Install
+the _SSH Exploiter_ and _Ransomware Payload_ by clicking their respective
+download icons in the right-most column of the table. You'll see the download
+icons transform into check marks once installation is complete.
+
+![Plugins page](../../images/tutorials/ransomware/010-plugin-installation.gif)
+
+Now that the plugins have been installed, we're ready to configure our
+simulation.
 
 #### Tell the Monkey which exploiter to use
-Make sure SSH Exploiter is enabled in the _Enabled exploiters_ list:
+Navigate to the **Configuration** page by selecting _Configure Monkey_ on the
+**Getting Started** page (or select _Configuration_ in the navigation sidebar).
+Check the box next to the _SSH Exploiter_ to enable it.
 
 ![Enable the SSH Exploiter](../../images/tutorials/ransomware/020-exploiter-enabled.jpg)
 
 #### Tell the Monkey which machine to target
-Make sure `hello` is provided as a target under _Scan target list_:
+Switch to the **Network analysis** subtab and click the yellow _+_ button under
+_Scan target list_. You'll see a new field appear. Enter the hostname of the
+vulnerable container, `hello` in the field.
 
 ![Scan target list in the Network Analysis configuration](../../images/tutorials/ransomware/030-scan-target-list.jpg)
 
 #### Tell the Monkey what credentials to use
-Enter `user` for _Identity_ and `password` for _Password_:
+The SSH exploiter needs one or more sets of credentials that it can use to
+attempt to access the target host. Switch to the **Credentials** subtab and
+enter `user` for _Identity_ and `password` for _Password_. Click the blue
+_SAVE_ button or hit the enter key. You'll see the credentials you've added
+appear below under _Saved credentials_.
 
 ![Credentials entered](../../images/tutorials/ransomware/040-credentials-input.jpg)
 
 #### Tell the Monkey to use the Ransomware plugin
-Next, we need to enable the Ransomware plugin. Select the **Payloads** tab, and enable the _Ransomware_ plugin in the _Enabled payloads_ list.
+Our final configuration step is to enable the ransomware plugin. Select the
+**Payloads** tab at the top of the page and enable the _Ransomware_ plugin in
+the _Enabled payloads_ list by checking the box next to it.
 
 ![Ransomware enabled](../../images/tutorials/ransomware/050-ransomware-enabled.jpg)
 
-We also need to tell the Ransomware plugin which folder to hold for ransom. Select _Ransomware_ in the _Enabled payloads_ list in order to view its settings.
-
-Since the `hello` container is linux-based, set the _Linux target directory_ to `/home/user/vault` (the directory that we [prepared earlier](#configure-the-vulnerable-container)).
+Next, we'll need to tell the Ransomware plugin which directory to hold for
+ransom. Since the `hello` container is linux-based, set the _Linux target
+directory_ to `/home/user/vault` (the directory that we [prepared
+earlier](#configure-the-vulnerable-container)).
 
 {{% notice warning %}}
-Infection Monkey will encrypt the contents of whichever folder we configure it to target. Therefore, when setting up a ransomware scenario, target a folder with dummy data or make sure you have a way to recover the data in the target directory.
+Infection Monkey will encrypt the contents of whichever directory we configure
+it to target. Therefore, when setting up a ransomware scenario, target a
+directory with dummy data or make sure you have a way to recover the data in
+the target directory.
 {{% /notice %}}
 
 
 ![Ransomware configured](../../images/tutorials/ransomware/060-ransomware-configuration.jpg)
 
-Make sure that _Leave ransom note_ is checked and click the green **Submit**
-button at the bottom of the screen.
+Make sure that _Leave ransom note_ is checked and click the green _Submit_
+button at the bottom of the screen to save our configuration.
 
 ### Run Infection Monkey
 Now that we've configured Infection Monkey, let's run it!
 
-Go to the **Run Monkey** page and run the Monkey **From Island**.
+Go to the **Run Monkey** page by selecting _1. Run Monkey_ from the navigation
+sidebar. Click the _From Island_ button to launch an attack on the vulnerable
+container from the Monkey Island.
 
-If you look at the **Infection Map**, you'll see that the `hello` container gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello-monkey).
+If you look at the **Infection Map**, you'll see that the `hello` container
+gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello-monkey).
 
-You can tell that the run has completed when a checkmark appears next to the **Infection Map** and **Security Report** in the navigation sidebar:
+You can tell that the run has completed when a check mark appears next to the
+_Infection Map_ and _Security Report_ in the navigation sidebar:
 
 ![Infection Monkey run completed](../../images/tutorials/ransomware/070-run-monkey.jpg)
 
 
-Great, so the run has completed, but how do we know whether or not our ransomware succeeded?
+Great! The run has completed, but how do we know whether or not our ransomware
+succeeded?
 
-One good place to look is the **Ransomware report**. Navigate to the **Security Reports** page, and select the **Ransomware report** tab. Then take a look at the **3. Attack** section. It lists the files that Infection Monkey was able to encrypt:
+One good place to look is the **Ransomware report**. Navigate to the **Security
+Reports** page by selecting _3. Security reports_ on the navigation sidebar.
+Select the _Ransomware report_ tab and scroll down to take a look at the _3.
+Attack_ section. It lists the files that Infection Monkey was able to encrypt:
 
 ![List of files taken for ransom in ransomware report](../../images/tutorials/ransomware/080-ransomware-report.jpg)
 
@@ -133,13 +169,14 @@ Infection Monkey uses a bit flip algorithm to "encrypt" files. So if you find yo
 {{% /notice %}}
 
 ### Review
-What have we learned?
-- Infection Monkey provides a Ransomware plugin that allows one to simulate a ransomware attack
-- How to specify a path for Infection Monkey to target for ransom in every machine to whom it successfully propagates
-- The Ransomware report provides a list of all files encrypted by Infection Monkey
+In this tutorial, you have learned:
+- Infection Monkey provides a ransomware plugin that enables you to simulate a ransomware attack.
+- How to prepare systems for a ransomware simulation by deploying target files.
+- How to configure Infection Monkey to use it's ransomware plugin.
+- How to view and interpret the results of Infection Monkey's ransomware report.
 
 ### Next Steps
 - Try removing the extension that Infection Monkey adds to the encrypted file
   and re-running the ransomware simulation to "decrypt" the file.
 - Try playing with the Ransomware plugin's configuration options.
-- Read our [Usage document on Ransomware](../../usage/ransomware-simulation).
+- Read our [ransomware usage document](../../usage/ransomware-simulation).
