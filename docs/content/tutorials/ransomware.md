@@ -71,7 +71,7 @@ Exploiter](../../images/tutorials/ransomware/020-exploiter-enabled.jpg)
 #### Tell the Monkey which machine to target
 Switch to the **Network analysis** subtab and click the yellow _+_ button under
 _Scan target list_. You'll see a new field appear. Enter the hostname of the
-vulnerable container, `hello` in the field.
+vulnerable container, `hello`, in the field.
 
 ![Scan target list in the Network Analysis
 configuration](../../images/tutorials/ransomware/030-scan-target-list.jpg)
@@ -191,7 +191,7 @@ In this tutorial, you have learned:
 - Infection Monkey provides a ransomware plugin that enables you to simulate a
   ransomware attack.
 - How to prepare systems for a ransomware simulation by deploying target files.
-- How to configure Infection Monkey to use it's ransomware plugin.
+- How to configure Infection Monkey to use its ransomware plugin.
 - How to view and interpret the results of Infection Monkey's ransomware report.
 
 ### Next Steps
