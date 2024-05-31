@@ -8,9 +8,7 @@ tags: ["tutorials", "ransomware"]
 ---
 
 In this tutorial, we'll configure and run a ransomware simulation using
-Infection Monkey.
-
-You'll learn:
+Infection Monkey. You'll learn:
 - How to setup an environment for a ransomware scenario
 - How to configure Infection Monkey to perform a ransomware attack
 - How to observe the results of the ransomware attack
@@ -22,10 +20,6 @@ done so already.
 
 ### Configure the vulnerable container
 For this scenario, we're going to need some valuable data so that it can be held for ransom. We'll create a folder named `vault`, and we'll add a list of passwords to that vault.
-
-{{% notice warning %}}
-Infection Monkey will encrypt the contents of whichever folder we configure it to target. Therefore, when setting up a ransomware scenario, target a folder with dummy data or make sure you have a way to recover the data in the target directory.
-{{% /notice %}}
 
 Connect to the container:
 
@@ -76,11 +70,15 @@ We also need to tell the Ransomware plugin which folder to hold for ransom. Sele
 
 Since the `hello` container is linux-based, set the _Linux target directory_ to `/home/user/vault` (the directory that we [prepared earlier](#configure-the-vulnerable-container)).
 
-Also make sure that _Leave ransom note_ is checked.
+{{% notice warning %}}
+Infection Monkey will encrypt the contents of whichever folder we configure it to target. Therefore, when setting up a ransomware scenario, target a folder with dummy data or make sure you have a way to recover the data in the target directory.
+{{% /notice %}}
+
 
 ![Ransomware configured](../../images/tutorials/ransomware/3-ransomware-configuration.jpg)
 
-Don't forget to **Submit** the configuration!
+Make sure that _Leave ransom note_ is checked and click the green **Submit**
+button at the bottom of the screen.
 
 ### Run Infection Monkey
 Now that we've configured Infection Monkey, let's run it!
@@ -141,5 +139,7 @@ What have we learned?
 - The Ransomware report provides a list of all files encrypted by Infection Monkey
 
 ### Next Steps
-- Try playing with the Ransomware plugin's configuration options
-- Read our [Usage document on Ransomware](../../usage/ransomware-simulation)
+- Try removing the extension that Infection Monkey adds to the encrypted file
+  and re-running the ransomware simulation to "decrypt" the file.
+- Try playing with the Ransomware plugin's configuration options.
+- Read our [Usage document on Ransomware](../../usage/ransomware-simulation).
