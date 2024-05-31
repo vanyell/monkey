@@ -135,7 +135,7 @@ succeeded?
 
 One good place to look is the **Ransomware report**. Navigate to the **Security
 Reports** page by selecting _3. Security reports_ on the navigation sidebar.
-Select the _Ransomware report_ tab and scroll down to take a look at the _3.
+Select the **Ransomware report** tab and scroll down to take a look at the _3.
 Attack_ section. It lists the files that Infection Monkey was able to encrypt:
 
 ![List of files taken for ransom in ransomware

@@ -57,8 +57,8 @@ then click _Let's go!_.
 ![Infection Monkey login
 screen](../../images/tutorials/first-steps/020-registration-page.jpg)
 
-After registering, you'll be automatically logged in and taken to the _Getting
-Started_ page.
+After registering, you'll be automatically logged in and taken to the **Getting
+Started** page.
 
 ![Getting started
 page](../../images/tutorials/first-steps/030-getting-started-page.jpg)
