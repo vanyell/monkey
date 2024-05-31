@@ -65,14 +65,16 @@ Navigate to the **Configuration** page by selecting _Configure Monkey_ on the
 **Getting Started** page (or select _Configuration_ in the navigation sidebar).
 Check the box next to the _SSH Exploiter_ to enable it.
 
-![Enable the SSH Exploiter](../../images/tutorials/ransomware/020-exploiter-enabled.jpg)
+![Enable the SSH
+Exploiter](../../images/tutorials/ransomware/020-exploiter-enabled.jpg)
 
 #### Tell the Monkey which machine to target
 Switch to the **Network analysis** subtab and click the yellow _+_ button under
 _Scan target list_. You'll see a new field appear. Enter the hostname of the
 vulnerable container, `hello` in the field.
 
-![Scan target list in the Network Analysis configuration](../../images/tutorials/ransomware/030-scan-target-list.jpg)
+![Scan target list in the Network Analysis
+configuration](../../images/tutorials/ransomware/030-scan-target-list.jpg)
 
 #### Tell the Monkey what credentials to use
 The SSH exploiter needs one or more sets of credentials that it can use to
@@ -81,14 +83,16 @@ enter `user` for _Identity_ and `password` for _Password_. Click the blue
 _SAVE_ button or hit the enter key. You'll see the credentials you've added
 appear below under _Saved credentials_.
 
-![Credentials entered](../../images/tutorials/ransomware/040-credentials-input.jpg)
+![Credentials
+entered](../../images/tutorials/ransomware/040-credentials-input.jpg)
 
 #### Tell the Monkey to use the Ransomware plugin
 Our final configuration step is to enable the ransomware plugin. Select the
 **Payloads** tab at the top of the page and enable the _Ransomware_ plugin in
 the _Enabled payloads_ list by checking the box next to it.
 
-![Ransomware enabled](../../images/tutorials/ransomware/050-ransomware-enabled.jpg)
+![Ransomware
+enabled](../../images/tutorials/ransomware/050-ransomware-enabled.jpg)
 
 Next, we'll need to tell the Ransomware plugin which directory to hold for
 ransom. Since the `hello` container is linux-based, set the _Linux target
@@ -103,7 +107,8 @@ the target directory.
 {{% /notice %}}
 
 
-![Ransomware configured](../../images/tutorials/ransomware/060-ransomware-configuration.jpg)
+![Ransomware
+configured](../../images/tutorials/ransomware/060-ransomware-configuration.jpg)
 
 Make sure that _Leave ransom note_ is checked and click the green _Submit_
 button at the bottom of the screen to save our configuration.
@@ -121,7 +126,8 @@ gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello-monkey).
 You can tell that the run has completed when a check mark appears next to the
 _Infection Map_ and _Security Report_ in the navigation sidebar:
 
-![Infection Monkey run completed](../../images/tutorials/ransomware/070-run-monkey.jpg)
+![Infection Monkey run
+completed](../../images/tutorials/ransomware/070-run-monkey.jpg)
 
 
 Great! The run has completed, but how do we know whether or not our ransomware
@@ -132,9 +138,11 @@ Reports** page by selecting _3. Security reports_ on the navigation sidebar.
 Select the _Ransomware report_ tab and scroll down to take a look at the _3.
 Attack_ section. It lists the files that Infection Monkey was able to encrypt:
 
-![List of files taken for ransom in ransomware report](../../images/tutorials/ransomware/080-ransomware-report.jpg)
+![List of files taken for ransom in ransomware
+report](../../images/tutorials/ransomware/080-ransomware-report.jpg)
 
-It looks like our passwords are being held for ransom! Let's connect to the container and observe the contents of the vault:
+It looks like our passwords are being held for ransom! Let's connect to the
+container and observe the contents of the vault:
 ```
 docker exec -it --user user hello bash
 
@@ -147,15 +155,21 @@ README.txt
 passwords.txt.m0nk3y
 ```
 
-`README.txt` is the ransom note that Infection Monkey leaves in the directory targeted by the Ransomware plugin. `passwords.txt.m0nk3y` is our password list (formerly `passwords.txt`) that Infection Monkey encrypted. First, let's take a peek at the ransom note:
+`README.txt` is the ransom note that Infection Monkey leaves in the directory
+targeted by the Ransomware plugin. `passwords.txt.m0nk3y` is our password list
+(formerly `passwords.txt`) that Infection Monkey encrypted. First, let's take a
+peek at the ransom note:
 
 ```
 $ cat ~/vault/README.txt
 ```
 
-You should see [this](https://raw.githubusercontent.com/guardicore/monkey/develop/monkey/agent_plugins/payloads/ransomware/src/ransomware_readme.txt) printed to the console.
+You should see
+[this](https://raw.githubusercontent.com/guardicore/monkey/develop/monkey/agent_plugins/payloads/ransomware/src/ransomware_readme.txt)
+printed to the console.
 
-Next, let's print the contents of the encrypted password file to verify that the file is indeed encrypted:
+Next, let's print the contents of the encrypted password file to verify that
+the file is indeed encrypted:
 
 ```shell
 $ cat ~/vault/passwords.txt.m0nk3y
@@ -165,12 +179,17 @@ $ cat ~/vault/passwords.txt.m0nk3y
 Looks like the Monkey did its job!
 
 {{% notice tip %}}
-Infection Monkey uses a bit flip algorithm to "encrypt" files. So if you find yourself in a situation where you need to reverse the encryption, you can drop the file extension that the Monkey adds, and then re-run the ransomware simulation. This will re-flip the bits, returning the files to their original state.
+Infection Monkey uses a bit flip algorithm to "encrypt" files. So if you find
+yourself in a situation where you need to reverse the encryption, you can drop
+the file extension that the Monkey adds, and then re-run the ransomware
+simulation. This will re-flip the bits, returning the files to their original
+state.
 {{% /notice %}}
 
 ### Review
 In this tutorial, you have learned:
-- Infection Monkey provides a ransomware plugin that enables you to simulate a ransomware attack.
+- Infection Monkey provides a ransomware plugin that enables you to simulate a
+  ransomware attack.
 - How to prepare systems for a ransomware simulation by deploying target files.
 - How to configure Infection Monkey to use it's ransomware plugin.
 - How to view and interpret the results of Infection Monkey's ransomware report.
