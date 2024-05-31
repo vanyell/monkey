@@ -2,7 +2,7 @@
 title: "Tutorial 2: Ransomware"
 date: 2020-05-26T20:57:10+03:00
 draft: false
-pre: '<i class="fab fa-graduation-cap"></i> '
+pre: '<i class="fas fa-lock"></i> '
 weight: 2
 tags: ["tutorials", "ransomware"]
 ---
