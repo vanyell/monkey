@@ -44,27 +44,27 @@ Now let's see if we can get Infection Monkey to encrypt our data!
 #### Install plugins
 Our first task is to make sure we have the required plugins. We'll need to install the Ransomware plugin, and because we'll still need to exploit the container, the SSH exploiter plugin as well.
 
-![Plugins installed](../../images/tutorials/ransomware/1-plugins-installed.jpg)
+![Plugins installed](../../images/tutorials/ransomware/010-plugins-installed.jpg)
 
 #### Tell the Monkey which exploiter to use
 Make sure SSH Exploiter is enabled in the _Enabled exploiters_ list:
 
-![Enable the SSH Exploiter](../../images/tutorials/hello-monkey/12-exploiter-enabled.jpg)
+![Enable the SSH Exploiter](../../images/tutorials/ransomware/020-exploiter-enabled.jpg)
 
 #### Tell the Monkey which machine to target
 Make sure `hello` is provided as a target under _Scan target list_:
 
-![Scan target list in the Network Analysis configuration](../../images/tutorials/hello-monkey/5-scan-target-list.jpg)
+![Scan target list in the Network Analysis configuration](../../images/tutorials/ransomware/030-scan-target-list.jpg)
 
 #### Tell the Monkey what credentials to use
 Enter `user` for _Identity_ and `password` for _Password_:
 
-![Credentials entered](../../images/tutorials/hello-monkey/13-credentials-input.jpg)
+![Credentials entered](../../images/tutorials/ransomware/040-credentials-input.jpg)
 
 #### Tell the Monkey to use the Ransomware plugin
 Next, we need to enable the Ransomware plugin. Select the **Payloads** tab, and enable the _Ransomware_ plugin in the _Enabled payloads_ list.
 
-![Ransomware enabled](../../images/tutorials/ransomware/2-ransomware-enabled.jpg)
+![Ransomware enabled](../../images/tutorials/ransomware/050-ransomware-enabled.jpg)
 
 We also need to tell the Ransomware plugin which folder to hold for ransom. Select _Ransomware_ in the _Enabled payloads_ list in order to view its settings.
 
@@ -75,7 +75,7 @@ Infection Monkey will encrypt the contents of whichever folder we configure it t
 {{% /notice %}}
 
 
-![Ransomware configured](../../images/tutorials/ransomware/3-ransomware-configuration.jpg)
+![Ransomware configured](../../images/tutorials/ransomware/060-ransomware-configuration.jpg)
 
 Make sure that _Leave ransom note_ is checked and click the green **Submit**
 button at the bottom of the screen.
@@ -89,14 +89,14 @@ If you look at the **Infection Map**, you'll see that the `hello` container gets
 
 You can tell that the run has completed when a checkmark appears next to the **Infection Map** and **Security Report** in the navigation sidebar:
 
-![Infection Monkey run completed](../../images/tutorials/hello-monkey/7-run-monkey.jpg)
+![Infection Monkey run completed](../../images/tutorials/ransomware/070-run-monkey.jpg)
 
 
 Great, so the run has completed, but how do we know whether or not our ransomware succeeded?
 
 One good place to look is the **Ransomware report**. Navigate to the **Security Reports** page, and select the **Ransomware report** tab. Then take a look at the **3. Attack** section. It lists the files that Infection Monkey was able to encrypt:
 
-![List of files taken for ransom in ransomware report](../../images/tutorials/ransomware/4-ransomware-report.jpg)
+![List of files taken for ransom in ransomware report](../../images/tutorials/ransomware/080-ransomware-report.jpg)
 
 It looks like our passwords are being held for ransom! Let's connect to the container and observe the contents of the vault:
 ```
