@@ -91,7 +91,7 @@ reset](/howtos/factory-reset).
 
 Yes! This will allow you to verify that the Infection Monkey identified no new security issues since the last time you ran it.
 
-Does the Infection Monkey require a connection to the internet?
+## Does the Infection Monkey require a connection to the internet?
 
 The Infection Monkey does not require internet access to function.
 
