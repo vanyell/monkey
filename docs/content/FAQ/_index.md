@@ -31,7 +31,6 @@ Below are some of the most common questions we receive about the Infection Monke
   - [How stable are the exploits used by the Infection Monkey? Will the Infection Monkey crash my systems with its exploits?](#how-stable-are-the-exploits-used-by-the-infection-monkey-will-the-infection-monkey-crash-my-systems-with-its-exploits)
 - [After I've set up Monkey Island, how can I execute the Infection Monkey Agent?](#after-ive-set-up-monkey-island-how-can-i-execute-the-infection-monkey-agent)
 - [How can I make the Infection Monkey Agents propagate "deeper" into the network?](#how-can-i-make-the-infection-monkey-agent-propagate-deeper-into-the-network)
-- [What if the report returns a blank screen?](#what-if-the-report-returns-a-blank-screen)
 - [Can I limit how the Infection Monkey propagates through my network?](#can-i-limit-how-the-infection-monkey-propagates-through-my-network)
 - [How can I get involved with the project?](#how-can-i-get-involved-with-the-project)
 
@@ -252,12 +251,6 @@ To do this, change the `Configuration -> Propagation -> General -> Maximum scan 
 
 ![How to increase propagation depth](/images/island/configuration_page/max_scan_depth_configuration.png "How to increase propagation depth")
 
-## What if the report returns a blank screen?
-
-This is sometimes caused when Monkey Island is installed with an old version of MongoDB. Make sure your MongoDB version is up to date using the `mongod --version` command on Linux or the `mongod -version` command on Windows. If your version is older than **4.0.10**, this might be the problem. To update your Mongo version:
-
-- **Linux**: First, uninstall the current version with `sudo apt uninstall mongodb` and then install the latest version using the [official MongoDB manual](https://docs.mongodb.com/manual/administration/install-community/).
-- **Windows**: First, remove the MongoDB binaries from the `monkey\monkey_island\bin\mongodb` folder. Download and install the latest version of MongoDB using the [official MongoDB manual](https://docs.mongodb.com/manual/administration/install-community/). After installation is complete, copy the files from the `C:\Program Files\MongoDB\Server\4.2\bin` folder to the `monkey\monkey_island\bin\mongodb folder`. Try to run the Monkey Island again and everything should work.
 
 ## Can I limit how the Infection Monkey propagates through my network?
 
