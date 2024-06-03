@@ -122,66 +122,8 @@ to download logs](../howtos/download-logs) for more information.
 
 ### Log locations
 
-If the logs cannot be downloaded through the UI for any reason, you can collect the log files
-directly from the machine where an Agent or Monkey Island ran.
+See the [logs reference page](../reference/logs).
 
-#### Monkey Island Server logs
-
-The Monkey Island's log file is located in the
-[data directory]({{< ref "/reference/data_directory" >}}).
-
-The log enables you to see which requests were requested from the server and extra logs from the backend logic. The log will contain entries like these:
-
-```log
-2022-04-18 13:48:43,914 - pywsgi.py:1226 -      write() - INFO - 192.168.56.1 - - [2022-04-18 13:48:43] "GET /api/agent-binaries/windows HTTP/1.1" 200 21470665 0.293586
-2022-04-18 13:48:49,970 - pywsgi.py:1226 -      write() - INFO - 192.168.56.1 - - [2022-04-18 13:48:49] "GET /api/island-mode HTTP/1.1" 200 128 0.003426
-2022-04-18 13:48:49,988 - report.py:355 - get_domain_issues() - INFO - Domain issues generated for reporting
-```
-
-It's also possible to change the default log level by editing `log_level` value in a [server configuration file](../../reference/server_configuration).
-`log_level` can be set to `info`(default, less verbose) or `debug`(more verbose).
-
-
-#### Monkey Island UI logs
-
-The Monkey Island's UI log file (`nextjs.log`) is located in the
-[data directory]({{< ref "/reference/data_directory" >}}).
-
-This log contains the output of the server process hosting the web interface.
-
-
-#### Infection Monkey Agent logs
-
-The Infection Monkey Agent log file can be found in directories specified for
-temporary files on the machines where it was executed. In most cases, this will
-be `/tmp` on Linux and `%temp%` on Windows. The Agent searches a standard list
-of directories to find an appropriate place to store the log:
-
-1. The directory named by the `TMPDIR` environment variable.
-2. The directory named by the `TEMP` environment variable.
-3. The directory named by the `TMP` environment variable.
-4. A platform-specific location:
-   - On Windows, the directories `C:\TEMP`, `C:\TMP`, `\TEMP`, and `\TMP`, in that order.
-   - On all other platforms, the directories `/tmp`, `/var/tmp`, and `/usr/tmp`, in that order.
-5. As a last resort, the current working directory.
-
-Infection Monkey log file name is constructed to the following pattern: `infection-monkey-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
-
-The logs contain information about the internals of the Infection Monkey Agent's execution. The log will contain entries like these:
-
-```log
-2019-07-22 19:16:44,228 [77598:140654230214464:INFO] main.main.116: >>>>>>>>>> Initializing monkey (InfectionMonkey): PID 77598 <<<<<<<<<<
-2019-07-22 19:16:44,231 [77598:140654230214464:INFO] monkey.initialize.54: Monkey is initializing...
-2019-07-22 19:16:44,231 [77598:140654230214464:DEBUG] system_singleton.try_lock.95: Global singleton mutex '{2384ec59-0df8-4ab9-918c-843740924a28}' acquired
-2019-07-22 19:16:44,234 [77598:140654230214464:DEBUG] monkey.initialize.81: Added default server: 10.15.1.96:5000
-2019-07-22 19:16:44,234 [77598:140654230214464:INFO] monkey.start.87: Monkey is running...
-2019-07-22 19:16:44,234 [77598:140654230214464:DEBUG] control.find_server.65: Trying to wake up with Monkey Island servers list: ['10.15.1.96:5000', '192.0.2.0:5000']
-2019-07-22 19:16:44,235 [77598:140654230214464:DEBUG] control.find_server.78: Trying to connect to server: 10.15.1.96:5000
-2019-07-22 19:16:44,238 [77598:140654230214464:DEBUG] connectionpool._new_conn.815: Starting new HTTPS connection (1): 10.15.1.96:5000
-2019-07-22 19:16:44,249 [77598:140654230214464:DEBUG] connectionpool._make_request.396: https://10.15.1.96:5000 "GET /api?action=is-up HTTP/1.1" 200 15
-2019-07-22 19:16:44,253 [77598:140654230214464:DEBUG] connectionpool._new_conn.815: Starting new HTTPS connection (1): updates.infectionmonkey.com:443
-2019-07-22 19:16:45,013 [77598:140654230214464:DEBUG] connectionpool._make_request.396: https://updates.infectionmonkey.com:443 "GET / HTTP/1.1" 200 61
-```
 
 ## Running the Infection Monkey in a production environment
 
