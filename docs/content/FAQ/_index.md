@@ -118,14 +118,14 @@ To reset the credentials, you'll need to perform a complete factory reset:
     ```
 1. Remove the MongoDB volume:
     ```bash
-    sudo docker volume rm db
+    sudo docker volume rm monkey-db
     ```
 1. Restart the MongoDB container:
    ```bash
     sudo docker run \
         --name monkey-mongo \
         --network=host \
-        --volume db:/data/db \
+        --volume monkey-db:/data/db \
         --detach \
         mongo:6.0
     ```
