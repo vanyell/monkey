@@ -224,9 +224,9 @@ If you do experience any performance issues please let us know on [our Slack cha
 
 ### Is it safe to use real passwords and usernames in the Infection Monkey's configuration?
 
-Absolutely! User credentials are stored encrypted in the Monkey Island Server. This information is accessible only to users that have access to the specific Monkey Island.
-
-We advise users to limit access to the Monkey Island Server by following our [password protection guide]({{< ref "/setup/accounts-and-security" >}}).
+Absolutely! User credentials are stored encrypted in the Monkey Island Server.
+This information can only be seen by individuals that have the credentials to
+access the Monkey Island.
 
 ### How do you store sensitive information on Monkey Island?
 
