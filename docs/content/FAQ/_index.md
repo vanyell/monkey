@@ -13,7 +13,7 @@ Below are some of the most common questions we receive about the Infection Monke
 - [How long does a single Infection Monkey Agent run? Is there a time limit?](#how-long-does-a-single-infection-monkey-agent-run-is-there-a-time-limit)
 - [How long does it take to stop all running Infection Monkey Agents?](#how-long-does-it-take-to-stop-all-running-infection-monkey-agents)
 - [Is the Infection Monkey a malware/virus?](#is-the-infection-monkey-a-malwarevirus)
-- [Reset the Monkey Island password](#reset-the-monkey-island-password)
+- [How do I reset the Monkey Island password?](#how-do-i-reset-the-monkey-island-password)
 - [Should I run the Infection Monkey continuously?](#should-i-run-the-infection-monkey-continuously)
   - [Exactly what internet queries does the Infection Monkey perform?](#exactly-what-internet-queries-does-the-infection-monkey-perform)
 - [Logging and how to find logs](#logging-and-how-to-find-logs)
@@ -80,64 +80,10 @@ downloaded installer](/usage/file-checksums) first. Then, create a new folder
 and disable antivirus scan for that folder. Lastly, re-install the Infection
 Monkey in the newly created folder.
 
-## Reset the Monkey Island password
+## How do I reset the Monkey Island password?
 
-{{% notice warning %}}
-If you reset the credentials, the database will be cleared. Any findings of the Infection Monkey from previous runs will be lost. <br/><br/>
-However, you can save the Monkey's existing configuration by logging in with your current credentials and clicking on the **Export config** button on the configuration page.
-{{% /notice %}}
-
-### On Windows and Linux (AppImage)
-
-When you first access the Monkey Island Server, you'll be prompted to create an account.
-Creating an account will write your credentials to the database in the [data directory]({{< ref "/reference/data_directory" >}}).
-
-To reset the credentials:
-
-1. **Remove** the data directory manually
-
-    Because credentials are stored in the database, you must perform a complete factory reset in order to reset the credentials, which is accomplished by removing the entire [data directory]({{< ref "/reference/data_directory" >}}).
-
-2. Restart the Monkey Island process:
-    * On Linux, simply kill the Monkey Island process and execute the AppImage.
-    * On Windows, restart the program.
-
-3. Go to the Monkey Island's URL and create a new account.
-
-### On Docker
-When you first access the Monkey Island Server, you'll be prompted to create an account.
-To reset the credentials, you'll need to perform a complete factory reset:
-
-1. Kill the Monkey Island container:
-    ```bash
-    sudo docker kill monkey-island
-    ```
-1. Kill the MongoDB container:
-    ```bash
-    sudo docker kill monkey-mongo
-    ```
-1. Remove the MongoDB volume:
-    ```bash
-    sudo docker volume rm monkey-db
-    ```
-1. Restart the MongoDB container:
-   ```bash
-    sudo docker run \
-        --name monkey-mongo \
-        --network=host \
-        --volume monkey-db:/data/db \
-        --detach \
-        mongo:6.0
-    ```
-1. Restart the Monkey Island container
-    ```bash
-    sudo docker run \
-        --name monkey-island \
-        --network=host \
-        infectionmonkey/monkey-island:latest
-    ```
-1. Go to the Monkey Island's URL and create a new account.
-
+In order to reset the Monkey Island password, you'll need to [perform a factory
+reset](/howtos/factory-reset).
 
 ## Should I run the Infection Monkey continuously?
 
