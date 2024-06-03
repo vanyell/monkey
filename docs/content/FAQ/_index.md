@@ -117,12 +117,8 @@ suggest an update if one is available.
 
 ### Downloading logs
 
-Both Monkey Agent and Monkey Island logs can be found in the Infection Map page. Click on the
-machine from which you want to download logs and press the "Download log" button on the side panel.
-Note that you can only download the Monkey Island log by clicking on the Monkey Island machine in
-the Infection Map.
-
-![How to download logs](/images/island/infection_map_page/agent_log_download.png "How to download logs")
+Both the Agent and Island logs can be downloaded from the Infection Map page. See [how
+to download logs](../howtos/download-logs) for more information.
 
 ### Log locations
 
