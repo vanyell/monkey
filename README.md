@@ -39,8 +39,8 @@ invention of mRNA vaccines, biological vaccines worked as follows:
 3. Inject the weakened virus into the human body, allowing the immune system to
    built up a defense.
 
-Once the immune system has fortified, it can recognize and fight off the real
-pathogen if it should ever infect the body.
+Once the immune system has built up a defense, it can recognize and fight off
+the real pathogen if it should ever infect the body.
 
 **Infection Monkey aims to use this same approach to combat computer viruses
 (or other types of malware.)**
@@ -60,7 +60,7 @@ pathogen if it should ever infect the body.
 After all, what better defense is there than understanding your adversary? 🤔
 Talk about Gorilla warfare.
 
-Be the chimpion of your network. Learn more about the Monkey here:
+Be the chimpion of your network. Learn more about the Monkey at
 [akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey)
 
 
