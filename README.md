@@ -11,15 +11,15 @@ Welcome to Infection Monkey!  We're glad you could swing by.🐒 Here's all the
 info you'll need to start monkeying around.
 
 ## What is Infection Monkey?
-Infection Monkey is an open-source adversary emulation platform designed to
-show you your real-world threat profile. Monkey uses various methods to
-self-propagate across a network and reports its activities to a centralized
+Infection Monkey is an open-source adversary emulation platform that helps you
+improve your security posture using empirical data. Monkey uses various methods
+to self-propagate across a network and reports its activities to a centralized
 command and control server known as the Monkey Island. 🐵🏝️ You know, like
 malware, but ✨safe.✨
 
 ## What's in it?
 
-Infection Monkey is comprised of two parts:
+Infection Monkey is comprised of two components:
 
 * **Agent** - A configurable network worm that can infect machines, steal
   data, and deliver payloads.
@@ -49,16 +49,18 @@ the real pathogen if it should ever infect the body.
 2. Analyze the malware and understand its behaviors.
 3. Modify Infection Monkey's configuration to enable behaviors that closely
    mimic those of the malware, but without causing damage to the target
-  systems.
-4. Inject the Monkey Agent into the network and validate
-   (empirically) that your security controls can detect, prevent, or otherwise
-   mitigate the infection.
+   systems.
+4. Inject the Monkey Agent into the network and validate (empirically) that
+   your security controls can detect, prevent, or otherwise mitigate the
+   infection.
 5. If the infection is not successfully thwarted, take the necessary steps to
    "build up your immune response" by improving your security tools, policies,
    and processes.
 
-After all, what better defense is there than understanding your adversary? 🤔
-Talk about Gorilla warfare.
+Sun Tzu said, "if you know others and know yourself, you will not be imperiled
+in a hundred battles." Knowledge of both your adversary's tactics and your own
+defensive capabilities is necessary in order to successfully secure a network.
+Infection Monkey aims helps you to know both.
 
 Be the chimpion of your network. Learn more about the Monkey at
 [akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey)
