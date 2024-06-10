@@ -7,50 +7,63 @@
 ![GitHub stars](https://img.shields.io/github/stars/guardicore/monkey)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/guardicore/monkey)
 
-## Adversary and malware emulation
+Welcome to Infection Monkey!  We're glad you could swing by.🐒 Here's all the
+info you'll need to start monkeying around.
 
-Welcome to the Infection Monkey!
+## What is Infection Monkey?
+Infection Monkey is an open-source adversary emulation platform that helps you
+improve your security posture using empirical data. Monkey uses various methods
+to self-propagate across a network and reports its activities to a centralized
+command and control server known as the Monkey Island. 🐵🏝️ You know, like
+malware, but ✨safe.✨
 
-The Infection Monkey is an open-source security tool to aid in adversary and
-malware emulation. The Monkey uses various methods to self-propagate across a
-network and reports its activities to a centralized command and control server
-known as the Monkey Island.
+## What's in it?
 
-The Infection Monkey is comprised of two parts:
+Infection Monkey is comprised of two components:
 
-* **Agent** - A configurable, network worm that can infect machines, steal
+* **Agent** - A configurable network worm that can infect machines, steal
   data, and deliver payloads.
 * **Monkey Island** - A command and control server used to control and
   visualize the Infection Monkey's progress throughout the simulation.
 
-You can think of Infection Monkey as a kind of malware vaccine. Prior to the
+### Build up your malware antibodies 💉
+
+![Malware Vaccine](docs/static/images/monkey-iv.png "Malware Vaccine")
+
+You can think of Infection Monkey as a kind of "malware vaccine." Prior to the
 invention of mRNA vaccines, biological vaccines worked as follows:
 
 1. Collect a sample of the virus.
-2. Through the magic of chemistry, create a weakened or inert form of the virus.
+2. Through the magic of chemistry, create a weakened or inert form of the
+   virus.
 3. Inject the weakened virus into the human body, allowing the immune system to
    built up a defense.
 
 Once the immune system has built up a defense, it can recognize and fight off
 the real pathogen if it should ever infect the body.
 
-Infection Monkey aims to use this same approach to combat computer viruses (or
-other types of malware.)
+**Infection Monkey aims to use this same approach to combat computer viruses
+(or other types of malware.)**
 
 1. Collect a sample of the malware.
 2. Analyze the malware and understand its behaviors.
 3. Modify Infection Monkey's configuration to enable behaviors that closely
    mimic those of the malware, but without causing damage to the target
-  systems.
-4. Inject the Infection Monkey Agent into the network and validate
-   (empirically) that your security controls can detect, prevent, or otherwise
-   mitigate the infection.
+   systems.
+4. Inject the Monkey Agent into the network and validate (empirically) that
+   your security controls can detect, prevent, or otherwise mitigate the
+   infection.
 5. If the infection is not successfully thwarted, take the necessary steps to
    "build up your immune response" by improving your security tools, policies,
    and processes.
 
-To read more about the Monkey, visit
-[akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey).
+Sun Tzu said, "if you know others and know yourself, you will not be imperiled
+in a hundred battles." Knowledge of both your adversary's tactics and your own
+defensive capabilities is necessary in order to successfully secure a network.
+Infection Monkey aims helps you to know both.
+
+Be the chimpion of your network. Learn more about the Monkey at
+[akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey)
 
 
 ## Screenshots
