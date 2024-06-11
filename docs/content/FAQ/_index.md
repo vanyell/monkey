@@ -176,7 +176,8 @@ This means we avoid using some powerful (and famous) exploits such as [EternalBl
 
 ## After I've set up Monkey Island, how can I execute the Infection Monkey Agent?
 
-See our detailed [getting started]({{< ref "/usage/getting-started" >}}) guide.
+Work through our [tutorials](/tutorials/) or see our detailed [getting
+started](/usage/getting-started) guide.
 
 ## How can I make the Infection Monkey Agent propagate "deeper" into the network?
 
