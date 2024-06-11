@@ -75,7 +75,13 @@ The results of running Monkey Agents are:
    discovered and/or exploited.
 
 A more in-depth description of reports generated can be found in the [reports
-documentation page]({{< ref "/reports" >}}).
+documentation page.]({{< ref "/reports" >}})
+
+### Infection Map
+![Infection Map](/images/island/infection_map_page/infection_map.png "Infection Map")
+
+### Security Report
+![Security Report](/images/island/reports_page/security_report_overview.png "Security Report")
 
 ## Getting Started
 
