@@ -1,15 +1,14 @@
 ---
-title: "Infection Monkey Documentation Hub"
+title: "Infection Monkey Documentation"
 date: 2020-05-26T18:15:37+03:00
 draft: false
 ---
 
-# Infection Monkey documentation hub
+# Infection Monkey documentation
 
 
-![Infection Monkey Documentation Hub
-Logo](/images/monkey-teacher.svg?height=300px "Infection Monkey Documentation
-Hub Logo")
+![Infection Monkey Documentation Logo](/images/monkey-teacher.svg?height=300px
+"Infection Monkey Documentation Logo")
 
 ## What is Guardicore Infection Monkey?
 Infection Monkey is an open-source adversary emulation platform that helps you
