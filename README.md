@@ -17,7 +17,7 @@ to self-propagate across a network and reports its activities to a centralized
 command and control server known as the Monkey Island. 🐵🏝️ You know, like
 malware, but ✨safe.✨
 
-## What's in it?
+## How does it work?
 
 Infection Monkey is comprised of two components:
 
