@@ -9,34 +9,64 @@ draft: false
 {{< homepage_shortcuts >}}
 
 ## What is Guardicore Infection Monkey?
-
-The Infection Monkey is an open-source breach and attack simulation tool for
-testing a data center's resiliency to perimeter breaches and internal server
-infection. Infection Monkey will help you validate existing security solutions
-and will provide a view of the internal network from an attacker's perspective.
-
-Infection Monkey is free and can be downloaded from [our
-download page](https://github.com/guardicore/monkey/releases/latest).
+Infection Monkey is an open-source adversary emulation platform that helps you
+improve your security posture using empirical data. Monkey uses various methods
+to self-propagate across a network and reports its activities to a centralized
+command and control server known as the Monkey Island. 🐵🏝️ You know, like
+malware, but ✨safe.✨
 
 ![Infection Monkey Documentation Hub
 Logo](/images/monkey-teacher.svg?height=400px "Infection Monkey Documentation
 Hub Logo")
 
-## How it works
+## How does it work?
 
-Architecturally, Infection Monkey comprises two components:
+Infection Monkey is comprised of two components:
 
-* Monkey Agent (Monkey for short) - a safe, worm-like binary program which
-  scans, propagates and simulates attack techniques on the **local network**.
-* Monkey Island Server (Island for short) - a C&C web server which provides a
-  GUI for users and interacts with the Monkey Agents.
+* **Agent** - A configurable network worm that can infect machines, steal
+  data, and deliver payloads.
+* **Monkey Island** - A command and control server used to control and
+  visualize the Infection Monkey's progress throughout the simulation.
 
-The user can run the Monkey Agent on the Island Server machine or distribute
-Monkey Agent binaries on the network manually. Based on the configuration
-parameters, Monkey Agents scan, propagate and simulate an attacker's behavior
-on the local network. All the information gathered about the network is
-aggregated in the Island Server and displayed once all Monkey Agents are
-finished.
+### Build up your malware antibodies 💉
+
+![Malware Vaccine](/images/monkey-iv.png "Malware Vaccine")
+
+You can think of Infection Monkey as a kind of "malware vaccine." Prior to the
+invention of mRNA vaccines, biological vaccines worked as follows:
+
+1. Collect a sample of the virus.
+2. Through the magic of chemistry, create a weakened or inert form of the
+   virus.
+3. Inject the weakened virus into the human body, allowing the immune system to
+   built up a defense.
+
+Once the immune system has built up a defense, it can recognize and fight off
+the real pathogen if it should ever infect the body.
+
+**Infection Monkey aims to use this same approach to combat computer viruses
+(or other types of malware.)**
+
+1. Collect a sample of the malware.
+2. Analyze the malware and understand its behaviors.
+3. Modify Infection Monkey's configuration to enable behaviors that closely
+   mimic those of the malware, but without causing damage to the target
+   systems.
+4. Inject the Monkey Agent into the network and validate (empirically) that
+   your security controls can detect, prevent, or otherwise mitigate the
+   infection.
+5. If the infection is not successfully thwarted, take the necessary steps to
+   "build up your immune response" by improving your security tools, policies,
+   and processes.
+
+Sun Tzu said, "if you know others and know yourself, you will not be imperiled
+in a hundred battles." Knowledge of both your adversary's tactics and your own
+defensive capabilities is necessary in order to successfully secure a network.
+Infection Monkey aims helps you to know both.
+
+Be the chimpion of your network. Learn more about the Monkey at
+[akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey)
+
 
 ## Results
 
@@ -51,11 +81,14 @@ documentation page]({{< ref "/reports" >}}).
 
 ## Getting Started
 
-If you haven't downloaded Infection Monkey yet you can do so [from our
-download page](https://github.com/guardicore/monkey/releases/latest). After
-downloading the Monkey, install it using one of our [setup guides]({{< ref
-"/setup" >}}), and read our [getting started guide]({{< ref
-"/usage/getting-started" >}}) for a quick-start on Monkey!
+If you're completely new to Infection Monkey, you can work through the
+[tutorials](/tutorials/) to get your feet wet.
+
+If you have a basic understanding of Infection Monkey, you can download it
+[from our download page](https://github.com/guardicore/monkey/releases/latest).
+After downloading the Monkey, install it using one of our [setup guides,]({{<
+ref "/setup" >}}) and read our [getting started guide]({{< ref
+"/usage/getting-started" >}})!
 
 ## Support and community
 
