@@ -34,7 +34,7 @@ class WindowsAgentCommandBuilder(IWindowsAgentCommandBuilder):
     def build_download_command(self, download_options: WindowsDownloadOptions):
         if download_options.download_method == WindowsDownloadMethod.WEB_REQUEST:
             download_command_func = self._build_download_command_webrequest
-        if download_options.download_method == WindowsDownloadMethod.WEB_CLIENT:
+        elif download_options.download_method == WindowsDownloadMethod.WEB_CLIENT:
             download_command_func = self._build_download_command_webclient
 
         # We always download using powershell since CMD doesn't have
@@ -70,7 +70,7 @@ class WindowsAgentCommandBuilder(IWindowsAgentCommandBuilder):
 
         if run_options.shell == WindowsShell.POWERSHELL:
             set_otp = self._set_otp_powershell
-        if run_options.shell == WindowsShell.CMD:
+        elif run_options.shell == WindowsShell.CMD:
             set_otp = self._set_otp_cmd
 
         self._command += f"{set_otp()} {str(run_options.agent_destination_path)} "
