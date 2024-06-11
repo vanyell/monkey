@@ -68,11 +68,11 @@ Be the chimpion of your network. Learn more about the Monkey at
 
 ## Screenshots
 
-### Map
-<img src=".github/map-full.png"  width="800" height="600">
+### Infection Map
+<img src="docs/static/images/island/infection_map_page/infection_map.png">
 
 ### Security report
-<img src=".github/security-report.png"  width="800" height="500">
+<img src="docs/static/images/island/reports_page/security_report_overview.png">
 
 ## Main Features
 
