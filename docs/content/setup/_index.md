@@ -14,7 +14,7 @@ Setting up the Infection Monkey is easy! First, you need to
 
 Once you've downloaded an installer, follow the relevant guide for your environment:
 
-{{% children %}}
+{{% children /%}}
 
 After setting the Monkey up, check out our [Getting Started](/usage/getting-started) guide!
 

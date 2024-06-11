@@ -18,4 +18,4 @@ You can enhance, optimize, and fine-tune the Monkey's behavior.
 
 Here are some examples with instructions on how to configure them.
 
-{{% children description=True style="p"%}}
+{{% children description=True style="p" /%}}

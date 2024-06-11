@@ -11,6 +11,6 @@ tags = ["tutorials"]
 
 Learn how to use Infection Monkey:
 
-{{% children %}}
+{{% children /%}}
 
 <br />

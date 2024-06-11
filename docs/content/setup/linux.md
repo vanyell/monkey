@@ -55,7 +55,7 @@ which requires setting the `CAP_NET_BIND_SERVICE` capability on the AppImage pac
 {{% notice info %}}
 If you're prompted to delete your data directory and you're not sure what to
 do, see the [FAQ]({{< ref
-"/faq/#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why"
+"/faq#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why"
 >}}) for more information.
 {{% /notice %}}
 

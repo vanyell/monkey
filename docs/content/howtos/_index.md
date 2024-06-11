@@ -11,6 +11,6 @@ tags = ["how tos"]
 
 Here you can find "how to" guides (or recipes) for accomplishing common tasks.
 
-{{% children %}}
+{{% children /%}}
 
 <br />

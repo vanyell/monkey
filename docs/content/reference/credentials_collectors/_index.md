@@ -12,4 +12,4 @@ tags: ["reference", "credentials collectors"]
 
 Infection Monkey has multiple ways to steal credentials from compromised machines:
 
-{{% children %}}
+{{% children /%}}
