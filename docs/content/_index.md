@@ -6,7 +6,10 @@ draft: false
 
 # Infection Monkey documentation hub
 
-{{< homepage_shortcuts >}}
+
+![Infection Monkey Documentation Hub
+Logo](/images/monkey-teacher.svg?height=300px "Infection Monkey Documentation
+Hub Logo")
 
 ## What is Guardicore Infection Monkey?
 Infection Monkey is an open-source adversary emulation platform that helps you
@@ -14,10 +17,6 @@ improve your security posture using empirical data. Monkey uses various methods
 to self-propagate across a network and reports its activities to a centralized
 command and control server known as the Monkey Island. 🐵🏝️ You know, like
 malware, but ✨safe.✨
-
-![Infection Monkey Documentation Hub
-Logo](/images/monkey-teacher.svg?height=400px "Infection Monkey Documentation
-Hub Logo")
 
 ## How does it work?
 
