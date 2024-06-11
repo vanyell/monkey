@@ -182,3 +182,4 @@ AgentPluginService.install_agent_plugin_from_repository
 
 # TODO: Remove after we move the plugins to separate repos
 execute_agent
+LinuxAgentCommandBuilder.build_permission_change_command
