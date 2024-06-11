@@ -11,4 +11,4 @@ tags = ["reference"]
 
 Find detailed information about the Infection Monkey:
 
-{{% children %}}
+{{% children /%}}
