@@ -131,7 +131,7 @@ See the [logs reference page](../reference/logs).
 
 The Infection Monkey leaves hardly any trace on the target system. It will leave:
 
-- Log files in [temporary directories]({{< ref "/faq/#infection-monkey-agent-logs">}}):
+- Log files in [temporary directories]({{< ref "/faq#infection-monkey-agent-logs">}}):
   - Path on Linux: `/tmp/infection-monky-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
   - Path on Windows: `%temp%\\infection-monky-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
 

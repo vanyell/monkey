@@ -24,7 +24,7 @@ collect more data on the current machine, consider running as Administrator.
 {{% notice info %}}
 If you're prompted to delete your data directory and you're not sure what to
 do, see the [FAQ]({{< ref
-"/faq/#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why"
+"/faq#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why"
 >}}) for more information.
 {{% /notice %}}
 
