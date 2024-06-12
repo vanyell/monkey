@@ -37,7 +37,7 @@ invention of mRNA vaccines, biological vaccines worked as follows:
 2. Through the magic of chemistry, create a weakened or inert form of the
    virus.
 3. Inject the weakened virus into the human body, allowing the immune system to
-   built up a defense.
+   build up a defense.
 
 Once the immune system has built up a defense, it can recognize and fight off
 the real pathogen if it should ever infect the body.
@@ -63,7 +63,7 @@ defensive capabilities is necessary in order to successfully secure a network.
 Infection Monkey aims helps you to know both.
 
 Be the chimpion of your network. Learn more about the Monkey at
-[akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey)
+[akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey).
 
 
 ## Screenshots
