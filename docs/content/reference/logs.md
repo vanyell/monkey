@@ -50,4 +50,4 @@ MongoDB's log file is named `mongodb.log` and is located in the
 ### See also
 
 - [Data directory reference](/reference/data_directory)
-- [How to download logs](/howtos/download-logs)
+- [How to download logs](/howtos/download_logs)
