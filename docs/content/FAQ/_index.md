@@ -19,21 +19,19 @@ If you want to see what has changed between versions, refer to the [releases pag
 
 ## I updated to a new version of the Infection Monkey and I'm being asked to delete my existing data directory. Why?
 
-The [data directory]({{< ref "/reference/data_directory" >}}) contains the
-Infection Monkey's database and other internal
-data. For the new version of Infection Monkey to work flawlessly, a data
-directory with a compatible structure needs to be set up.
+The [data directory](/reference/data_directory) contains the Infection Monkey's
+database and other internal data. For the new version of Infection Monkey to
+work flawlessly, a data directory with a compatible structure needs to be set
+up.
 
 If you would like to save the data gathered from the Monkey's previous runs,
-you can make a backup of your [existing data directory]({{< ref
-"/reference/data_directory" >}}) before deleting it.
+you can make a backup of your [existing data directory](/reference/data_directory) before deleting it.
 
 ## How can I use an old data directory?
 
 To use the data stored in a data directory from an older version, reinstall the
 version of the Monkey Island which matches your data directory's version. Then,
-copy the backup of your old data directory to the [appropriate location]({{<
-ref "/reference/data_directory" >}}).
+copy the backup of your old data directory to the [appropriate location](/reference/data_directory).
 
 ## How long does a single Infection Monkey Agent run? Is there a time limit?
 
@@ -106,7 +104,7 @@ See the [logs reference page](../reference/logs).
 
 The Infection Monkey leaves hardly any trace on the target system. It will leave:
 
-- Log files in [temporary directories]({{< ref "/faq#infection-monkey-agent-logs">}}):
+- Log files in [temporary directories](/faq#infection-monkey-agent-logs):
   - Path on Linux: `/tmp/infection-monky-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
   - Path on Windows: `%temp%\\infection-monky-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
 
@@ -194,7 +192,7 @@ Infection Monkey from scanning or exploiting, you can add them to the list of
 
 ## How can I get involved with the project?
 
-Infection Monkey is an open-source project, and we welcome contributions and contributors. Check out the [contribution documentation]({{< ref "/development" >}}) for more information.
+Infection Monkey is an open-source project, and we welcome contributions and contributors. Check out the [contribution documentation](/development) for more information.
 
 ## About the project 🐵
 
