@@ -23,12 +23,13 @@ collect more data on the current machine, consider running as Administrator.
 
 {{% notice info %}}
 If you're prompted to delete your data directory and you're not sure what to
-do, see the [FAQ]({{< ref
-"/faq#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why"
->}}) for more information.
+do, see the
+[FAQ](/faq#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why)
+for more information.
 {{% /notice %}}
 
-Once you have access to the Monkey Island server, check out the [getting started page]({{< ref "/usage/getting-started" >}}).
+Once you have access to the Monkey Island server, check out the [getting
+started page](/usage/getting-started).
 
 ## Configuring the server
 

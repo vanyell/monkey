@@ -32,22 +32,22 @@ pattern: `infection-monkey-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
 ### Island
 
 The Monkey Island's log file is named `monkey_island.log` and is located in the
-[data directory]({{< ref "/reference/data_directory" >}}). This log shows the
+[data directory](/reference/data_directory). This log shows the
 requests sent to the Monkey Island server, as well as details about how data is
 processed.
 
 #### Next generation UI (development only)
 
 The Monkey Island's UI produces a log file named `nextjs.log` located in the
-[data directory]({{< ref "/reference/data_directory" >}}). This log contains
+[data directory](/reference/data_directory). This log contains
 the output of the server process hosting the web interface.
 
 ### MongoDB
 
 MongoDB's log file is named `mongodb.log` and is located in the
-[data directory]({{< ref "/reference/data_directory" >}}).
+[data directory](/reference/data_directory).
 
 ### See also
 
-- [Data directory reference]({{< ref "/reference/data_directory" >}})
-- [How to download logs](../howtos/download_logs)
+- [Data directory reference](/reference/data_directory)
+- [How to download logs](/howtos/download-logs)

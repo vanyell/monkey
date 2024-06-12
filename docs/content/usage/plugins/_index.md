@@ -23,4 +23,4 @@ Plugins page consists of three tabs:
 ## Troubleshooting
 
 First, make sure that the machine running Monkey Island has access to the internet. If it does,
-check the [Island logs]({{< ref "/FAQ#monkey-island-server-logs" >}}).
+check the [Island logs](/FAQ#monkey-island-server-logs).

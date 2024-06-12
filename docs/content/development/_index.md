@@ -20,7 +20,7 @@ information here may be outdated and will be updated soon.
 
 Here are a few short links to help you get started:
 
-* [Getting up and running]({{< ref "/development/setup-development-environment" >}}) - These instructions will help you get a working development setup.
+* [Getting up and running](/development/setup-development-environment) - These instructions will help you get a working development setup.
 * [Contributing guidelines](https://github.com/guardicore/monkey/blob/master/CONTRIBUTING.md) - These guidelines will help you submit.
 
 ## What are we looking for?
