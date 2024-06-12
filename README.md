@@ -12,10 +12,10 @@ info you'll need to start monkeying around.
 
 ## What is Infection Monkey?
 Infection Monkey is an open-source adversary emulation platform that helps you
-improve your security posture using empirical data. Monkey uses various methods
-to self-propagate across a network and reports its activities to a centralized
-command and control server known as the Monkey Island. 🐵🏝️ You know, like
-malware, but ✨safe.✨
+improve your security posture using empirical data. The Monkey uses various
+methods to self-propagate across a network and reports its activities to a
+centralized command and control server known as the Monkey Island. 🐵🏝️ You
+know, like malware, but ✨safe.✨
 
 ## How does it work?
 
@@ -37,7 +37,7 @@ invention of mRNA vaccines, biological vaccines worked as follows:
 2. Through the magic of chemistry, create a weakened or inert form of the
    virus.
 3. Inject the weakened virus into the human body, allowing the immune system to
-   built up a defense.
+   build up a defense.
 
 Once the immune system has built up a defense, it can recognize and fight off
 the real pathogen if it should ever infect the body.
@@ -63,16 +63,16 @@ defensive capabilities is necessary in order to successfully secure a network.
 Infection Monkey aims helps you to know both.
 
 Be the chimpion of your network. Learn more about the Monkey at
-[akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey)
+[akamai.com/infectionmonkey](https://www.akamai.com/infectionmonkey).
 
 
 ## Screenshots
 
-### Map
-<img src=".github/map-full.png"  width="800" height="600">
+### Infection Map
+<img src="docs/static/images/island/infection_map_page/infection_map.png">
 
 ### Security report
-<img src=".github/security-report.png"  width="800" height="500">
+<img src="docs/static/images/island/reports_page/security_report_overview.png">
 
 ## Main Features
 

@@ -2,7 +2,7 @@
 # baseURL = "https://staging-covuyicu.kinsta.cloud/infectionmonkey/docs/"
 baseURL = ""
 languageCode = "en-us"
-title = "Guardicore Infection Monkey - Documentation Hub"
+title = "Infection Monkey Documentation"
 
 theme = "learn"
 
@@ -14,7 +14,7 @@ theme = "learn"
   # Author of the site, will be used in meta information
   author = "Guardicore"
   # Description of the site, will be used in meta information
-  description = "Guardicore Infection Monkey - Documentation hub"
+  description = "Infection Monkey Documentation"
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = false
   # Disable search function. It will hide search bar
@@ -40,25 +40,25 @@ theme = "learn"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-[[menu.shortcuts]] 
+[[menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Homepage"
 identifier = "homepage"
 url = "https://infectionmonkey.com"
 weight = 10
 
-[[menu.shortcuts]] 
+[[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> GitHub"
 identifier = "github"
 url = "https://github.com/guardicore/monkey"
 weight = 20
 
-[[menu.shortcuts]] 
+[[menu.shortcuts]]
 name = "<i class='fab fa-slack'></i> Slack"
 identifier = "slack"
 url = "https://join.slack.com/t/infectionmonkey/shared_invite/enQtNDU5MjAxMjg1MjU1LWM0NjVmNWE2ZTMzYzAxOWJiYmMxMzU0NWU3NmUxYjcyNjk0YWY2MDkwODk4NGMyNDU4NzA4MDljOWNmZWViNDU"
 weight = 30
 
-[[menu.shortcuts]] 
+[[menu.shortcuts]]
 name = "<i class='fas fa-inbox'></i> Email"
 identifier = "email"
 url = "mailto:support@infectionmonkey.com"
