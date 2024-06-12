@@ -15,6 +15,7 @@ Below are some of the most common questions we receive about the Infection Monke
 - [Is the Infection Monkey a malware/virus?](#is-the-infection-monkey-a-malwarevirus)
 - [How do I reset the Monkey Island password?](#how-do-i-reset-the-monkey-island-password)
 - [Should I run the Infection Monkey continuously?](#should-i-run-the-infection-monkey-continuously)
+- [Does the Infection Monkey require a connection to the internet?](#does-the-infection-monkey-require-a-connection-to-the-internet)
   - [Exactly what internet queries does the Infection Monkey perform?](#exactly-what-internet-queries-does-the-infection-monkey-perform)
 - [Logging and how to find logs](#logging-and-how-to-find-logs)
   - [Downloading logs](#downloading-logs)
