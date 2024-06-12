@@ -74,8 +74,8 @@ The results of running Monkey Agents are:
  - A report, which displays security issues that Monkey Agents
    discovered and/or exploited.
 
-A more in-depth description of reports generated can be found in the [reports
-documentation page.]({{< ref "/reports" >}})
+A more in-depth description of reports generated can be found in the
+[reports documentation page.](/reports)
 
 ### Infection Map
 ![Infection Map](/images/island/infection_map_page/infection_map.png "Infection Map")
@@ -90,9 +90,9 @@ If you're completely new to Infection Monkey, you can work through the
 
 If you have a basic understanding of Infection Monkey, you can download it
 [from our download page](https://github.com/guardicore/monkey/releases/latest).
-After downloading the Monkey, install it using one of our [setup guides,]({{<
-ref "/setup" >}}) and read our [getting started guide!]({{< ref
-"/usage/getting-started" >}})
+After downloading the Monkey, install it using one of our
+[setup guides,](/setup) and read our
+[getting started guide!](/usage/getting-started)
 
 ## Support and community
 
