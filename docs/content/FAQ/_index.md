@@ -102,11 +102,8 @@ See the [logs reference page](../reference/logs).
 
 ### How much of a footprint does the Infection Monkey leave?
 
-The Infection Monkey leaves hardly any trace on the target system. It will leave:
-
-- Log files in [temporary directories](/faq#infection-monkey-agent-logs):
-  - Path on Linux: `/tmp/infection-monky-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
-  - Path on Windows: `%temp%\\infection-monky-agent-<TIMESTAMP>-<RANDOM_STRING>.log`
+The Agent does its best to leave no trace. It will, however, leave
+[log files in temporary directories.](/reference/logs/#agent)
 
 ### What's the Infection Monkey Agent's impact on system resources usage?
 
