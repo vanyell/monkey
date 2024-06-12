@@ -53,6 +53,12 @@ fbd91aacc8ea   mongo           Up 7 seconds
 b1c9ac1d3b81   hello           Up 7 seconds
 ```
 
+{{% notice tip %}}
+You can shutdown the sandbox environment when you are finished with it by
+running `docker compose down` in the same directory that contains the
+`docker-compose.yml` file.
+{{% /notice %}}
+
 Now that the environment is running, open a browser to
 [https://localhost:5000](https://localhost:5000) to access the Monkey Island
 web interface. You may see a warning that looks similar to the one shown below.
