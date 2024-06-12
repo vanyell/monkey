@@ -7,30 +7,7 @@ pre: "<i class='fas fa-question'></i> "
 
 Below are some of the most common questions we receive about the Infection Monkey. If the answer you're looking for isn't here, talk with us [on our Slack channel](https://join.slack.com/t/infectionmonkey/shared_invite/zt-2cm5qiayf-yiEg5RPau0zQhki9xTlORA), email us at [support@infectionmonkey.com](mailto:support@infectionmonkey.com) or [open an issue on GitHub](https://github.com/guardicore/monkey).
 
-- [Where can I get the latest version of the Infection Monkey?](#where-can-i-get-the-latest-version-of-the-infection-monkey)
-- [I updated to a new version of the Infection Monkey and I'm being asked to delete my existing data directory. Why?](#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why)
-- [How can I use an old data directory?](#how-can-i-use-an-old-data-directory)
-- [How long does a single Infection Monkey Agent run? Is there a time limit?](#how-long-does-a-single-infection-monkey-agent-run-is-there-a-time-limit)
-- [How long does it take to stop all running Infection Monkey Agents?](#how-long-does-it-take-to-stop-all-running-infection-monkey-agents)
-- [Is the Infection Monkey a malware/virus?](#is-the-infection-monkey-a-malwarevirus)
-- [How do I reset the Monkey Island password?](#how-do-i-reset-the-monkey-island-password)
-- [Should I run the Infection Monkey continuously?](#should-i-run-the-infection-monkey-continuously)
-- [Does the Infection Monkey require a connection to the internet?](#does-the-infection-monkey-require-a-connection-to-the-internet)
-  - [Exactly what internet queries does the Infection Monkey perform?](#exactly-what-internet-queries-does-the-infection-monkey-perform)
-- [Logging and how to find logs](#logging-and-how-to-find-logs)
-  - [Downloading logs](#downloading-logs)
-  - [Log locations](#log-locations)
-- [Running the Infection Monkey in a production environment](#running-the-infection-monkey-in-a-production-environment)
-  - [How much of a footprint does the Infection Monkey leave?](#how-much-of-a-footprint-does-the-infection-monkey-leave)
-  - [What's the Infection Monkey Agent's impact on system resources usage?](#whats-the-infection-monkey-agents-impact-on-system-resources-usage)
-  - [What are the system resource requirements for the Monkey Island?](#what-are-the-system-resource-requirements-for-the-monkey-island)
-  - [Is it safe to use real passwords and usernames in the Infection Monkey's configuration?](#is-it-safe-to-use-real-passwords-and-usernames-in-the-infection-monkeys-configuration)
-  - [How do you store sensitive information on Monkey Island?](#how-do-you-store-sensitive-information-on-monkey-island)
-  - [How stable are the exploits used by the Infection Monkey? Will the Infection Monkey crash my systems with its exploits?](#how-stable-are-the-exploits-used-by-the-infection-monkey-will-the-infection-monkey-crash-my-systems-with-its-exploits)
-- [After I've set up Monkey Island, how can I execute the Infection Monkey Agent?](#after-ive-set-up-monkey-island-how-can-i-execute-the-infection-monkey-agent)
-- [How can I make the Infection Monkey Agents propagate "deeper" into the network?](#how-can-i-make-the-infection-monkey-agent-propagate-deeper-into-the-network)
-- [Can I limit how the Infection Monkey propagates through my network?](#can-i-limit-how-the-infection-monkey-propagates-through-my-network)
-- [How can I get involved with the project?](#how-can-i-get-involved-with-the-project)
+{{< table_of_contents >}}
 
 ## Where can I get the latest version of the Infection Monkey?
 
@@ -180,7 +157,7 @@ To do this, change the `Configuration -> Propagation -> General -> Maximum scan 
 
 Yes! To limit how the Infection Monkey propagates through your network, you can:
 
-#### Adjust the scan depth
+### Adjust the scan depth
 
 The scan depth limits the number of hops that the Infection Monkey Agent will
 spread from patient zero. If you set the scan depth to one, the Agent will only
@@ -197,18 +174,18 @@ further nor continue to scan or propagate.
 ![What is scan depth](/images/island/others/propagation_depth_diagram.png "What is scan
 depth")
 
-#### Enable or disable scanning the local subnet
+### Enable or disable scanning the local subnet
 
 You can find the settings that define how the Infection Monkey will scan your
 network in `Configuration -> Propagation -> Network analysis`. If enabled,
 the `Scan Agent's networks` setting instructs an Agent to scan its entire local subnet.
 
-#### Add IPs to the IP allow list
+### Add IPs to the IP allow list
 
 You can specify which hosts you want the Infection Monkey Agents to attempt to
 scan in the `Configuration -> Propagation -> Network analysis -> Scan target list` section.
 
-#### Add IPs to the IP block list
+### Add IPs to the IP block list
 
 If there are any hosts on your network that you would like to prevent the
 Infection Monkey from scanning or exploiting, you can add them to the list of
