@@ -10,10 +10,11 @@ pre: "<i class='fa fa-lock'></i> "
 The Infection Monkey is capable of simulating a ransomware attack on your
 network using a set of configurable behaviors. In order to simulate the
 behavior of ransomware as accurately as possible, the Infection Monkey can
-[encrypt user-specified files](#configuring-encryption) using a [fully
-reversible algorithm](#how-are-the-files-encrypted). A number of mechanisms are
-in place to ensure that all actions performed by the encryption routine are
-safe for production environments.
+[encrypt user-specified
+files](/reference/payloads/ransomware/#files-targeted-for-encryption) using a
+[fully reversible algorithm](#how-are-the-files-encrypted). A number of
+mechanisms are in place to ensure that all actions performed by the encryption
+routine are safe for production environments.
 
 ## Workflow
 ### 1. Prepare your environment for a ransomware simulation
@@ -86,94 +87,15 @@ prevent these changes from taking place.
 ### Which files are encrypted?
 
 During the ransomware simulation, attempts will be made to encrypt all regular
-files with [targeted file extensions](#files-targeted-for-encryption) in the
-configured directory. The simulation is not recursive, i.e. it will not touch
-any files in sub-directories of the configured directory. The Infection Monkey
-will not follow any symlinks or shortcuts.
+files with [targeted file
+extensions](/reference/payloads/ransomware/#files-targeted-for-encryption) in
+the configured directory. The simulation is not recursive, i.e. it will not
+touch any files in sub-directories of the configured directory. The Infection
+Monkey will not follow any symlinks or shortcuts.
 
 These precautions are taken to prevent the Infection Monkey from accidentally
 encrypting files that you didn't intend to encrypt.
 
-### Files targeted for encryption
-
-Only regular files with certain extensions are encrypted by the ransomware
-simulation. This list is based on the [analysis of the Goldeneye ransomware by
-BitDefender](https://labs.bitdefender.com/2017/07/a-technical-look-into-the-goldeneye-ransomware-attack/).
-
-- .3ds
-- .7z
-- .accdb
-- .ai
-- .asp
-- .aspx
-- .avhd
-- .avi
-- .back
-- .bak
-- .c
-- .cfg
-- .conf
-- .cpp
-- .cs
-- .ctl
-- .dbf
-- .disk
-- .djvu
-- .doc
-- .docx
-- .dwg
-- .eml
-- .fdb
-- .giff
-- .gz
-- .h
-- .hdd
-- .jpg
-- .jpeg
-- .kdbx
-- .mail
-- .mdb
-- .mpg
-- .mpeg
-- .msg
-- .nrg
-- .ora
-- .ost
-- .ova
-- .ovf
-- .pdf
-- .php
-- .pmf
-- .png
-- .ppt
-- .pptx
-- .pst
-- .pvi
-- .py
-- .pyc
-- .rar
-- .rtf
-- .sln
-- .sql
-- .tar
-- .tiff
-- .txt
-- .vbox
-- .vbs
-- .vcb
-- .vdi
-- .vfd
-- .vmc
-- .vmdk
-- .vmsd
-- .vmx
-- .vsdx
-- .vsv
-- .work
-- .xls
-- .xlsx
-- .xvd
-- .zip
 
 
 ### Leaving a README.txt file
@@ -200,3 +122,7 @@ When this feature is enabled, the desktop background will be changed to this:
 ![Ransomware
 wallpaper](/images/island/others/ransomware_wallpaper_downsized.png
 "Ransomware wallpaper")
+
+### See also
+- [Ransomware tutorial](/tutorials/ransomware/)
+- [Ransomware reference documentation](/reference/payloads/ransomware)
