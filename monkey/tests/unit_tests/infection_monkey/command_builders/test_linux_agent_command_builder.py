@@ -8,6 +8,7 @@ from agentpluginapi import (
     LinuxDownloadMethod,
     LinuxDownloadOptions,
     LinuxRunOptions,
+    LinuxSetPermissionsOptions,
 )
 from monkeytypes import AgentID
 
@@ -55,8 +56,30 @@ def test_build_download_command(
 
     assert expected_method in actual_command
     assert not_expected_method not in actual_command
-    assert "chmod" in actual_command
     assert EXPECTED_AGENT_DESTINATION_PATH in actual_command
+
+
+@pytest.mark.parametrize(
+    "permissions, expected_command",
+    [
+        (0o777, f"chmod 777 {AGENT_DESTINATION_PATH}; "),
+        (0o700, f"chmod 700 {AGENT_DESTINATION_PATH}; "),
+        (0o550, f"chmod 550 {AGENT_DESTINATION_PATH}; "),
+    ],
+)
+def test_build_set_permissions_command(
+    linux_agent_command_builder: ILinuxAgentCommandBuilder,
+    permissions: int,
+    expected_command: str,
+):
+    linux_set_permissions_options = LinuxSetPermissionsOptions(
+        agent_destination_path=AGENT_DESTINATION_PATH, permissions=permissions
+    )
+
+    linux_agent_command_builder.build_set_permissions_command(linux_set_permissions_options)
+    actual_command = linux_agent_command_builder.get_command()
+
+    assert actual_command == expected_command
 
 
 def test_build_run_command_none(
