@@ -11,6 +11,16 @@ In this tutorial, we will setup a simple sandbox environment that will be
 useful in future tutorials. We will learn how to access the Infection Monkey's
 command and control server and register a new user.
 
+{{% notice info %}}
+This tutorial will help you set up an Infection Monkey server and environment
+that allows you to complete the remaining tutorials. The Infection Monkey
+server that you set up using these steps may have been modified to foster
+learning and exploration; is not intended for use in production environments.
+After you've completed the tutorials and are ready to install Infection Monkey
+in your environment, you can visit the [setup page](../setup/) for instructions
+on installing an official release.
+{{% /notice %}}
+
 ### Prerequisites
 First, make sure that you have the following installed:
 - `docker` and `docker-compose`
