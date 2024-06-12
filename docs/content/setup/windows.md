@@ -100,7 +100,7 @@ private certificate authority.
 Only **English** system locale is supported. If your command prompt gives output in a different
 language, the Infection Monkey is not guaranteed to work.
 
-For supported Windows versions, take a look at the [OS support page](../../reference/operating_systems_support).
+For a list of supported Windows versions, see the [system requirements page](../../reference/system_requirements).
 
 ### Missing Windows update
 

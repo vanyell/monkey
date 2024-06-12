@@ -140,21 +140,8 @@ If you do experience any performance issues please let us know on [our Slack cha
 
 ### What are the system resource requirements for the Monkey Island?
 
-#### Linux
+See the [system requirements](/reference/system_requirements) page.
 
-**CPU**: Intel(R) Xeon(R) CPU @ 2.20GHz or better
-
-**CPU Cores**: 2
-
-**RAM**: 4GB
-
-#### Windows
-
-**CPU**: Intel(R) Xeon(R) CPU @ 2.20GHz or better
-
-**CPU Cores**: 4
-
-**RAM**: 6GB
 
 ### Is it safe to use real passwords and usernames in the Infection Monkey's configuration?
 

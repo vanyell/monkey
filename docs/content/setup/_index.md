@@ -19,7 +19,8 @@ Once you've downloaded an installer, follow the relevant guide for your environm
 After setting the Monkey up, check out our [Getting Started](/usage/getting-started) guide!
 
 {{% notice tip %}}
-You can find information about [operating system compatibility and support here](../reference/operating_systems_support).
+You can find information about operating system compatibility and system
+requirements [here](../reference/system_requirements).
 {{% /notice %}}
 
 {{% notice tip %}}
