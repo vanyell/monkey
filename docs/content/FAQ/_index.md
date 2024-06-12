@@ -5,7 +5,7 @@ draft: false
 pre: "<i class='fas fa-question'></i> "
 ---
 
-Below are some of the most common questions we receive about the Infection Monkey. If the answer you're looking for isn't here, talk with us [on our Slack channel](https://infectionmonkey.slack.com/join/shared_invite/enQtNDU5MjAxMjg1MjU1LWM0NjVmNWE2ZTMzYzAxOWJiYmMxMzU0NWU3NmUxYjcyNjk0YWY2MDkwODk4NGMyNDU4NzA4MDljOWNmZWViNDU), email us at [support@infectionmonkey.com](mailto:support@infectionmonkey.com) or [open an issue on GitHub](https://github.com/guardicore/monkey).
+Below are some of the most common questions we receive about the Infection Monkey. If the answer you're looking for isn't here, talk with us [on our Slack channel](https://join.slack.com/t/infectionmonkey/shared_invite/zt-2cm5qiayf-yiEg5RPau0zQhki9xTlORA), email us at [support@infectionmonkey.com](mailto:support@infectionmonkey.com) or [open an issue on GitHub](https://github.com/guardicore/monkey).
 
 - [Where can I get the latest version of the Infection Monkey?](#where-can-i-get-the-latest-version-of-the-infection-monkey)
 - [I updated to a new version of the Infection Monkey and I'm being asked to delete my existing data directory. Why?](#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why)
@@ -136,7 +136,7 @@ The Infection Monkey leaves hardly any trace on the target system. It will leave
 
 The Infection Monkey Agent uses less than a single-digit percent of CPU time and very low RAM usage. For example, on a single-core Windows Server machine, the Infection Monkey Agent consistently uses 0.06% CPU, less than 80MB of RAM and a small amount of I/O periodically.
 
-If you do experience any performance issues please let us know on [our Slack channel](https://infectionmonkey.slack.com/) or [open an issue on GitHub](https://github.com/guardicore/monkey).
+If you do experience any performance issues please let us know on [our Slack channel](https://join.slack.com/t/infectionmonkey/shared_invite/zt-2cm5qiayf-yiEg5RPau0zQhki9xTlORA) or [open an issue on GitHub](https://github.com/guardicore/monkey).
 
 ### What are the system resource requirements for the Monkey Island?
 
