@@ -12,10 +12,10 @@ info you'll need to start monkeying around.
 
 ## What is Infection Monkey?
 Infection Monkey is an open-source adversary emulation platform that helps you
-improve your security posture using empirical data. Monkey uses various methods
-to self-propagate across a network and reports its activities to a centralized
-command and control server known as the Monkey Island. 🐵🏝️ You know, like
-malware, but ✨safe.✨
+improve your security posture using empirical data. The Monkey uses various
+methods to self-propagate across a network and reports its activities to a
+centralized command and control server known as the Monkey Island. 🐵🏝️ You
+know, like malware, but ✨safe.✨
 
 ## How does it work?
 
