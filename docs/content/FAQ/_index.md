@@ -57,7 +57,7 @@ Monkey in the newly created folder.
 ## How do I reset the Monkey Island password?
 
 In order to reset the Monkey Island password, you'll need to [perform a factory
-reset](/howtos/factory-reset).
+reset](/howtos/factory_reset).
 
 ## Should I run the Infection Monkey continuously?
 
@@ -91,7 +91,7 @@ suggest an update if one is available.
 ### Downloading logs
 
 Both the Agent and Island logs can be downloaded from the Infection Map page. See [how
-to download logs](../howtos/download-logs) for more information.
+to download logs](../howtos/download_logs) for more information.
 
 ### Log locations
 

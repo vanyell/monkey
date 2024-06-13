@@ -20,4 +20,4 @@ machine in the Infection Map.
 
 ### See also
 
-- [Logs reference page](../reference/logs)
+- [Logs reference page](/reference/logs)

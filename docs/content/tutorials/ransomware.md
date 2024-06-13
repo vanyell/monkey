@@ -15,7 +15,7 @@ Infection Monkey. You'll learn:
 
 ### Prerequisites
 To complete this tutorial, you'll need to have the sandbox environment set up.
-Follow the steps in [Tutorial 0: First steps](../first-steps) if you have not
+Follow the steps in [Tutorial 0: First steps](../first_steps) if you have not
 done so already.
 
 ### Configure the vulnerable container
@@ -121,7 +121,7 @@ sidebar. Click the _From Island_ button to launch an attack on the vulnerable
 container from the Monkey Island.
 
 If you look at the **Infection Map**, you'll see that the `hello` container
-gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello-monkey).
+gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello_monkey).
 
 You can tell that the run has completed when a check mark appears next to the
 _Infection Map_ and _Security Report_ in the navigation sidebar:
