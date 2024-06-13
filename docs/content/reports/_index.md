@@ -1,8 +1,8 @@
-+++
-title = "Reports"
-chapter = true
-pre = "<i class='fas fa-scroll'></i> "
-+++
+---
+title: "Reports"
+chapter: true
+pre: "<i class='fas fa-scroll'></i> "
+---
 
 # Infection Monkey's Reports
 

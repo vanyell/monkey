@@ -1,9 +1,9 @@
-+++
-title = "Setup"
-chapter = true
-pre = '<i class="fas fa-cogs"></i> '
-tags = ["setup"]
-+++
+---
+title: "Setup"
+chapter: true
+pre: '<i class="fas fa-cogs"></i> '
+tags: ["setup"]
+---
 
 # Setting up Infection Monkey
 

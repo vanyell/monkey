@@ -1,8 +1,8 @@
-+++
-title = "Plugins"
-chapter = false
-pre = '<i class="fas fa-puzzle-piece"></i> '
-+++
+---
+title: "Plugins"
+chapter: false
+pre: '<i class="fas fa-puzzle-piece"></i> '
+---
 
 ## Overview
 

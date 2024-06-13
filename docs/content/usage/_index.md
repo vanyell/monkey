@@ -1,8 +1,8 @@
-+++
-title = "Usage"
-chapter = true
-pre = '<i class="fas fa-users-cog"></i> '
-+++
+---
+title: "Usage"
+chapter: true
+pre: '<i class="fas fa-users-cog"></i> '
+---
 
 # Usage
 

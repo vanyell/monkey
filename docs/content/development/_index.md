@@ -1,9 +1,9 @@
-+++
-title = "Contribute"
-chapter = true
-pre = '<i class="fas fa-code"></i> '
-tags = ["development", "contribute"]
-+++
+---
+title: "Contribute"
+chapter: true
+pre: '<i class="fas fa-code"></i> '
+tags: ["development", "contribute"]
+---
 
 # Securing networks together
 

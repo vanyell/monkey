@@ -1,9 +1,9 @@
-+++
-title = "Reference"
-chapter = true
-pre = '<i class="fas fa-layer-group"></i> '
-tags = ["reference"]
-+++
+---
+title: "Reference"
+chapter: true
+pre: '<i class="fas fa-layer-group"></i>'
+tags: ["reference"]
+---
 
 # Reference
 
