@@ -12,17 +12,10 @@ tags: ["setup", "AppImage", "linux"]
 An [AppImage](https://appimage.org/) is a distribution-agnostic, self-running
 package that contains an application and everything that it may need to run.
 
-The Infection Monkey AppImage package should run on most modern Linux distros that have FUSE
-installed, but the ones that we've tested are:
-- BlackArch 2023.04.01
-- Kali 2023.1
-- Parrot 5.2
-- CentOS/Rocky/RHEL 8+
-- Debian 11
-- openSUSE Leap 15.4
-- Ubuntu Bionic 18.04, Focal 20.04, Jammy 22.04
-
-On Windows, AppImage can be run in WSL 2.
+The Infection Monkey AppImage package should run on most modern Linux distros
+that have FUSE installed. See the [system
+requirements](/reference/system_requirements) for a list of Linux distributions
+that have been tested with the latest version of Infection Monkey.
 
 
 ## Deployment
