@@ -3,6 +3,7 @@ title: "Contribute"
 chapter: true
 pre: '<i class="fas fa-code"></i> '
 tags: ["development", "contribute"]
+weight: 200
 ---
 
 # Securing networks together

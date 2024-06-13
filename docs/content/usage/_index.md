@@ -2,6 +2,7 @@
 title: "Usage"
 chapter: true
 pre: '<i class="fas fa-users-cog"></i> '
+weight: 40
 ---
 
 # Usage

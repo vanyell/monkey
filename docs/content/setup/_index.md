@@ -3,6 +3,7 @@ title: "Setup"
 chapter: true
 pre: '<i class="fas fa-cogs"></i> '
 tags: ["setup"]
+weight: 20
 ---
 
 # Setting up Infection Monkey
