@@ -1,7 +1,5 @@
 ---
 title: "Ransomware report"
-date: 2021-08-05T13:23:10+03:00
-weight: 4
 draft: false
 description: "Provides information about ransomware simulation on your network"
 ---

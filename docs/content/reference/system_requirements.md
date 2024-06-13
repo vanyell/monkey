@@ -1,9 +1,7 @@
 ---
 title: "System requirements"
-date: 2020-07-14T08:09:53+03:00
 draft: false
 pre: '<i class="fas fa-laptop"></i> '
-weight: 60
 tags: ["setup", "reference", "windows", "linux"]
 ---
 

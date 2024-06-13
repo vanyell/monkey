@@ -1,6 +1,5 @@
 ---
 title: "Infection Monkey Documentation"
-date: 2020-05-26T18:15:37+03:00
 draft: false
 ---
 

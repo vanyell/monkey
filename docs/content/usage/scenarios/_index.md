@@ -1,7 +1,5 @@
 +++
 title = "Scenarios"
-date = 2020-08-12T12:52:59+03:00
-weight = 3
 chapter = true
 pre = "<i class='fas fa-map-marked-alt'></i> "
 +++

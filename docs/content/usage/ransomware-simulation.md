@@ -1,9 +1,7 @@
 ---
 title: " Ransomware Simulation"
-date: 2021-06-23T18:13:59+05:30
 draft: false
 description: "Simulate a ransomware attack on your network and assess the potential damage."
-weight: 6
 pre: "<i class='fa fa-lock'></i> "
 ---
 

@@ -1,7 +1,5 @@
 +++
 title = "Plugins"
-date = 2023-08-31T14:39:18+00:00
-weight = 10
 chapter = false
 pre = '<i class="fas fa-puzzle-piece"></i> '
 +++

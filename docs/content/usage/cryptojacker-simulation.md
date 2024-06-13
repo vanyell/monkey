@@ -1,9 +1,7 @@
 ---
 title: " Cryptojacker Simulation"
-date: 2022-08-09T13:51:13-04:00
 draft: false
 description: "Simulate a cryptojacking attack on your network and assess the potential damage."
-weight: 6
 pre: "<i class='fa fa-coins'></i> "
 ---
 

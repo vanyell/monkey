@@ -1,9 +1,7 @@
 ---
 title: "Data directory"
-date: 2021-05-18T08:49:59+03:00
 draft: false
 pre: '<i class="fas fa-folder"></i> '
-weight: 30
 ---
 
 ## What is the data directory?

@@ -1,8 +1,6 @@
 ---
 title: "Getting Started"
-date: 2020-05-26T21:01:12+03:00
 draft: false
-weight: 1
 pre: "<i class='fas fa-play-circle'></i> "
 tags: ["usage"]
 ---

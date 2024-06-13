@@ -1,7 +1,5 @@
 +++
 title = "Setup"
-date = 2020-05-26T20:55:04+03:00
-weight = 5
 chapter = true
 pre = '<i class="fas fa-cogs"></i> '
 tags = ["setup"]

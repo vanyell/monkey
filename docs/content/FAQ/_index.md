@@ -1,6 +1,5 @@
 ---
 title: "FAQ"
-date: 2020-06-18T15:11:52+03:00
 draft: false
 pre: "<i class='fas fa-question'></i> "
 ---

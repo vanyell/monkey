@@ -1,7 +1,5 @@
 +++
 title = "Contribute"
-date = 2020-05-26T20:55:04+03:00
-weight = 30
 chapter = true
 pre = '<i class="fas fa-code"></i> '
 tags = ["development", "contribute"]

@@ -1,9 +1,7 @@
 ---
 title: "How to download logs"
-date: 2020-06-03T11:28:00+04:00
 draft: false
 pre: '<i class="fas fa-file-lines"></i> '
-weight: 2
 tags: ["howtos", "download logs"]
 ---
 

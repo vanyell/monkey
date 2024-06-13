@@ -1,9 +1,7 @@
 ---
 title: "Network Segmentation"
-date: 2020-08-12T13:05:05+03:00
 draft: false
 description: "Verify your network is properly segmented."
-weight: 4
 ---
 
 ## Overview

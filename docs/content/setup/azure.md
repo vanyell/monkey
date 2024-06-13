@@ -1,9 +1,7 @@
 ---
 title: "Azure"
-date: 2020-05-26T20:57:39+03:00
 draft: false
 pre: '<i class="fab fa-microsoft"></i> '
-weight: 6
 tags: ["setup", "azure"]
 ---
 
