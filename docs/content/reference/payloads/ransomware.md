@@ -44,10 +44,6 @@ The file extension that the Infection Monkey will use for the encrypted file.
 ^(\.[A-Za-z0-9_]+)?$
 ```
 
-[try
-pattern](https://regexr.com/?expression=%5E\(%5C.%5BA-Za-z0-9_%5D%2B\)%3F%24
-"try regular expression with regexr.com")
-
 #### file\_extension Default Value
 
 The default value is:
@@ -78,9 +74,6 @@ encrypted.
 ^$|^/|^\$|^~
 ```
 
-[try pattern](https://regexr.com/?expression=%5E%24%7C%5E%2F%7C%5E%5C%24%7C%5E~
-"try regular expression with regexr.com")
-
 ### windows\_target\_dir
 
 A path to a directory on Windows systems that contains files you will allow
@@ -102,8 +95,6 @@ encrypted.
 ```regexp
 ^$|^([A-Za-z]:(\\|/))|^%([A-Za-z#$'()*+,\-\.?@[\]_`\{\}~ ]+([A-Za-z#$'()*+,\-\.?@[\]_`\{\}~ ]|\d)*)%|^\\{2}
 ```
-
-[try pattern](https://regexr.com/?expression=%5E%24%7C%5E\(%5BA-Za-z%5D%3A\(%5C%5C%7C%2F\)\)%7C%5E%25\(%5BA-Za-z%23%24'\(\)*%2B%2C%5C-%5C.%3F%40%5B%5C%5D_%60%5C%7B%5C%7D~%20%5D%2B\(%5BA-Za-z%23%24'\(\)*%2B%2C%5C-%5C.%3F%40%5B%5C%5D_%60%5C%7B%5C%7D~%20%5D%7C%5Cd\)*\)%25%7C%5E%5C%5C%7B2%7D "try regular expression with regexr.com")
 
 ### leave\_readme
 
