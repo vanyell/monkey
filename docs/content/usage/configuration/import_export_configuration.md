@@ -38,7 +38,7 @@ cannot necessarily be imported into newer versions.
 {{% notice note %}}
 If a configuration file enables plugins (e.g. exploiters or payloads) that are
 not installed, the Monkey Island will refuse to import it. You can install
-plugins on the [plugin installation page](/usage/plugins/).
+plugins on the [plugin installation page](/features/plugins/).
 {{% /notice %}}
 
 ### Importing a plaintext configuration file
