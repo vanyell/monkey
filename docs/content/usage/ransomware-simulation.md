@@ -1,5 +1,5 @@
 ---
-title: " Ransomware Simulation"
+title: "Ransomware Simulation"
 draft: false
 description: "Simulate a ransomware attack on your network and assess the potential damage."
 pre: "<i class='fa fa-lock'></i> "

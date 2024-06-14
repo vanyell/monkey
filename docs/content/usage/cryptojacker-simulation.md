@@ -1,5 +1,5 @@
 ---
-title: " Cryptojacker Simulation"
+title: "Cryptojacker Simulation"
 draft: false
 description: "Simulate a cryptojacking attack on your network and assess the potential damage."
 pre: "<i class='fa fa-coins'></i> "
