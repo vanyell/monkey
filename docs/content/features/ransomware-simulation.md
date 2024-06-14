@@ -60,7 +60,7 @@ ransomware simulation.
 
 After the simulation is complete, you can use the same mechanism you used in
 [step
-1](/usage/ransomware-simulation#1-prepare-your-environment-for-a-ransomware-simulation)
+1](/features/ransomware-simulation#1-prepare-your-environment-for-a-ransomware-simulation)
 to either remove the target directory or replace the encrypted files with
 unencrypted files. In most cases, there's no need to attempt to decrypt the
 files, as you should still have the originals.
