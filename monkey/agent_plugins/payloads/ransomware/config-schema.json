@@ -30,7 +30,7 @@
         "change_wallpaper": {
             "title": "Change Desktop Wallpaper",
             "type": "boolean",
-            "description": "If enabled, Infection Monkey will change the desktop wallpaper on Windows systems",
+            "description": "If enabled, Infection Monkey will change the desktop wallpaper on Windows systems.",
             "default": false
         }
     }
