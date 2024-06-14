@@ -51,7 +51,7 @@ Next, click **Infection Map** to see the Infection Monkey in action.
 ![Infection Map](/images/island/infection_map_page/infection_map.png "Infection Map")
 
 As the simulation progresses, the map is updated with data on accessible and "hacked" machines. Once
-all Infection Monkey Agents have finished propagating, click **Security Report** to see the reports. See [Infection Monkey's Reports](../reports) for more info.
+all Infection Monkey Agents have finished propagating, click **Security Report** to see the reports. See [Infection Monkey's Reports](/features/reports) for more info.
 
 ![End of Monkey execution](/images/island/infection_map_page/infection_map_with_arrow_to_report.png "End of Monkey execution")
 

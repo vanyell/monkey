@@ -5,7 +5,7 @@ description: "Provides information about ransomware simulation on your network"
 ---
 
 {{% notice info %}}
-Check out [the documentation for other available reports](/reports).
+Check out [the documentation for other available reports](/features/reports).
 {{% /notice %}}
 
 The Infection Monkey can be configured to [simulate a ransomware
