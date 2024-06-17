@@ -1,9 +1,7 @@
 ---
 title: "Credentials Leak"
-date: 2020-08-12T13:04:25+03:00
 draft: false
 description: "Assess the impact of a successful phishing attack, insider threat, or other form of credentials leak."
-weight: 5
 ---
 
 ## Overview

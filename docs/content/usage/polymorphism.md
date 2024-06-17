@@ -1,8 +1,6 @@
 ---
 title: "Polymorphism"
-date: 2023-05-16T15:19:06+05:30
 draft: false
-weight: 5
 pre: "<i class='fas fa-file-signature'></i> "
 tags: ["usage", "polymorphism"]
 ---

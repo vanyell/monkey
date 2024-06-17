@@ -1,8 +1,6 @@
 ---
 title: "Verify Integrity - Checksums"
-date: 2020-06-08T19:53:47+03:00
 draft: false
-weight: 100
 pre: "<i class='fas fa-certificate'></i> "
 ---
 

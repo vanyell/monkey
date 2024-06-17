@@ -1,9 +1,7 @@
 ---
 title: "Ransomware"
-date: 2024-06-12T18:42:17Z
 draft: false
 description: "Reference material for the Ransomware payload"
-weight: 6
 pre: "<i class='fa fa-lock'></i> "
 ---
 {{< table_of_contents >}}

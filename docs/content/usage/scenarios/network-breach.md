@@ -1,9 +1,7 @@
 ---
 title: "Network Breach"
-date: 2020-08-12T13:04:55+03:00
 draft: false
 description: "Simulate an internal network breach and assess the potential impact."
-weight: 3
 ---
 
 ## Overview

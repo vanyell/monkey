@@ -1,9 +1,7 @@
 ---
 title: "AWS"
-date: 2020-05-26T20:57:36+03:00
 draft: false
 pre: '<i class="fab fa-aws"></i> '
-weight: 5
 tags: ["setup", "aws"]
 ---
 

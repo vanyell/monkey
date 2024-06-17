@@ -1,6 +1,5 @@
 ---
 title: "Network"
-date: 2020-06-09T12:20:14+03:00
 draft: false
 description: "Configure settings related to Infection Monkey's network activity."
 ---

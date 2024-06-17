@@ -1,6 +1,5 @@
 ---
 title: "Importing and Exporting Configuration"
-date: 2023-11-28T10:08:52Z
 draft: false
 description: "Configure Infection Monkey by importing/exporting a configuration file."
 ---

@@ -1,8 +1,6 @@
 ---
 title: "Running Manually"
-date: 2022-06-09T14:47:40+03:00
 draft: false
-weight: 2
 pre: "<i class='fas fa-terminal'></i> "
 tags: ["usage"]
 ---

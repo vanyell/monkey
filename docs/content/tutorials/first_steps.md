@@ -1,9 +1,7 @@
 ---
 title: "Tutorial 0: First steps"
-date: 2020-05-26T20:57:10+03:00
 draft: false
 pre: '<i class="fas fa-shoe-prints"></i> '
-weight: 2
 tags: ["tutorials", "first-steps"]
 ---
 

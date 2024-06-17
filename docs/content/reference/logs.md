@@ -1,9 +1,7 @@
 ---
 title: "Logs"
-date: 2024-06-03T13:20:41-04:00
 draft: false
 pre: '<i class="fas fa-file-lines"></i> '
-weight: 50
 tags: ["logs", "reference"]
 ---
 

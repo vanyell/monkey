@@ -1,10 +1,9 @@
-+++
-title = "Reports"
-date = 2020-06-24T21:16:03+03:00
-weight = 40
-chapter = true
-pre = "<i class='fas fa-scroll'></i> "
-+++
+---
+title: "Reports"
+chapter: true
+pre: "<i class='fas fa-scroll'></i> "
+weight: 50
+---
 
 # Infection Monkey's Reports
 

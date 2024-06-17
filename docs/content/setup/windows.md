@@ -1,9 +1,7 @@
 ---
 title: "Windows"
-date: 2020-05-26T20:57:10+03:00
 draft: false
 pre: '<i class="fab fa-windows"></i> '
-weight: 2
 tags: ["setup", "windows"]
 ---
 
