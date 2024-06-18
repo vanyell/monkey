@@ -13,7 +13,7 @@ Infection Monkey. You'll learn:
 
 ### Prerequisites
 To complete this tutorial, you'll need to have the sandbox environment set up.
-Follow the steps in [Tutorial 0: First steps](../first_steps) if you have not
+Follow the steps in [Tutorial 0: First steps](../first-steps) if you have not
 done so already.
 
 ### Configure the vulnerable container
