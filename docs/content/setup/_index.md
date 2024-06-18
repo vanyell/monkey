@@ -23,5 +23,5 @@ requirements [here](../reference/system_requirements).
 {{% /notice %}}
 
 {{% notice tip %}}
-You can find the binary checksums of our installers to verify their integrity [on this page](../usage/file-checksums).
+You can find the binary checksums of our installers to verify their integrity [on this page](/reference/release-artifact-checksums).
 {{% /notice %}}

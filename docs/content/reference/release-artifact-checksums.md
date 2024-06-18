@@ -1,5 +1,5 @@
 ---
-title: "Verify Integrity - Checksums"
+title: "Release artifact checksums"
 draft: false
 pre: "<i class='fas fa-certificate'></i> "
 ---
