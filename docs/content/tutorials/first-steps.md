@@ -87,7 +87,7 @@ Let's take a moment to review what you've learned:
 
 ### Next steps
 Now that you have a sandbox environment for experimenting with Infection
-Monkey, you can move on to [Tutorial 1: Hello, Monkey](../hello_monkey), where
+Monkey, you can move on to [Tutorial 1: Hello, Monkey](../hello-monkey), where
 you'll learn how to configure and use Infection Monkey to exploit a vulnerable
 server.
 

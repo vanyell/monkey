@@ -119,7 +119,7 @@ sidebar. Click the _From Island_ button to launch an attack on the vulnerable
 container from the Monkey Island.
 
 If you look at the **Infection Map**, you'll see that the `hello` container
-gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello_monkey).
+gets exploited as it did in [Tutorial 1: Hello, Monkey](../hello-monkey).
 
 You can tell that the run has completed when a check mark appears next to the
 _Infection Map_ and _Security Report_ in the navigation sidebar:
