@@ -91,7 +91,7 @@ suggest an update if one is available.
 ### Downloading logs
 
 Both the Agent and Island logs can be downloaded from the Infection Map page. See [how
-to download logs](../howtos/download_logs) for more information.
+to download logs](../howtos/download-logs) for more information.
 
 ### Log locations
 
