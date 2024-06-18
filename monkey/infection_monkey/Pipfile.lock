@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9f75bfb1e5ab3d9dab04a14c9020be8b43795076c529081cec807806f539fd7a"
+            "sha256": "252e5b0bd15afb37a884b9f0e7c1c6ec970d54ab376587dea07e61f14e739a09"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -300,12 +300,12 @@
         },
         "monkey-agentpluginapi": {
             "hashes": [
-                "sha256:090a25b0f70d45c3d4822ced070e2623c349b5f17b3d4601244a12827a41a108",
-                "sha256:1dccca51af652fb53d321cb980dd2b417a9397e9d88db1f8954c9e4983005401"
+                "sha256:1bfd76703735aea0ae8dadc9a82af5df14b82a028e69b6a3f635f3de42c60f8a",
+                "sha256:7b763441939e5b37115e7dee8c2d28ed7c38a79b758efb0d6b7dba272afa8c49"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.11' and python_version < '4.0'",
-            "version": "==0.10.0"
+            "version": "==0.11.0"
         },
         "monkey-types": {
             "hashes": [
