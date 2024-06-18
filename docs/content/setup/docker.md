@@ -197,7 +197,7 @@ again with the new file.
 If you'd like to keep your existing configuration, you can export it to a file
 using the *Export config* button and then import it to the new Monkey Island.
 
-![Import/export configuration](../../images/island/configuration_page/import_export_configuration.png "Import/export configuration")
+![Import/export configuration](../../images/island/configuration-page/import-export-configuration.png "Import/export configuration")
 
 ## Troubleshooting
 

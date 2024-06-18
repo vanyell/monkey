@@ -44,4 +44,4 @@ under **Propagation -> Credentials** and use the "+" button to add the old
 passwords to the configuration. For example, here we added a few extra
 passwords (and a username as well) to the configuration:
 
-![Exploit password and user lists](/images/island/configuration_page/credentials_configuration.png "Exploit password and user lists")
+![Exploit password and user lists](/images/island/configuration-page/credentials-configuration.png "Exploit password and user lists")

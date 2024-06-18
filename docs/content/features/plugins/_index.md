@@ -16,7 +16,7 @@ Plugins page consists of three tabs:
 - **Upload New Plugin** - A form to upload a new plugin to the Monkey Island. This is useful if you
  want to install a plugin that is not officially released yet.
 
-![Plugin Installation Screen](/images/island/plugins_page/plugin_installation.PNG "Plugin Installation")
+![Plugin Installation Screen](/images/island/plugins-page/plugin-installation.PNG "Plugin Installation")
 
 ## Troubleshooting
 

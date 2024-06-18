@@ -16,4 +16,4 @@ property by adding random bytes to each Agent before propagation.
 
 ## Using Polymorphism
 
-![Polymorphism Configuration](/images/island/configuration_page/polymorphism_configuration.png "Polymorphism configuration")
+![Polymorphism Configuration](/images/island/configuration-page/polymorphism-configuration.png "Polymorphism configuration")

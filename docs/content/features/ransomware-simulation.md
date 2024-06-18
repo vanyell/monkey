@@ -41,7 +41,7 @@ caution: you'll no longer be able to tell if the file has been encrypted based
 on the filename alone!
 
 ![Ransomware
-configuration](/images/island/configuration_page/ransomware_configuration.png
+configuration](/images/island/configuration-page/ransomware-configuration.png
 "Ransomware configuration")
 
 ### 3. Configure propagation
@@ -118,7 +118,7 @@ only applicable to victim machines running Windows.
 When this feature is enabled, the desktop background will be changed to this:
 
 ![Ransomware
-wallpaper](/images/island/others/ransomware_wallpaper_downsized.png
+wallpaper](/images/island/others/ransomware-wallpaper-downsized.png
 "Ransomware wallpaper")
 
 ### See also

@@ -145,7 +145,7 @@ If you wish to simulate a very "deep" attack into your network, you can increase
 
 To do this, change the `Configuration -> Propagation -> General -> Maximum scan depth` configuration option:
 
-![How to increase propagation depth](/images/island/configuration_page/max_scan_depth_configuration.png "How to increase propagation depth")
+![How to increase propagation depth](/images/island/configuration-page/max-scan-depth-configuration.png "How to increase propagation depth")
 
 
 ## Can I limit how the Infection Monkey propagates through my network?
@@ -166,7 +166,7 @@ the Agent will pivot from _Host C_ and continue to scan other machines on the
 network. However, if _Host C_ successfully breaches _Host E_, it will not pivot
 further nor continue to scan or propagate.
 
-![What is scan depth](/images/island/others/propagation_depth_diagram.png "What is scan
+![What is scan depth](/images/island/others/propagation-depth-diagram.png "What is scan
 depth")
 
 ### Enable or disable scanning the local subnet

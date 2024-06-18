@@ -24,7 +24,7 @@ Infection Monkey's various features are provided by plugins. No plugins are inst
 
 Read more about plugins [here](/features/plugins).
 
-![Plugin Installation Screen](/images/island/plugins_page/plugin_installation.PNG "Plugin Installation")
+![Plugin Installation Screen](/images/island/plugins-page/plugin-installation.PNG "Plugin Installation")
 
 ### Running the Infection Monkey
 
@@ -32,13 +32,13 @@ To get the Infection Monkey running as fast as possible, click **Run Monkey**. O
 
 To run the Infection Monkey, select one of the following options:
 
-![Run Page](/images/island/run_monkey_page/run_monkey.png "Run Page")
+![Run Page](/images/island/run-monkey-page/run-monkey.png "Run Page")
 
 1. Click **From Island** to run the Infection Monkey on the Monkey Island Server. This simulates an attacker trying to propagate through your local network from the Monkey Island machine.
 2. Click **Manual**  to download and execute the Infection Monkey on a machine of your choice.
 Follow the instructions and run the generated command on the machine you selected. This simulates an attacker who has breached one of your servers. The Infection Monkey will map all accessible machines and their open services, attempt to steal credentials, and use exploits to propagate.
 
-![Run on machine of your choice](/images/island/run_monkey_page/run_monkey_on_machine.png "Run on machine of your choice")
+![Run on machine of your choice](/images/island/run-monkey-page/run-monkey-on-machine.png "Run on machine of your choice")
 
 {{% notice tip %}}
 If you're running the Infection Monkey in an AWS cloud environment, check out [Usage -> Integrations](../../usage/integrations) for information about how it integrates with AWS.
@@ -48,11 +48,11 @@ If you're running the Infection Monkey in an AWS cloud environment, check out [U
 
 Next, click **Infection Map** to see the Infection Monkey in action.
 
-![Infection Map](/images/island/infection_map_page/infection_map.png "Infection Map")
+![Infection Map](/images/island/infection-map-page/infection-map.png "Infection Map")
 
 As the simulation progresses, the map is updated with data on accessible and "hacked" machines. Once
 all Infection Monkey Agents have finished propagating, click **Security Report** to see the reports. See [Infection Monkey's Reports](/features/reports) for more info.
 
-![End of Monkey execution](/images/island/infection_map_page/infection_map_with_arrow_to_report.png "End of Monkey execution")
+![End of Monkey execution](/images/island/infection-map-page/infection-map-with-arrow-to-report.png "End of Monkey execution")
 
 Congratulations, you finished your first successful execution of the Infection Monkey 🎉 ! To thoroughly test your network, you can run the Infection Monkey from different starting locations and use different configurations.

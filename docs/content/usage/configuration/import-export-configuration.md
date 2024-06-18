@@ -19,7 +19,7 @@ configuration files cannot be recovered if password is lost.
 {{% /notice %}}
 
 ![Export
-Configuration](/images/island/configuration_page/export_configuration.png
+Configuration](/images/island/configuration-page/export-configuration.png
 "Export Configuration")
 
 
@@ -43,10 +43,10 @@ plugins on the [plugin installation page](/features/plugins/).
 
 ### Importing a plaintext configuration file
 ![Configuration without
-password](/images/island/configuration_page/import_configuration.png
+password](/images/island/configuration-page/import-configuration.png
 "Configuration without password")
 
 ### Importing a password-protected (encrypted) configuration file
 ![Password-encrypted
-Configuration](/images/island/configuration_page/import_configuration_password.png
+Configuration](/images/island/configuration-page/import-configuration-password.png
 "Password-encrypted Configuration")

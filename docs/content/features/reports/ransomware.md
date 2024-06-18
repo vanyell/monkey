@@ -23,7 +23,7 @@ The report is split into three sections:
 
 The breach section shows when and where the ransomware infection began.
 
-![Breach](/images/island/reports_page/ransomware_report_breach.png "Breach")
+![Breach](/images/island/reports-page/ransomware-report-breach.png "Breach")
 
 
 ## Lateral movement
@@ -32,7 +32,7 @@ The lateral movement section provides information about how the simulated
 ransomware was able to propagate through your network.
 
 
-![Lateral Movement](/images/island/reports_page/ransomware_report_lateral_movement.png "Lateral Movement")
+![Lateral Movement](/images/island/reports-page/ransomware-report-lateral-movement.png "Lateral Movement")
 
 
 ## Attack
@@ -40,4 +40,4 @@ ransomware was able to propagate through your network.
 The attack section shows the details of what the simulated ransomware
 successfully encrypted, including a list of specific files.
 
-![Attack](/images/island/reports_page/ransomware_report_attack.png "Attack")
+![Attack](/images/island/reports-page/ransomware-report-attack.png "Attack")
