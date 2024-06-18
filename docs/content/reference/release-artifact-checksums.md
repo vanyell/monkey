@@ -40,7 +40,7 @@ $ sha256sum <FILE_NAME>
 | InfectionMonkey-v2.3.0.exe                           | Windows Installer | 2.3.0   | `66f5b06f1c85c26393dd990e0539a22833a4455b0eed3a08f43dcafaaa92fa0c` |
 
 
-## Older checksums
+## Older versions checksums
 
 | Filename                                             | Type              | Version | SHA256                                                             |
 |------------------------------------------------------|-------------------|---------|--------------------------------------------------------------------|
