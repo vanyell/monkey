@@ -19,7 +19,7 @@ After setting the Monkey up, check out our [Getting Started](/usage/getting-star
 
 {{% notice tip %}}
 You can find information about operating system compatibility and system
-requirements [here](../reference/system_requirements).
+requirements [here](../reference/system-requirements).
 {{% /notice %}}
 
 {{% notice tip %}}

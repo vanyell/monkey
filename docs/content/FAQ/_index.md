@@ -113,7 +113,7 @@ If you do experience any performance issues please let us know on [our Slack cha
 
 ### What are the system resource requirements for the Monkey Island?
 
-See the [system requirements](/reference/system_requirements) page.
+See the [system requirements](/reference/system-requirements) page.
 
 
 ### Is it safe to use real passwords and usernames in the Infection Monkey's configuration?

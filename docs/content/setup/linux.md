@@ -12,7 +12,7 @@ package that contains an application and everything that it may need to run.
 
 The Infection Monkey AppImage package should run on most modern Linux distros
 that have FUSE installed. See the [system
-requirements](/reference/system_requirements) for a list of Linux distributions
+requirements](/reference/system-requirements) for a list of Linux distributions
 that have been tested with the latest version of Infection Monkey.
 
 
