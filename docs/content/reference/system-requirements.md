@@ -5,6 +5,8 @@ pre: '<i class="fas fa-laptop"></i> '
 tags: ["setup", "reference", "windows", "linux"]
 ---
 
+{{< table_of_contents >}}
+
 ## Monkey Island
 
 
@@ -39,7 +41,7 @@ versions of Microsoft Windows:
 - Windows Server 2019
 - Windows 10
 
-### Hardware Requirements
+### Hardware requirements
 #### Supported architectures
 The Monkey Island runs on x86-64 processors only.
 
@@ -59,6 +61,7 @@ The Monkey Island runs on x86-64 processors only.
 
 ## Agent
 
+### Supported operating systems
 #### Linux
 
 The Monkey Agent should run on any Linux distribution with a version of
@@ -80,6 +83,7 @@ with the following distributions:
   is installed.)
 - Windows 10
 
+### Hardware requirements
 #### Supported architectures
 The Monkey Agent runs on x86-64 processors only.
 
