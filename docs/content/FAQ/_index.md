@@ -19,19 +19,19 @@ If you want to see what has changed between versions, refer to the [releases pag
 
 ## I updated to a new version of the Infection Monkey and I'm being asked to delete my existing data directory. Why?
 
-The [data directory](/reference/data_directory) contains the Infection Monkey's
+The [data directory](/reference/data-directory) contains the Infection Monkey's
 database and other internal data. For the new version of Infection Monkey to
 work flawlessly, a data directory with a compatible structure needs to be set
 up.
 
 If you would like to save the data gathered from the Monkey's previous runs,
-you can make a backup of your [existing data directory](/reference/data_directory) before deleting it.
+you can make a backup of your [existing data directory](/reference/data-directory) before deleting it.
 
 ## How can I use an old data directory?
 
 To use the data stored in a data directory from an older version, reinstall the
 version of the Monkey Island which matches your data directory's version. Then,
-copy the backup of your old data directory to the [appropriate location](/reference/data_directory).
+copy the backup of your old data directory to the [appropriate location](/reference/data-directory).
 
 ## How long does a single Infection Monkey Agent run? Is there a time limit?
 

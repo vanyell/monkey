@@ -10,7 +10,7 @@ installation. This is useful if you forgot your credentials for accessing the
 Monkey Island or you just want a fresh start.
 
 When the Monkey Island starts for the first time, it creates a [data
-directory](/reference/data_directory) where it stores all of its
+directory](/reference/data-directory) where it stores all of its
 data if one does not already exist. Performing a factory reset involves the
 following steps:
 
