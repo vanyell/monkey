@@ -68,15 +68,17 @@ class WindowsAgentCommandBuilder(IWindowsAgentCommandBuilder):
             if run_options.shell == WindowsShell.CMD:
                 self._command += "cmd.exe /c "
 
-        if run_options.shell == WindowsShell.POWERSHELL:
-            set_otp = self._set_otp_powershell
-        elif run_options.shell == WindowsShell.CMD:
-            set_otp = self._set_otp_cmd
-
-        self._command += f"{set_otp()} {str(run_options.agent_destination_path)} "
+        if run_options.include_otp:
+            if run_options.shell == WindowsShell.POWERSHELL:
+                set_otp = self._set_otp_powershell
+            elif run_options.shell == WindowsShell.CMD:
+                set_otp = self._set_otp_cmd
+            self._command += f"{set_otp()} {str(run_options.agent_destination_path)}"
 
         if run_options.dropper_execution_mode != DropperExecutionMode.SCRIPT:
-            self._command += self._build_agent_run_arguments(run_options)
+            self._command += " " + self._build_agent_run_arguments(run_options)
+
+        self._command += ";"
 
     def _set_otp_powershell(self) -> str:
         return f"$env:{self._agent_otp_environment_variable}='{self._otp_provider.get_otp()}';"

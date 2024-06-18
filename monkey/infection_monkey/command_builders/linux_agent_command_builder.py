@@ -57,13 +57,17 @@ class LinuxAgentCommandBuilder(ILinuxAgentCommandBuilder):
         )
 
     def build_run_command(self, run_options: LinuxRunOptions):
-        self._command += (
-            f"{self._agent_otp_environment_variable}={self._otp_provider.get_otp()} "
-            f"{str(run_options.agent_destination_path)} "
-        )
+        if run_options.include_otp:
+            self._command += (
+                f"{self._agent_otp_environment_variable}={self._otp_provider.get_otp()} "
+            )
+
+        self._command += str(run_options.agent_destination_path)
 
         if run_options.dropper_execution_mode != DropperExecutionMode.SCRIPT:
-            self._command += self._build_agent_run_arguments(run_options)
+            self._command += " " + self._build_agent_run_arguments(run_options)
+
+        self._command += ";"
 
     def _build_agent_run_arguments(self, run_options: LinuxRunOptions) -> str:
         agent_arguments = build_monkey_commandline_parameters(
