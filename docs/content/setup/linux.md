@@ -72,7 +72,7 @@ properly on other Linux distributions.
 ## Configuring the server
 
 You can configure the server by creating
-a [server configuration file](../../reference/server_configuration) and
+a [server configuration file](../../reference/server-configuration) and
 providing a path to it via command line parameters:
 
 `./InfectionMonkey-v2.3.0.AppImage --server-config="/path/to/server_config.json"`
@@ -115,7 +115,7 @@ private certificate authority.
     chmod 600 <PATH_TO_CRT_FILE>
     ```
 
-1. Create a [server configuration file and provide the path to the certificate](../../reference/server_configuration).
+1. Create a [server configuration file and provide the path to the certificate](../../reference/server-configuration).
 The server configuration file should look something like:
 
     ```json
@@ -139,7 +139,7 @@ The server configuration file should look something like:
 
 1. Terminate the Island process if it's already running.
 
-1. Create a [server configuration file](../../reference/server_configuration).
+1. Create a [server configuration file](../../reference/server-configuration).
 The server configuration file should look something like:
 
     ```json

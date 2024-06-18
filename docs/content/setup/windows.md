@@ -32,7 +32,7 @@ started page](/usage/getting-started).
 ## Configuring the server
 
 You can configure the server by editing [the configuration
-file](../../reference/server_configuration) located in installation directory.
+file](../../reference/server-configuration) located in installation directory.
 The default path is
 `C:\Program Files\Infection Monkey\monkey_island\cc\server_config.json`.
 
