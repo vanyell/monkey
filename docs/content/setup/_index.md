@@ -23,6 +23,6 @@ requirements [here](../reference/system_requirements).
 {{% /notice %}}
 
 {{% notice tip %}}
-You can find the SHA256 checksums of our release artifacts to verify their
-integrity [on this page](/reference/release-artifact-checksums).
+You can find the SHA256 hashes of our release artifacts to verify their
+integrity [on this page](/reference/release-artifact-hashes).
 {{% /notice %}}
