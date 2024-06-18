@@ -57,7 +57,7 @@ re-install the Infection Monkey in the newly created folder.
 ## How do I reset the Monkey Island password?
 
 In order to reset the Monkey Island password, you'll need to [perform a factory
-reset](/howtos/factory_reset).
+reset](/howtos/factory-reset).
 
 ## Should I run the Infection Monkey continuously?
 
