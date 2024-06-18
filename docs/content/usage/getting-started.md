@@ -22,7 +22,7 @@ On your first login, you'll be asked to create a username and password for the M
 
 Infection Monkey's various features are provided by plugins. No plugins are installed out of the box. To install plugins, click on **Plugins** in the navigation bar and install the plugins you want to use. Clicking on "Download All Safe Plugins" will download all plugins that are considered safe to use in production environments.
 
-Read more about plugins [here](/usage/plugins).
+Read more about plugins [here](/features/plugins).
 
 ![Plugin Installation Screen](/images/island/plugins_page/plugin_installation.PNG "Plugin Installation")
 
@@ -51,7 +51,7 @@ Next, click **Infection Map** to see the Infection Monkey in action.
 ![Infection Map](/images/island/infection_map_page/infection_map.png "Infection Map")
 
 As the simulation progresses, the map is updated with data on accessible and "hacked" machines. Once
-all Infection Monkey Agents have finished propagating, click **Security Report** to see the reports. See [Infection Monkey's Reports](../reports) for more info.
+all Infection Monkey Agents have finished propagating, click **Security Report** to see the reports. See [Infection Monkey's Reports](/features/reports) for more info.
 
 ![End of Monkey execution](/images/island/infection_map_page/infection_map_with_arrow_to_report.png "End of Monkey execution")
 

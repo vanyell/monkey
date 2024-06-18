@@ -196,4 +196,4 @@ In this tutorial, you have learned:
 - Try removing the extension that Infection Monkey adds to the encrypted file
   and re-running the ransomware simulation to "decrypt" the file.
 - Try playing with the Ransomware plugin's configuration options.
-- Read our [ransomware usage document](../../usage/ransomware-simulation).
+- Read our [ransomware usage document](../../features/ransomware-simulation).
