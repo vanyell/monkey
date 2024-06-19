@@ -67,8 +67,6 @@ class LinuxAgentCommandBuilder(ILinuxAgentCommandBuilder):
         if run_options.dropper_execution_mode != DropperExecutionMode.SCRIPT:
             self._command += " " + self._build_agent_run_arguments(run_options)
 
-        self._command += ";"
-
     def _build_agent_run_arguments(self, run_options: LinuxRunOptions) -> str:
         agent_arguments = build_monkey_commandline_parameters(
             parent=self._agent_id,

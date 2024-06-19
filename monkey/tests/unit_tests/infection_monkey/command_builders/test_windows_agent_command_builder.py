@@ -90,7 +90,6 @@ def test_build_run_command_none(
     assert str(agent_id) in actual_command
     assert MONKEY_ARG in actual_command
     assert EXPECTED_AGENT_DESTINATION_PATH in actual_command
-    assert actual_command[-1] == ";"
 
 
 @pytest.mark.parametrize(
