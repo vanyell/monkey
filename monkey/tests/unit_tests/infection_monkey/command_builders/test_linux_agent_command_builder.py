@@ -126,6 +126,28 @@ def test_build_run_command_dropper(
     assert EXPECTED_DROPPER_DESTINATION_PATH in actual_command
 
 
+@pytest.mark.parametrize("otp_included", [True, False])
+def test_build_run_command_otp(
+    linux_agent_command_builder: ILinuxAgentCommandBuilder,
+    otp: str,
+    otp_included,
+):
+    linux_run_options = LinuxRunOptions(
+        agent_destination_path=AGENT_DESTINATION_PATH,
+        dropper_execution_mode=DropperExecutionMode.DROPPER,
+        dropper_destination_path=DROPPER_DESTINATION_PATH,
+        include_otp=otp_included,
+    )
+
+    linux_agent_command_builder.build_run_command(linux_run_options)
+    actual_command = linux_agent_command_builder.get_command()
+
+    if otp_included:
+        assert otp in actual_command
+    else:
+        assert otp not in actual_command
+
+
 def test_build_run_command_script(
     linux_agent_command_builder: ILinuxAgentCommandBuilder,
     agent_otp_environment_variable: str,
