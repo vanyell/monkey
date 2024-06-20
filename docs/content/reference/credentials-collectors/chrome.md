@@ -1,6 +1,7 @@
 ---
 title: "Chrome"
 tags: ["credentials collector", "chrome", "linux", "windows"]
+pre: '<i class="fa-brands fa-chrome"></i> '
 ---
 
 ## Description
