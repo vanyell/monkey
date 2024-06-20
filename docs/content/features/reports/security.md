@@ -2,6 +2,7 @@
 title: "Security report"
 draft: false
 description: "Provides actionable recommendations and insight into an attacker's view of your network"
+pre: "<i class='fas fa-shield'></i> "
 ---
 
 {{% notice info %}}
