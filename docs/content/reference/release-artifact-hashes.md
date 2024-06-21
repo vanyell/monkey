@@ -1,16 +1,22 @@
 ---
-title: "Verify Integrity - Checksums"
+title: "Release artifact hashes"
 draft: false
 pre: "<i class='fas fa-certificate'></i> "
 ---
 
-The official distribution of Infection Monkey is compiled and supplied by Guardicore ([download from our official site here](https://www.akamai.com/infectionmonkey#download)). The team signs all software packages to certify that a particular Infection Monkey package is a valid and unaltered Infection Monkey release. Before installing Infection Monkey, you should validate the package using the SHA-256 checksum.
+The official distribution of Infection Monkey is built and supplied by
+[Akamai](https://www.akamai.com). You can download the latest release from [our
+download page on GitHub.](https://github.com/guardicore/monkey/releases/latest)
+Before installing Infection Monkey, you should verify the integrity of your
+downloaded package comparing its SHA-256 hash with the one that corresponds to
+your specific release artifact in the table below.
 
-## How to get SHA-256 checksum
+## How to get a file's SHA-256 hash
 
 ### On Windows
 
-Use the `Get-FileHash` <i class="fas fa-terminal"></i> PowerShell commandlet, like so:
+Use the `Get-FileHash` <i class="fas fa-terminal"></i> PowerShell commandlet,
+like so:
 
 ```powershell
 Get-FileHash '<FILE_NAME>' | Format-List
@@ -24,7 +30,7 @@ Use the `sha256sum` <i class="fas fa-terminal"></i> shell command, like so:
 $ sha256sum <FILE_NAME>
 ```
 
-## Latest version checksums
+## Latest version hashes
 
 | Filename                                             | Type              | Version | SHA256                                                             |
 |------------------------------------------------------|-------------------|---------|--------------------------------------------------------------------|
@@ -35,7 +41,7 @@ $ sha256sum <FILE_NAME>
 | InfectionMonkey-v2.3.0.exe                           | Windows Installer | 2.3.0   | `66f5b06f1c85c26393dd990e0539a22833a4455b0eed3a08f43dcafaaa92fa0c` |
 
 
-## Older checksums
+## Older versions hashes
 
 | Filename                                             | Type              | Version | SHA256                                                             |
 |------------------------------------------------------|-------------------|---------|--------------------------------------------------------------------|

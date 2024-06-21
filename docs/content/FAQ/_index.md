@@ -50,9 +50,9 @@ simulate malware on your network.
 
 Because of this, the Infection Monkey gets flagged as malware by some antivirus
 solutions during installation. If this happens, [verify the integrity of the
-downloaded installer](/usage/file-checksums) first. Then, create a new folder
-and disable antivirus scan for that folder. Lastly, re-install the Infection
-Monkey in the newly created folder.
+downloaded installer](/reference/release-artifact-hashes) first. Then,
+create a new folder and disable antivirus scan for that folder. Lastly,
+re-install the Infection Monkey in the newly created folder.
 
 ## How do I reset the Monkey Island password?
 
