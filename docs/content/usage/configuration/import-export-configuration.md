@@ -1,5 +1,5 @@
 ---
-title: "Importing and Exporting Configuration"
+title: "Import/Export Configuration"
 draft: false
 description: "Configure Infection Monkey by importing/exporting a configuration file."
 pre: "<i class='fas fa-upload'></i> "
