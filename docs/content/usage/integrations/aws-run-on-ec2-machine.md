@@ -3,6 +3,7 @@ title: "Running the Agent on AWS EC2 instances"
 draft: false
 description: "Use AWS SSM to execute Infection Monkey on your AWS instances."
 tags: ["aws", "integration"]
+pre: "<i class='fa-brands fa-aws'></i> "
 ---
 
 ## When to use this feature

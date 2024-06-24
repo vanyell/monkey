@@ -2,6 +2,7 @@
 title: "Other"
 draft: false
 description: "Tips and tricks about configuring Monkeys for your needs."
+pre: "<i class='fas fa-circle-plus'></i> "
 ---
 
 ## Overview

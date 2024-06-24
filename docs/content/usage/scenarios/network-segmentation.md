@@ -2,6 +2,7 @@
 title: "Network Segmentation"
 draft: false
 description: "Verify your network is properly segmented."
+pre: "<i class='fas fa-network-wired'></i> "
 ---
 
 ## Overview

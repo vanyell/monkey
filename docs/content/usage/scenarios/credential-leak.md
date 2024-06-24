@@ -2,6 +2,7 @@
 title: "Credentials Leak"
 draft: false
 description: "Assess the impact of a successful phishing attack, insider threat, or other form of credentials leak."
+pre: "<i class='fas fa-droplet'></i> "
 ---
 
 ## Overview
