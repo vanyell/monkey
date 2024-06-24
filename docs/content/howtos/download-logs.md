@@ -14,7 +14,7 @@ page by following these steps:
 Note that you can only download the Island log by clicking on the Monkey Island
 machine in the Infection Map.
 
-![Downloading logs](/images/island/infection_map_page/agent_log_download.png "Downloading logs")
+![Downloading logs](/images/island/infection-map-page/agent-log-download.png "Downloading logs")
 
 ### See also
 

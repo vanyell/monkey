@@ -12,7 +12,7 @@ package that contains an application and everything that it may need to run.
 
 The Infection Monkey AppImage package should run on most modern Linux distros
 that have FUSE installed. See the [system
-requirements](/reference/system_requirements) for a list of Linux distributions
+requirements](/reference/system-requirements) for a list of Linux distributions
 that have been tested with the latest version of Infection Monkey.
 
 
@@ -72,7 +72,7 @@ properly on other Linux distributions.
 ## Configuring the server
 
 You can configure the server by creating
-a [server configuration file](../../reference/server_configuration) and
+a [server configuration file](../../reference/server-configuration) and
 providing a path to it via command line parameters:
 
 `./InfectionMonkey-v2.3.0.AppImage --server-config="/path/to/server_config.json"`
@@ -115,7 +115,7 @@ private certificate authority.
     chmod 600 <PATH_TO_CRT_FILE>
     ```
 
-1. Create a [server configuration file and provide the path to the certificate](../../reference/server_configuration).
+1. Create a [server configuration file and provide the path to the certificate](../../reference/server-configuration).
 The server configuration file should look something like:
 
     ```json
@@ -139,7 +139,7 @@ The server configuration file should look something like:
 
 1. Terminate the Island process if it's already running.
 
-1. Create a [server configuration file](../../reference/server_configuration).
+1. Create a [server configuration file](../../reference/server-configuration).
 The server configuration file should look something like:
 
     ```json
@@ -165,4 +165,4 @@ instructions again.
 If you'd like to keep your existing configuration, you can export it to a file
 using the *Export config* button and then import it to the new Monkey Island.
 
-![Import/export configuration](../../images/island/configuration_page/import_export_configuration.png "Import/export configuration")
+![Import/export configuration](../../images/island/configuration-page/import-export-configuration.png "Import/export configuration")

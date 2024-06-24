@@ -23,20 +23,20 @@ The Overview section of the report provides high-level information about the Inf
 execution, including the machines from which the infection originated, how long the breach
 simulation took, and the configuration of the Agents.
 
-![Overview](/images/island/reports_page/security_report_overview.png "Overview")
+![Overview](/images/island/reports-page/security-report-overview.png "Overview")
 
 ## Segmentation Issues
 
 This section reports the segmentation issues in your network.
 
-![Segmentation Issues](/images/island/reports_page/security_report_segmentation_issues.png "Segmentation Issues")
+![Segmentation Issues](/images/island/reports-page/security-report-segmentation-issues.png "Segmentation Issues")
 
 ## Machine-related Recommendations
 
 Here, you will find recommendations for improving your network's
 security, including actionable mitigation steps.
 
-![Machine-related Recommendations](/images/island/reports_page/security_report_machine_related_recommendations.png "Machine-related Recommendations")
+![Machine-related Recommendations](/images/island/reports-page/security-report-machine-related-recommendations.png "Machine-related Recommendations")
 
 
 ## The Network from Infection Monkey's Eyes
@@ -44,4 +44,4 @@ security, including actionable mitigation steps.
 This section contains a summary of what Infection Monkey found, including
 details of scanned servers, breached servers, and stolen credentials.
 
-![The Network from Infection Monkey's Eyes](/images/island/reports_page/security_report_network_from_monkeys_eyes.png "The Network from Infection Monkey's Eyes")
+![The Network from Infection Monkey's Eyes](/images/island/reports-page/security-report-network-from-monkeys-eyes.png "The Network from Infection Monkey's Eyes")

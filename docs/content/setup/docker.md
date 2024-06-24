@@ -68,7 +68,7 @@ Once you have access to the Monkey Island server, check out the [getting started
 ## Configuring the server
 
 You can configure the server by mounting a volume and specifying a
- [server configuration file](../../reference/server_configuration):
+ [server configuration file](../../reference/server-configuration):
 
 1. Create a directory for server configuration file, e.g. `monkey_island_data`:
     ```bash
@@ -139,7 +139,7 @@ private certificate authority.
     chmod 600 <PATH_TO_KEY_FILE>
     chmod 600 <PATH_TO_CRT_FILE>
     ```
-1. Modify the [server configuration file](../../reference/server_configuration) to look like:
+1. Modify the [server configuration file](../../reference/server-configuration) to look like:
     ```json
     {
         "data_dir": "/monkey_island_data",
@@ -168,7 +168,7 @@ private certificate authority.
 ### Change logging level
 
 1. Stop the docker container if it's already running.
-1. Modify the [server configuration file](../../reference/server_configuration) by adding the following lines:
+1. Modify the [server configuration file](../../reference/server-configuration) by adding the following lines:
     ```json
     {
         "log_level": "INFO"
@@ -197,7 +197,7 @@ again with the new file.
 If you'd like to keep your existing configuration, you can export it to a file
 using the *Export config* button and then import it to the new Monkey Island.
 
-![Import/export configuration](../../images/island/configuration_page/import_export_configuration.png "Import/export configuration")
+![Import/export configuration](../../images/island/configuration-page/import-export-configuration.png "Import/export configuration")
 
 ## Troubleshooting
 

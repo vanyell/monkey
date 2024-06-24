@@ -77,10 +77,10 @@ A more in-depth description of reports generated can be found in the
 [reports documentation page.](/features/reports)
 
 ### Infection Map
-![Infection Map](/images/island/infection_map_page/infection_map.png "Infection Map")
+![Infection Map](/images/island/infection-map-page/infection-map.png "Infection Map")
 
 ### Security Report
-![Security Report](/images/island/reports_page/security_report_overview.png "Security Report")
+![Security Report](/images/island/reports-page/security-report-overview.png "Security Report")
 
 ## Getting Started
 

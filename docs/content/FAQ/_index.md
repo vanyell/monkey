@@ -19,19 +19,19 @@ If you want to see what has changed between versions, refer to the [releases pag
 
 ## I updated to a new version of the Infection Monkey and I'm being asked to delete my existing data directory. Why?
 
-The [data directory](/reference/data_directory) contains the Infection Monkey's
+The [data directory](/reference/data-directory) contains the Infection Monkey's
 database and other internal data. For the new version of Infection Monkey to
 work flawlessly, a data directory with a compatible structure needs to be set
 up.
 
 If you would like to save the data gathered from the Monkey's previous runs,
-you can make a backup of your [existing data directory](/reference/data_directory) before deleting it.
+you can make a backup of your [existing data directory](/reference/data-directory) before deleting it.
 
 ## How can I use an old data directory?
 
 To use the data stored in a data directory from an older version, reinstall the
 version of the Monkey Island which matches your data directory's version. Then,
-copy the backup of your old data directory to the [appropriate location](/reference/data_directory).
+copy the backup of your old data directory to the [appropriate location](/reference/data-directory).
 
 ## How long does a single Infection Monkey Agent run? Is there a time limit?
 
@@ -57,7 +57,7 @@ re-install the Infection Monkey in the newly created folder.
 ## How do I reset the Monkey Island password?
 
 In order to reset the Monkey Island password, you'll need to [perform a factory
-reset](/howtos/factory_reset).
+reset](/howtos/factory-reset).
 
 ## Should I run the Infection Monkey continuously?
 
@@ -91,7 +91,7 @@ suggest an update if one is available.
 ### Downloading logs
 
 Both the Agent and Island logs can be downloaded from the Infection Map page. See [how
-to download logs](../howtos/download_logs) for more information.
+to download logs](../howtos/download-logs) for more information.
 
 ### Log locations
 
@@ -113,7 +113,7 @@ If you do experience any performance issues please let us know on [our Slack cha
 
 ### What are the system resource requirements for the Monkey Island?
 
-See the [system requirements](/reference/system_requirements) page.
+See the [system requirements](/reference/system-requirements) page.
 
 
 ### Is it safe to use real passwords and usernames in the Infection Monkey's configuration?
@@ -145,7 +145,7 @@ If you wish to simulate a very "deep" attack into your network, you can increase
 
 To do this, change the `Configuration -> Propagation -> General -> Maximum scan depth` configuration option:
 
-![How to increase propagation depth](/images/island/configuration_page/max_scan_depth_configuration.png "How to increase propagation depth")
+![How to increase propagation depth](/images/island/configuration-page/max-scan-depth-configuration.png "How to increase propagation depth")
 
 
 ## Can I limit how the Infection Monkey propagates through my network?
@@ -166,7 +166,7 @@ the Agent will pivot from _Host C_ and continue to scan other machines on the
 network. However, if _Host C_ successfully breaches _Host E_, it will not pivot
 further nor continue to scan or propagate.
 
-![What is scan depth](/images/island/others/propagation_depth_diagram.png "What is scan
+![What is scan depth](/images/island/others/propagation-depth-diagram.png "What is scan
 depth")
 
 ### Enable or disable scanning the local subnet

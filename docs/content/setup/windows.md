@@ -13,7 +13,7 @@ Don't get scared if the Infection Monkey gets [flagged as malware during the ins
 
 After running the installer, the following prompt should appear on the screen:
 
-![Windows installer screenshot](../../images/island/others/windows_installer.png "Windows installer screenshot")
+![Windows installer screenshot](../../images/island/others/windows-installer.png "Windows installer screenshot")
 
 1. Follow the steps to complete the installation.
 1. Run the Infection Monkey by clicking on the desktop shortcut. **Note**: If you want Agents to
@@ -32,7 +32,7 @@ started page](/usage/getting-started).
 ## Configuring the server
 
 You can configure the server by editing [the configuration
-file](../../reference/server_configuration) located in installation directory.
+file](../../reference/server-configuration) located in installation directory.
 The default path is
 `C:\Program Files\Infection Monkey\monkey_island\cc\server_config.json`.
 
@@ -99,7 +99,7 @@ private certificate authority.
 Only **English** system locale is supported. If your command prompt gives output in a different
 language, the Infection Monkey is not guaranteed to work.
 
-For a list of supported Windows versions, see the [system requirements page](../../reference/system_requirements).
+For a list of supported Windows versions, see the [system requirements page](../../reference/system-requirements).
 
 ### Missing Windows update
 
@@ -122,4 +122,4 @@ it. The new Monkey version will be installed over the old version.
 If you'd like to keep your existing configuration, you can export it to a file
 using the *Export config* button and then import it to the new Monkey Island.
 
-![Import/export configuration](../../images/island/configuration_page/import_export_configuration.png "Import/export configuration")
+![Import/export configuration](../../images/island/configuration-page/import-export-configuration.png "Import/export configuration")
