@@ -2,6 +2,7 @@
 title: "Network Breach"
 draft: false
 description: "Simulate an internal network breach and assess the potential impact."
+pre: "<i class='fas fa-network-wired'></i> "
 ---
 
 ## Overview

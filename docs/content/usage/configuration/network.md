@@ -2,6 +2,7 @@
 title: "Network"
 draft: false
 description: "Configure settings related to Infection Monkey's network activity."
+pre: "<i class='fas fa-network-wired'></i> "
 ---
 
 Here you can control multiple important settings, such as:

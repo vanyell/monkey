@@ -1,6 +1,7 @@
 ---
 title: "SSH"
 tags: ["credentials collector", "ssh", "linux"]
+pre: '<i class="fas fa-terminal"></i> '
 ---
 
 ## Description

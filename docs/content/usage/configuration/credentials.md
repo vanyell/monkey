@@ -2,6 +2,7 @@
 title: "Credentials"
 draft: false
 description: "Configure credentials that the Infection Monkey will use for propagation."
+pre: "<i class='fas fa-key'></i> "
 ---
 
 On this screen, you can configure credentials for Infection Monkey to use when attempting

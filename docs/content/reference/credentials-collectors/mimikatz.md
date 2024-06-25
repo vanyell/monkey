@@ -1,6 +1,7 @@
 ---
 title: "Mimikatz"
 tags: ["credentials collector", "mimikatz", "windows"]
+pre: '<i class="fas fa-cat"></i> '
 ---
 
 ## Description

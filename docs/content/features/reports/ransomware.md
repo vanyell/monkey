@@ -2,6 +2,7 @@
 title: "Ransomware report"
 draft: false
 description: "Provides information about ransomware simulation on your network"
+pre: "<i class='fa fa-lock'></i> "
 ---
 
 {{% notice info %}}
