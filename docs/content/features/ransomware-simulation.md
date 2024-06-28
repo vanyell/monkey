@@ -1,10 +1,11 @@
 ---
 title: "Ransomware Simulation"
 draft: false
-description: "Simulate a ransomware attack on your network and assess the potential damage."
 pre: "<i class='fa fa-lock'></i> "
+tags: ["usage", "ransomware"]
 ---
 
+## Description
 The Infection Monkey is capable of simulating a ransomware attack on your
 network using a set of configurable behaviors. In order to simulate the
 behavior of ransomware as accurately as possible, the Infection Monkey can
@@ -14,59 +15,9 @@ files](/reference/payloads/ransomware/#files-targeted-for-encryption) using a
 mechanisms are in place to ensure that all actions performed by the encryption
 routine are safe for production environments.
 
-## Workflow
-### 1. Prepare your environment for a ransomware simulation
-
-The Infection Monkey will only encrypt files that you allow it to. In order to
-take full advantage of the Infection Monkey's ransomware simulation, you'll
-need to provide the Infection Monkey with a directory that contains files that
-are safe for it to encrypt. The recommended approach is to use a configuration
-management tool, such as
-[Ansible](https://docs.ansible.com/ansible/latest/user_guide/) or
-[PsExec](https://theitbros.com/using-psexec-to-run-commands-remotely/), or even
-a Windows GPO, to add a "ransomware target" directory to each machine in your
-environment. The Infection Monkey can then be configured to encrypt files in
-this directory.
-
-### 2. Configure encryption
-
-To ensure minimum interference and easy recoverability, the ransomware
-simulation will only encrypt files contained in a user-specified directory. If
-no directory is specified, no files will be encrypted.
-
-Infection Monkey appends the `.m0nk3y` file extension to files that it
-encrypts. You may optionally provide a custom file extension for Infection
-Monkey to use instead. You can even provide no file extension, but take
-caution: you'll no longer be able to tell if the file has been encrypted based
-on the filename alone!
-
-![Ransomware
-configuration](/images/island/configuration-page/ransomware-configuration.png
-"Ransomware configuration")
-
-### 3. Configure propagation
-
-If you would like the Infection Monkey to propagate through the network,
-[Configure](/usage/configuration/) the network settings and one or more
-exploiters.
-
-### 4. Run the Agent
-
-Once everything is configured to your liking, simply [run the
-agent](/usage/getting-started#running-the-infection-monkey) to begin the
-ransomware simulation.
-
-### 5. Clean up
-
-After the simulation is complete, you can use the same mechanism you used in
-[step
-1](/features/ransomware-simulation#1-prepare-your-environment-for-a-ransomware-simulation)
-to either remove the target directory or replace the encrypted files with
-unencrypted files. In most cases, there's no need to attempt to decrypt the
-files, as you should still have the originals.
-
 
 ## Technical details
+
 ### How are the files encrypted?
 
 Files are "encrypted" in place with a simple bit flip. Encrypted files are
@@ -94,8 +45,6 @@ Monkey will not follow any symlinks or shortcuts.
 These precautions are taken to prevent the Infection Monkey from accidentally
 encrypting files that you didn't intend to encrypt.
 
-
-
 ### Leaving a README.txt file
 
 Many ransomware packages leave a README.txt file on the victim machine with an
@@ -107,7 +56,6 @@ The README.txt file informs the user that a ransomware simulation has taken
 place and that they should contact their administrator. The contents of the
 file can be found
 [here](https://github.com/guardicore/monkey/blob/master/monkey/agent_plugins/payloads/ransomware/src/ransomware_readme.txt).
-
 
 ### Changing the desktop wallpaper
 
@@ -121,6 +69,8 @@ When this feature is enabled, the desktop background will be changed to this:
 wallpaper](/images/island/others/ransomware-wallpaper-downsized.png
 "Ransomware wallpaper")
 
+
 ### See also
+- [How to simulate a ransomware attack](/howtos/simulate-ransomware)
 - [Ransomware tutorial](/tutorials/ransomware/)
 - [Ransomware reference documentation](/reference/payloads/ransomware)
