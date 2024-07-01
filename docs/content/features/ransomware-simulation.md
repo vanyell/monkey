@@ -22,7 +22,11 @@ routine are safe for production environments.
 
 Files are "encrypted" in place with a simple bit flip. Encrypted files are
 renamed to have a file extension (`.m0nk3y` by default) appended to their
-names. This is a safe way to simulate encryption since it is easy to "decrypt"
+names. You can even provide no file extension, but take caution: you'll no
+longer be able to tell if the file has been encrypted based on the filename
+alone.
+
+The Infection Monkey's encryption method is safe since it is easy to "decrypt"
 your files. You can simply perform a bit flip on the files again and rename
 them to remove the appended `.m0nk3y` extension.
 
@@ -40,10 +44,19 @@ files with [targeted file
 extensions](/reference/payloads/ransomware/#files-targeted-for-encryption) in
 the configured directory. The simulation is not recursive, i.e. it will not
 touch any files in sub-directories of the configured directory. The Infection
-Monkey will not follow any symlinks or shortcuts.
+Monkey will not follow any symlinks or shortcuts. If no directory is specified,
+no files will be encrypted.
 
 These precautions are taken to prevent the Infection Monkey from accidentally
 encrypting files that you didn't intend to encrypt.
+
+In order to take full advantage of the Infection Monkey's ransomware
+simulation, add a "ransomware target" directory (containing files that are safe
+for encryption) to each machine in your environment. The recommended approach
+to do so is by using a configuration management tool, such as
+[Ansible](https://docs.ansible.com/ansible/latest/user_guide/) or
+[PsExec](https://theitbros.com/using-psexec-to-run-commands-remotely/), or even
+a Windows GPO.
 
 ### Leaving a README.txt file
 
