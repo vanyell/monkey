@@ -1,13 +1,11 @@
 ---
 title: "SSH"
-tags: ["credentials collector", "ssh", "linux"]
-pre: '<i class="fas fa-terminal"></i> '
+draft: false
+description: "Reference material for the SSH credentials collector"
+pre: "<i class='fas fa-terminal'></i> "
 ---
+{{< table_of_contents >}}
 
-## Description
+## Configuration
 
-The SSH Credentials Collector steals SSH keys from Linux users.
-
-For all users on the system, it locates the `/home/<user>/.ssh`
-directory and steals keypairs from it. The supported private key
-encryption formats are RSA, DSA, EC, and ECDSA.
+The SSH credentials collector has no configurable options.

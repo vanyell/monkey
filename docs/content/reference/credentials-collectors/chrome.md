@@ -1,11 +1,11 @@
 ---
 title: "Chrome"
-tags: ["credentials collector", "chrome", "linux", "windows"]
-pre: '<i class="fa-brands fa-chrome"></i> '
+draft: false
+description: "Reference material for the Chrome credentials collector"
+pre: "<i class='fa-brands fa-chrome'></i> "
 ---
+{{< table_of_contents >}}
 
-## Description
+## Configuration
 
-The Chrome Credentials Collector steals saved credentials from Chrome-based browsers.
-On Linux, it targets Google Chrome and Chromium. On Windows, it targets Google Chrome
-and Microsoft Edge.
+The Chrome credentials collector has no configurable options.
