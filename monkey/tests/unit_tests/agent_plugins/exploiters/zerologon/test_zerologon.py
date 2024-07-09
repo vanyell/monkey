@@ -1,11 +1,10 @@
 from ipaddress import IPv4Address
 from unittest.mock import MagicMock
+from uuid import uuid4
 
 import pytest
 from agentpluginapi import IAgentEventPublisher, TargetHost
 from monkeyevents import ExploitationEvent, PasswordRestorationEvent
-
-from infection_monkey.utils.ids import get_agent_id
 
 NETBIOS_NAME = "NetBIOS Name"
 
@@ -32,7 +31,7 @@ def zerologon_exploiter_object(monkeypatch, mock_agent_event_publisher):
     monkeypatch.setattr(obj, "report_login_attempt", mock_report_login_attempt)
     monkeypatch.setattr(obj, "host", TargetHost(ip=IPv4Address("1.1.1.1")))
     monkeypatch.setattr(obj, "agent_event_publisher", mock_agent_event_publisher)
-    monkeypatch.setattr(obj, "agent_id", get_agent_id())
+    monkeypatch.setattr(obj, "agent_id", uuid4())
     return obj
 
 
