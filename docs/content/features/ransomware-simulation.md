@@ -16,9 +16,7 @@ mechanisms are in place to ensure that all actions performed by the encryption
 routine are safe for production environments.
 
 
-## Technical details
-
-### How are the files encrypted?
+## How files are encrypted
 
 Files are "encrypted" in place with a simple bit flip. Encrypted files are
 renamed to have a file extension (`.m0nk3y` by default) appended to their
@@ -37,7 +35,7 @@ which is similar to the way that many ransomwares behave. As this is a
 simulation, your security solutions should be triggered to notify you or
 prevent these changes from taking place.
 
-### Which files are encrypted?
+## Files targeted for encryption
 
 During the ransomware simulation, attempts will be made to encrypt all regular
 files with [targeted file
@@ -58,7 +56,7 @@ to do so is by using a configuration management tool, such as
 [PsExec](https://theitbros.com/using-psexec-to-run-commands-remotely/), or even
 a Windows GPO.
 
-### Leaving a README.txt file
+## Leaving a README.txt file
 
 Many ransomware packages leave a README.txt file on the victim machine with an
 explanation of what has occurred and instructions for paying the attacker. The
@@ -70,7 +68,7 @@ place and that they should contact their administrator. The contents of the
 file can be found
 [here](https://github.com/guardicore/monkey/blob/master/monkey/agent_plugins/payloads/ransomware/src/ransomware_readme.txt).
 
-### Changing the desktop wallpaper
+## Changing the desktop wallpaper
 
 Infection Monkey can change the desktop wallpaper as a more conspicuous
 indication that a ransomware attack has occurred. This feature is currently
@@ -83,7 +81,7 @@ wallpaper](/images/island/others/ransomware-wallpaper-downsized.png
 "Ransomware wallpaper")
 
 
-### See also
+## See also
 - [How to simulate a ransomware attack](/howtos/simulate-ransomware)
 - [Ransomware tutorial](/tutorials/ransomware/)
 - [Ransomware reference documentation](/reference/payloads/ransomware)
