@@ -10,18 +10,25 @@ network.
 
 1. Prepare your environment for a ransomware simulation
 
-    The Infection Monkey will only encrypt files that are allowed by you.
+    Infection Monkey will only encrypt files that are allowed by you.
     Prepare your network by adding a "ransomware target" directory to each
-    machine in your environment. This can be done using a configuration
-    management tool, such as
+    machine in your environment, and add some files to this directory that are
+    safe to encrypt. This can be done using a configuration management tool,
+    such as
     [Ansible](https://docs.ansible.com/ansible/latest/user_guide/) or
     [PsExec](https://theitbros.com/using-psexec-to-run-commands-remotely/), or
     a Windows GPO.
 
+    For the ransomware simulation to succeed on a machine, the user running the
+    Infection Monkey Agent must have read and write permissions for the target
+    directory and its constituent files. Note that the simulation is not
+    recursive, i.e. it will not traverse any sub-directories of the configured
+    target directory.
+
 1. Configure the simulation
 
-    In the configuration, specify which directory the Infection Monkey should
-    target for encryption and provide a file extension that the Infection Monkey
+    In the configuration, specify which directory Infection Monkey should
+    target for encryption and provide a file extension that Infection Monkey
     should use to rename the encrypted files.
 
     If desired, enable the options to leave a README.txt on each machine and
@@ -33,22 +40,20 @@ network.
 
 1. Configure propagation
 
-    If you would like the Infection Monkey to propagate through the network,
+    If you would like Infection Monkey to propagate through the network,
     [Configure](/usage/configuration/) the network settings and enable one or
     more exploiters.
 
 1. Run the Agent
 
-    Once everything is configured to your liking, simply [run the agent](
-    /usage/getting-started#running-the-infection-monkey) to begin the
-    ransomware simulation.
+    Once everything is configured to your liking,
+    [run the agent](/usage/getting-started#running-the-infection-monkey).
 
 1. Clean up
 
-    After the simulation is complete, you can use the same mechanism you used in
-    step 1 to either remove the target directory, replace the encrypted files,
-    or decrypt them (see ["How are the files encrypted?"](
-    /features/ransomware-simulation/#how-are-the-files-encrypted)).
+    After the simulation is complete, use the same mechanism you used in step 1
+    to either remove the target directory or replace the encrypted files with
+    the originals.
 
 
 ### See also
