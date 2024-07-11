@@ -11,7 +11,7 @@ network using a set of configurable behaviors. In order to simulate the
 behavior of ransomware as accurately as possible, the Infection Monkey can
 [encrypt user-specified
 files](/reference/payloads/ransomware/#files-targeted-for-encryption) using a
-[fully reversible algorithm](#how-are-the-files-encrypted). A number of
+[fully reversible algorithm](#how-files-are-encrypted). A number of
 mechanisms are in place to ensure that all actions performed by the encryption
 routine are safe for production environments.
 
