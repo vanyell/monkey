@@ -6,24 +6,23 @@ tags: ["usage", "ransomware"]
 ---
 
 ## Summary
-The Infection Monkey is capable of simulating a ransomware attack on your
-network using a set of configurable behaviors. In order to simulate the
-behavior of ransomware as accurately as possible, the Infection Monkey can
-[encrypt user-specified
+Infection Monkey is capable of simulating a ransomware attack on your network
+using a set of configurable behaviors. In order to simulate the behavior of
+ransomware as accurately as possible, the Infection Monkey can [encrypt
+user-specified
 files](/reference/payloads/ransomware/#files-targeted-for-encryption) using a
-[fully reversible algorithm](#how-files-are-encrypted). A number of
-mechanisms are in place to ensure that all actions performed by the encryption
-routine are safe for production environments.
+[fully reversible algorithm](#how-files-are-encrypted). A number of mechanisms
+are in place to ensure that all actions performed by the encryption routine are
+safe for production environments.
 
 ## What is ransomware?
 
 Cybercriminals often use ransomware, a type of malicious software, to extort
 money from individuals or organizations. It works by encrypting the victim's
 files or locking them out of their systems, making the data inaccessible. The
-attackers then demand a ransom payment in exchange for the decryption key.
-
-A ransomware attack can have severe consequences, including significant
-downtime, data loss, and financial damage.
+attackers then demand a ransom payment in exchange for the decryption key. A
+ransomware attack can have severe consequences, including significant downtime,
+data loss, and financial damage.
 
 ## Encrypting files
 
@@ -79,13 +78,11 @@ file can be found
 
 ## Changing the desktop wallpaper
 
-Often, ransomware packages change the desktop wallpaper to immediately grab the
+Often, ransomware will change the desktop wallpaper to immediately grab the
 victim's attention, display ransom instructions, and create a sense of urgency
-and fear.
-
-Infection Monkey can change the desktop wallpaper as a more conspicuous
-indication that a ransomware attack has occurred. This feature is currently
-only applicable to victim machines running Windows.
+and fear. Infection Monkey can change the desktop wallpaper as a more
+conspicuous indication that a ransomware attack has occurred. This feature is
+currently only applicable to victim machines running Windows.
 
 When this feature is enabled, the desktop background will be changed to this:
 
