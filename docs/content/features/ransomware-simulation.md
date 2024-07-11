@@ -5,7 +5,7 @@ pre: "<i class='fa fa-lock'></i> "
 tags: ["usage", "ransomware"]
 ---
 
-## Description
+## Summary
 The Infection Monkey is capable of simulating a ransomware attack on your
 network using a set of configurable behaviors. In order to simulate the
 behavior of ransomware as accurately as possible, the Infection Monkey can
@@ -15,18 +15,29 @@ files](/reference/payloads/ransomware/#files-targeted-for-encryption) using a
 mechanisms are in place to ensure that all actions performed by the encryption
 routine are safe for production environments.
 
+## What is ransomware?
 
-## How files are encrypted
+Cybercriminals often use ransomware, a type of malicious software, to extort
+money from individuals or organizations. It works by encrypting the victim's
+files or locking them out of their systems, making the data inaccessible. The
+attackers then demand a ransom payment in exchange for the decryption key.
 
-Files are "encrypted" in place with a simple bit flip. Encrypted files are
-renamed to have a file extension (`.m0nk3y` by default) appended to their
-names. You can even provide no file extension, but take caution: you'll no
-longer be able to tell if the file has been encrypted based on the filename
-alone.
+A ransomware attack can have severe consequences, including significant
+downtime, data loss, and financial damage.
 
-The Infection Monkey's encryption method is safe since it is easy to "decrypt"
-your files. You can simply perform a bit flip on the files again and rename
-them to remove the appended `.m0nk3y` extension.
+## Encrypting files
+
+### How files are encrypted
+
+In order to ensure that no permanent damage is done to your environment,
+Infection Monkey simulates the encryption behavior of ransomware by
+adopting safe and easily reversible methods. Data encryption is simulated by
+manipulating the files in place with a simple bit flip. The "encrypted" files
+are then renamed to have a file extension (`.m0nk3y` by default) appended to
+their names. You can even provide no file extension, but take caution: you'll
+no longer be able to tell if the file has been encrypted based on the filename
+alone. If required, you can "decrypt" your files by simply performing a bit flip
+on the files again and renaming them to remove the appended `.m0nk3y` extension.
 
 Flipping a file's bits is sufficient to simulate the encryption behavior of
 ransomware, as the data in your files has been manipulated (leaving them
@@ -35,23 +46,21 @@ which is similar to the way that many ransomwares behave. As this is a
 simulation, your security solutions should be triggered to notify you or
 prevent these changes from taking place.
 
-## Files targeted for encryption
+### Files targeted for encryption
 
-During the ransomware simulation, attempts will be made to encrypt all regular
-files with [targeted file
-extensions](/reference/payloads/ransomware/#files-targeted-for-encryption) in
-the configured directory. The simulation is not recursive, i.e. it will not
-touch any files in sub-directories of the configured directory. The Infection
+Certain precautions are taken to prevent Infection Monkey from accidentally
+encrypting files that you didn't intend to encrypt. During the ransomware
+simulation, attempts will be made to encrypt only regular files with [targeted
+file extensions](/reference/payloads/ransomware/#files-targeted-for-encryption)
+in the configured directory. The simulation is not recursive, i.e. it will not
+touch any files in sub-directories of the configured directory. Infection
 Monkey will not follow any symlinks or shortcuts. If no directory is specified,
 no files will be encrypted.
 
-These precautions are taken to prevent the Infection Monkey from accidentally
-encrypting files that you didn't intend to encrypt.
-
-In order to take full advantage of the Infection Monkey's ransomware
-simulation, add a "ransomware target" directory (containing files that are safe
-for encryption) to each machine in your environment. The recommended approach
-to do so is by using a configuration management tool, such as
+In order to take full advantage of Infection Monkey's ransomware simulation,
+add a "ransomware target" directory (containing files that are safe for
+encryption) to each machine in your environment. The recommended approach to do
+so is by using a configuration management tool, such as
 [Ansible](https://docs.ansible.com/ansible/latest/user_guide/) or
 [PsExec](https://theitbros.com/using-psexec-to-run-commands-remotely/), or even
 a Windows GPO.
@@ -69,6 +78,10 @@ file can be found
 [here](https://github.com/guardicore/monkey/blob/master/monkey/agent_plugins/payloads/ransomware/src/ransomware_readme.txt).
 
 ## Changing the desktop wallpaper
+
+Often, ransomware packages change the desktop wallpaper to immediately grab the
+victim's attention, display ransom instructions, and create a sense of urgency
+and fear.
 
 Infection Monkey can change the desktop wallpaper as a more conspicuous
 indication that a ransomware attack has occurred. This feature is currently
