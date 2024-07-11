@@ -25,10 +25,10 @@ steps to successfully simulate a ransomware attack on your network.
     [PsExec](https://theitbros.com/using-psexec-to-run-commands-remotely/), or
     a Windows GPO.
 
-    {{% notice info %}}
-    For the ransomware simulation to succeed on a machine, the user running the
-    Infection Monkey Agent must have read and write permissions for the target
-    directory and its constituent files.
+    {{% notice note %}}
+For the ransomware simulation to succeed on a machine, the user running the
+Infection Monkey Agent must have read and write permissions for the target
+directory and its constituent files.
     {{% /notice %}}
 
 1. Configure the simulation
