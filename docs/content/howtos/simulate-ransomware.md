@@ -28,7 +28,7 @@ steps to successfully simulate a ransomware attack on your network.
     {{% notice note %}}
 For the ransomware simulation to succeed on a machine, the user running the
 Infection Monkey Agent must have read and write permissions for the target
-directory and its constituent files.
+directory and its contents.
     {{% /notice %}}
 
 1. Configure the simulation
@@ -58,7 +58,7 @@ directory and its constituent files.
 
     After the simulation is complete, use the same mechanism you used in step 1
     to either remove the target directory or replace the encrypted files with
-    the originals.
+    the originals so the simulation can be run again.
 
 
 ### See also
