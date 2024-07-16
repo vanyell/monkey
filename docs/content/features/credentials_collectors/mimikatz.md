@@ -12,8 +12,10 @@ Mimikatz is an open-source tool widely used by attackers to extract plaintext
 passwords, hashes, PINs, and Kerberos tickets from memory, which assist in
 privilege escalation and lateral movement.
 
-The Mimikatz Credentials Collector uses [pypykatz](https://github.com/skelsec/pypykatz)
-(a pure-Python implementation of [mimikatz](https://github.com/gentilkiwi/mimikatz))
-to steal credentials from Windows Credential Manager.
+The Mimikatz Credentials Collector uses
+[pypykatz](https://github.com/skelsec/pypykatz), a pure-Python implementation
+of [mimikatz](https://github.com/gentilkiwi/mimikatz).
 
-![Mimikatz Configuration](/images/island/configuration-page/mimikatz-credentials-collector-configuration.png "Mimikatz configuration")
+![Mimikatz
+Configuration](/images/island/configuration-page/mimikatz-credentials-collector-configuration.png
+"Mimikatz configuration")
