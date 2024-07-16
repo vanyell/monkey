@@ -6,6 +6,8 @@ pre: "<i class='fas fa-key'></i> "
 
 # Credentials Collectors
 
+## <!-- we just need this here for formatting preferences done with CSS -->
+
 In real-world network attacks, malicious actors often adopt methods to extract
 credentials from compromised systems. Stolen credentials enable the attackers
 to further breach the environment in many ways including lateral movement,
