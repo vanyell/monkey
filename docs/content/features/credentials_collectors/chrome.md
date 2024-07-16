@@ -8,6 +8,12 @@ pre: "<i class='fa fa-chrome'></i> "
 
 ## Description
 
-The Chrome Credentials Collector steals saved credentials from Chrome-based browsers.
-On Linux, it targets Google Chrome and Chromium. On Windows, it targets Google Chrome
-and Microsoft Edge.
+By default, Chromium-based browsers store saved usernames and passwords in a
+recoverable format. Stealing browser credentials can enable access to sensitive
+personal and business accounts leading to data exfiltration, identity theft,
+financial loss, etc. Users often reuse credentials across accounts which can
+support lateral movement and persistence.
+
+The Chrome Credentials Collector steals saved credentials from Chromium-based
+browsers. On Linux, it targets Google Chrome and Chromium. On Windows, it
+targets Google Chrome and Microsoft Edge.
