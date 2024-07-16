@@ -8,11 +8,29 @@ pre: "<i class='fa fa-terminal'></i> "
 
 ## Description
 
-SSH keys are crucial for secure access to remote servers and systems. Attackers
-may attempt to steal them for gaining access to sensitive systems, data theft,
-lateral movement, privilege escalation, and persistence.
+SSH public/private key pairs are credentials that allow users to remotely
+access systems using the [Secure Shell Protocol
+(SSH)](https://en.wikipedia.org/wiki/Secure_Shell). Stealing them could enable
+an attacker to:
 
-The SSH Credentials Collector steals SSH keys from Linux users. For all users
-on the system, it locates the `/home/<user>/.ssh` directory and steals keypairs
-from it. The supported private key encryption formats are RSA, DSA, EC, and
-ECDSA.
+- Gain access to sensitive systems
+- Steal data
+- Move laterally through the network
+- Escalate their privileges
+- Establish a persistent presence
+
+While SSH key pairs can be encrypted to mitigate this risk, many users skip this
+step and trade security for convenience. This leaves the SSH keys vulnerable to
+theft. Infection Monkey's SSH Credentials Collector seeks out and steals
+unprotected SSH key pairs. After compromising a Linux host, the SSH Credentials
+Collector will locate the `$HOME/.ssh` directory for each user and attempt to
+steal unencrypted SSH key pairs from it.
+
+The SSH Credentials Collector will attempt to steal any key pair matching all
+of the following criteria:
+
+- The key pair is stored in `$HOME/.ssh` for any user on the system.
+- The key pair is readable by the user running the Infection Monkey Agent.
+- The key pair is not encrypted.
+- The key pair is stored in one of the supported formats (RSA, DSA, EC, or
+  ECDSA).
