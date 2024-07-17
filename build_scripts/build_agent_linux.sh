@@ -1,6 +1,5 @@
 #! /bin/bash
 #
-DOCKER_USER="m0nk3y"
 SCRIPT_NAME="$(basename "$0")"
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 
@@ -52,29 +51,31 @@ mkdir -p "$DIST_DIR"
 
 setup_environment_commands="
 set +x &&
-export PYENV_ROOT=\"/usr/local/.pyenv\" &&
-command -v pyenv >/dev/null || export PATH=\"\$PYENV_ROOT/bin:\$PYENV_ROOT/shims:\$PATH\" &&
-eval \"\$(pyenv init - --no-rehash)\" &&
+export PIP_CACHE_DIR=\"\$(mktemp -d)\" &&
+export PYINSTALLER_CONFIG_DIR=\"\$(mktemp -d)\" &&
+export VENV_DIR=\"\$(mktemp -d)\" &&
 python --version &&
-python -m pip install pipenv &&
+python -m venv \"\${VENV_DIR}\" &&
+source \"\${VENV_DIR}\"/bin/activate &&
+pip install pipenv &&
 "
 
 clone_commands="
-cd &&
+export REPO_DIR=\$(mktemp -d) &&
 echo \"Cloning branch ${BRANCH}...\" &&
-git clone https://github.com/guardicore/monkey.git -b \"${BRANCH}\" --single-branch --depth 1 &&
-cd monkey/monkey/infection_monkey &&
+git clone https://github.com/guardicore/monkey.git -b \"${BRANCH}\" --single-branch --depth 1 \"\${REPO_DIR}\"&&
+cd \"\${REPO_DIR}\"/monkey/infection_monkey &&
 "
 
 local_commands="
-cd /home/${DOCKER_USER}/src/monkey/infection_monkey &&
+cd /src/monkey/infection_monkey &&
 "
 
 build_commands="
-SKIP_CYTHON=1 PIP_NO_BINARY=pydantic python -m pipenv sync &&
-python -m pipenv run bash build_linux.sh &&
+SKIP_CYTHON=1 PIP_NO_BINARY=pydantic pipenv sync &&
+pipenv run bash build_linux.sh &&
 echo 'Copying agent binary to \"${DIST_DIR}\"' &&
-cp dist/monkey-linux-64 /home/${DOCKER_USER}/dist
+cp dist/monkey-linux-64 /dist
 "
 
 docker_commands=""
@@ -98,7 +99,8 @@ TAG="latest"
 docker pull infectionmonkey/agent-builder:$TAG
 docker run \
     --rm \
-    -v "${DIST_DIR}:/home/${DOCKER_USER}/dist" \
-    -v "${SCRIPT_DIR}/../:/home/${DOCKER_USER}/src" \
+    --user "$(id -u):$(id -g)" \
+    -v "${DIST_DIR}:/dist" \
+    -v "${SCRIPT_DIR}/../:/src" \
     infectionmonkey/agent-builder:$TAG \
-    /bin/bash -c "${docker_commands}" | ts  '[%Y-%m-%d %H:%M:%S]'
+    /bin/bash -l -c "${docker_commands}" | ts  '[%Y-%m-%d %H:%M:%S]'
