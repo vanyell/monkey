@@ -26,9 +26,8 @@ collectors to steal credentials. Any stolen credentials are then sent to the
 Monkey Island, where they become immediately available for any Agent to use.
 
 After the reconnaissance phase, the Agent will begin the propagation phase and
-attempt to compromise other hosts on the network. Exploiters are Infection
-Monkey plugins that attempt to spread copies of the Agent throughout the
-network. Some exploiters can use the credentials stolen by credentials
+attempt to compromise other hosts on the network using [exploiters](
+/features/exploiters). Some exploiters can use the credentials stolen by credentials
 collectors to gain access to other systems on the network. First, the exploiter
 will query the Monkey Island to retrieve credentials that were configured by
 the user and any credentials that were stolen by credentials collectors. Next,
