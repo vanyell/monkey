@@ -37,9 +37,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Log4Shell exploiter plugin. #4257
 - SNMP exploiter plugin. #4258
 - Zerologon exploiter plugin. #4259
-- Mimikatz credentials collector plugin. #4260
-- Chrome credentials collector plugin. #4261
-- SSH credentials collector plugin. #4262
+- Mimikatz credentials collector plugin. #4261
+- Chrome credentials collector plugin. #4262
+- SSH credentials collector plugin. #4263
+- Cryptojacker payload plugin. #4264
 
 ### Security
 
