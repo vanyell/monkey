@@ -86,18 +86,6 @@ EXPECTED_SERIALIZED_AGENT_PLUGIN_REPOSITORY_INDEX = {
     },
 }
 
-EXPECTED_SERIALIZED_AGENT_PLUGIN_REPOSITORY_SIMPLE_INDEX = {
-    "timestamp": 1692629886.4792287,
-    "compatible_infection_monkey_version": "development",
-    "plugins": {
-        "Credentials_Collector": {},
-        "Exploiter": {
-            "SSH": SSH_EXPLOITER,
-        },
-        "Fingerprinter": {},
-        "Payload": {},
-    },
-}
 
 AGENT_PLUGIN_REPOSITORY_INDEX_FILE_URL = f"{AGENT_PLUGIN_REPOSITORY_DEVELOP_URL}/index.yml"
 
