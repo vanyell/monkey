@@ -1,5 +1,4 @@
-from agent_plugins.payloads.cryptojacker.src import cpu_utilizer, cryptojacker, memory_utilizer
-from agent_plugins.payloads.ransomware.src.plugin import Plugin as RansomwarePlugin
+from agent_plugin.payloads.ransomware.src.plugin import Plugin as RansomwarePlugin
 from agent_plugins.payloads.ransomware.src.ransomware_options import (
     EncryptionBehavior,
     RansomwareOptions,
