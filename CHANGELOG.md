@@ -41,6 +41,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Chrome credentials collector plugin. #4262
 - SSH credentials collector plugin. #4263
 - Cryptojacker payload plugin. #4264
+- Ransomware payload plugin. #4265
 
 ### Security
 

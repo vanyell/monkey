@@ -1,10 +1,3 @@
-from agent_plugin.payloads.ransomware.src.plugin import Plugin as RansomwarePlugin
-from agent_plugins.payloads.ransomware.src.ransomware_options import (
-    EncryptionBehavior,
-    RansomwareOptions,
-    linux_target_dir,
-    windows_target_dir,
-)
 from flask_security import Security
 
 from common.agent_configuration import ScanTargetConfiguration
@@ -94,14 +87,6 @@ MonkeyExploitation.label
 AgentPlugin.dump_source_archive
 AgentPlugin.supported_operating_systems
 
-EncryptionBehavior.validate_file_extension
-EncryptionBehavior.validate_linux_target_dir
-EncryptionBehavior.validate_windows_target_dir
-RansomwareOptions.encryption
-RansomwareOptions.other_behaviors
-linux_target_dir
-windows_target_dir
-
 
 # User model fields
 User.active
@@ -156,5 +141,3 @@ WindowsAgentCommandBuilder.reset_command
 # TODO: Remove after we move the plugins to separate repos
 execute_agent
 LinuxAgentCommandBuilder.build_permission_change_command
-
-RansomwarePlugin
