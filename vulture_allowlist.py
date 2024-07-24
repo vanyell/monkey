@@ -1,4 +1,3 @@
-from agent_plugins.credentials_collectors.chrome.utils import BrowserCredentialsDatabasePath
 from agent_plugins.payloads.cryptojacker.src import cpu_utilizer, cryptojacker, memory_utilizer
 from agent_plugins.payloads.ransomware.src.plugin import Plugin as RansomwarePlugin
 from agent_plugins.payloads.ransomware.src.ransomware_options import (
@@ -95,8 +94,6 @@ MonkeyExploitation.label
 
 AgentPlugin.dump_source_archive
 AgentPlugin.supported_operating_systems
-
-BrowserCredentialsDatabasePath.database_file_path
 
 EncryptionBehavior.validate_file_extension
 EncryptionBehavior.validate_linux_target_dir
