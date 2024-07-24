@@ -29,6 +29,16 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Removed
 - Fingerprinter configuration from UI. #3769, #3826
+- RDP exploiter plugin. #4252
+- Hadoop exploiter plugin. #4253
+- WMI exploiter plugin. #4254
+- MSSQL exploiter plugin. #4255
+- PowerShell exploiter plugin. #4256
+- Log4Shell exploiter plugin. #4257
+- SNMP exploiter plugin. #4258
+- Zerologon exploiter plugin. #4259
+- Mimikatz credentials collector plugin. #4260
+- Chrome credentials collector plugin. #4261
 
 ### Security
 
