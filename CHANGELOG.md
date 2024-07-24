@@ -39,6 +39,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Zerologon exploiter plugin. #4259
 - Mimikatz credentials collector plugin. #4260
 - Chrome credentials collector plugin. #4261
+- SSH credentials collector plugin. #4262
 
 ### Security
 
