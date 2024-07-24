@@ -21,7 +21,7 @@ The Infection Monkey Docker container works on Linux only. It is not compatible 
 1. Pull the Monkey Island Docker image:
 
     ```bash
-    sudo docker pull infectionmonkey/monkey_island:latest
+    sudo docker pull infectionmonkey/monkey-island:latest
     ```
 
 ### 2. Start MongoDB
