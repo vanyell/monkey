@@ -3,7 +3,7 @@ title: "Chrome Credentials Collector"
 draft: false
 description: "Collects credentials from Chrome-based browsers"
 tags: ["credentials collector", "chrome", "linux", "windows"]
-pre: "<i class='fa fa-chrome'></i> "
+pre: "<i class='fa-brands fa-chrome'></i> "
 ---
 
 ## Description
