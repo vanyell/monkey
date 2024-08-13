@@ -1,5 +1,5 @@
 ---
-title: "Infection Monkey AWS Execution"
+title: "AWS Agent Launcher"
 draft: false
 description: "Run Infection Monkey on AWS EC2 instances"
 tags: ["aws", "ec2", "ssm", "agent", "run"]
@@ -8,8 +8,8 @@ pre: "<i class='fa-brands fa-aws'></i> "
 
 ## Description
 
-Infection Monkey enables the simulation of various attack scenarios across your
-AWS infrastructure without the requirement of any manual installation.
+Infection Monkey enables you to launch Agents throughout your AWS
+infrastructure without logging in to or modifying any of your EC2 instances.
 Executing Infection Monkey on AWS EC2 instances is facilitated by the [AWS
 Systems Manager (SSM) Agent](
 https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html).
@@ -19,25 +19,23 @@ Manager](
 https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html),
 and uses the [Amazon Message Delivery Service](
 https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmessagedeliveryservice.html)
-to report back status and execution details.
+to report status and execution details back to the Monkey Island.
 
-## Prerequisites
+In order to use this feature, your EC2 instances must meet the following
+criteria:
 
-1. Ensure that the SSM Agent is installed on the EC2 instance on which
-Infection Monkey will run.
-1. Ensure that the EC2 instance has the necessary IAM roles to allow
-the SSM Agent to execute commands.
+1. The SSM Agent must be installed on the EC2 instance from which you will
+   launch the Infection Monkey Agent.
+1. The EC2 instance must have the necessary IAM roles to allow the SSM Agent to
+   execute commands.
 
-## Running Infection Monkey on AWS EC2 Instances
 
-The Monkey Island can be deployed manually on any EC2 instance with a
-[supported operating system](
-../../reference/system-requirements/#supported-operating-systems) or by using
-the [Infection Monkey
-AMI](https://aws.amazon.com/marketplace/pp/prodview-b3oqimxzrd762). When
-deployed, it will automatically detect that it is running on an AWS instance
-and offer the option to run an Infection Monkey Agent on EC2 instances that
-have SSM Agents.
+When the Monkey Island is deployed on any EC2 instance, (such as when using the
+[Infection Monkey
+AMI](https://aws.amazon.com/marketplace/pp/prodview-b3oqimxzrd762)), it will
+automatically detect that it is running on within an AWS environment and the
+option to launch Infection Monkey Agents on EC2 instances will become
+available.
 
 ![Running Infection Monkey on EC2 Instances](
 /images/island/integrations/aws/run_on_aws_ec2.png "Running Infection Monkey on EC2
