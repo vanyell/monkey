@@ -7,7 +7,7 @@ tags: ["setup", "docker", "linux"]
 
 ## Supported operating systems
 
-The Infection Monkey Docker container works on Linux only. It is not compatible with Docker for Windows or Docker for Mac.
+The Infection Monkey Docker image works on Linux only. It is not compatible with Docker for Windows or Docker for Mac.
 
 ## Deployment
 
