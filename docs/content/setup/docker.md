@@ -26,7 +26,7 @@ The Infection Monkey Docker image works on Linux only. It is not compatible with
 
 ### 2. Start MongoDB
 {{% notice info %}}
-If you are upgrading the Infection Monkey to a new version, be sure to remove
+If you are upgrading Infection Monkey to a new version, be sure to remove
 any MongoDB containers or volumes associated with the previous version.
 {{% /notice %}}
 

@@ -8,7 +8,7 @@ tags: ["setup", "windows"]
 ## Deployment
 
 {{% notice tip %}}
-Don't get scared if the Infection Monkey gets [flagged as malware during the installation](/faq/#is-the-infection-monkey-a-malwarevirus).
+Don't get scared if Infection Monkey gets [flagged as malware during the installation](/faq/#is-infection-monkey-a-malwarevirus).
 {{% /notice %}}
 
 After running the installer, the following prompt should appear on the screen:
@@ -16,13 +16,13 @@ After running the installer, the following prompt should appear on the screen:
 ![Windows installer screenshot](../../images/island/others/windows-installer.png "Windows installer screenshot")
 
 1. Follow the steps to complete the installation.
-1. Run the Infection Monkey by clicking on the desktop shortcut. **Note**: If you want Agents to
+1. Run Infection Monkey by clicking on the desktop shortcut. **Note**: If you want Agents to
 collect more data on the current machine, consider running as Administrator.
 
 {{% notice info %}}
 If you're prompted to delete your data directory and you're not sure what to
 do, see the
-[FAQ](/faq#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why)
+[FAQ](/faq#i-updated-to-a-new-version-of-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why)
 for more information.
 {{% /notice %}}
 
@@ -97,7 +97,7 @@ private certificate authority.
 ### Support
 
 Only **English** system locale is supported. If your command prompt gives output in a different
-language, the Infection Monkey is not guaranteed to work.
+language, Infection Monkey is not guaranteed to work.
 
 For a list of supported Windows versions, see the [system requirements page](../../reference/system-requirements).
 
@@ -116,7 +116,7 @@ here](https://www.google.com/chrome/).
 
 ## Upgrading
 
-To upgrade the Infection Monkey on Windows, download the new installer and run
+To upgrade Infection Monkey on Windows, download the new installer and run
 it. The new Monkey version will be installed over the old version.
 
 If you'd like to keep your existing configuration, you can export it to a file

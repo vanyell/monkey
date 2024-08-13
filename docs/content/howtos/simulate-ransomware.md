@@ -52,7 +52,7 @@ directory and its contents.
 1. **Run the Agent.**
 
     Once everything is configured to your liking,
-    [run the agent](/usage/getting-started#running-the-infection-monkey).
+    [run the agent](/usage/getting-started#running-infection-monkey).
 
 1. **Clean up.**
 

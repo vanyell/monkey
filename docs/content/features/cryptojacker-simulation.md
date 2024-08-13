@@ -7,7 +7,7 @@ pre: "<i class='fa fa-coins'></i> "
 
 ## Summary
 
-The Infection Monkey is capable of simulating the behavior of a cryptojacker by
+Infection Monkey is capable of simulating the behavior of a cryptojacker by
 using the CPU and memory of infected systems to perform cryptographic
 operations. It can also send network requests that imitate the network traffic
 of Bitcoin miners.

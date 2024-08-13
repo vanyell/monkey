@@ -6,10 +6,10 @@ pre: "<i class='fas fa-shield'></i> "
 ---
 
 {{% notice info %}}
-Check out [the documentation for other reports available in the Infection Monkey](/features/reports).
+Check out [the documentation for other reports available in Infection Monkey](/features/reports).
 {{% /notice %}}
 
-The Infection Monkey's **Security Report** provides you with actionable recommendations and insight into an attacker's view of your network.
+Infection Monkey's **Security Report** provides you with actionable recommendations and insight into an attacker's view of your network.
 
 The report is split into the following categories:
 
@@ -20,7 +20,7 @@ The report is split into the following categories:
 
 ## Overview
 
-The Overview section of the report provides high-level information about the Infection Monkey's
+The Overview section of the report provides high-level information about Infection Monkey's
 execution, including the machines from which the infection originated, how long the breach
 simulation took, and the configuration of the Agents.
 

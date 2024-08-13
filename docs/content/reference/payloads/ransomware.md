@@ -24,7 +24,7 @@ remove extraneous information.
 
 ### file\_extension
 
-The file extension that the Infection Monkey will use for the encrypted file.
+The file extension that Infection Monkey will use for the encrypted file.
 
 `file_extension`
 

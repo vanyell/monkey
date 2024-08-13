@@ -22,7 +22,7 @@ Select the [Infection Monkey from the Azure Marketplace](https://azuremarketplac
     1. Review the details of the offer and click **Create**.
 
 At this point, Azure will provision and deploy your new machine. When ready,
-you can browse to the Infection Monkey running on your fresh deployment at:
+you can browse to Infection Monkey running on your fresh deployment at:
 
 `https://{public-ip-address}`
 
@@ -30,7 +30,7 @@ Once you have access to the Monkey Island server, check out the [getting started
 
 ## Configuration
 
-Azure VM is running the AppImage deployment of the Infection Monkey. To configure the VM, shell
+Azure VM is running the AppImage deployment of Infection Monkey. To configure the VM, shell
 into it and follow configuration instructions in the [Linux setup section](/setup/linux#configuring-the-server).
 
 ## Upgrading

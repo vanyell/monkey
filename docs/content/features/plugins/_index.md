@@ -6,7 +6,7 @@ pre: '<i class="fas fa-puzzle-piece"></i> '
 
 ## Overview
 
-The Infection Monkey is extensible! You can install plugins to enhance the functionality of the Infection Monkey.
+Infection Monkey is extensible! You can install plugins to enhance the functionality of Infection Monkey.
 
 Plugins page consists of three tabs:
 
