@@ -9,7 +9,7 @@ pre: "<i class='fa fa-lock'></i> "
 Check out [the documentation for other available reports](/features/reports).
 {{% /notice %}}
 
-The Infection Monkey can be configured to [simulate a ransomware
+Infection Monkey can be configured to [simulate a ransomware
 attack](/features/ransomware-simulation) on your network. After running,
 it generates a **Ransomware Report** that provides you with insight into how
 ransomware might behave within your environment.

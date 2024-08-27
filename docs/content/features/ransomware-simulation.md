@@ -8,7 +8,7 @@ tags: ["usage", "ransomware"]
 ## Summary
 Infection Monkey is capable of simulating a ransomware attack on your network
 using a set of configurable behaviors. In order to simulate the behavior of
-ransomware as accurately as possible, the Infection Monkey can [encrypt
+ransomware as accurately as possible, Infection Monkey can [encrypt
 user-specified
 files](/reference/payloads/ransomware/#files-targeted-for-encryption) using a
 [fully reversible algorithm](#how-files-are-encrypted). A number of mechanisms

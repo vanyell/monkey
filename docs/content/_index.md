@@ -23,7 +23,7 @@ Infection Monkey is comprised of two components:
 * **Agent** - A configurable network worm that can infect machines, steal
   data, and deliver payloads.
 * **Monkey Island** - A command and control server used to control and
-  visualize the Infection Monkey's progress throughout the simulation.
+  visualize Infection Monkey's progress throughout the simulation.
 
 ### Build up your malware antibodies 💉
 

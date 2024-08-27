@@ -5,11 +5,11 @@ pre: "<i class='fas fa-question'></i> "
 weight: 100
 ---
 
-Below are some of the most common questions we receive about the Infection Monkey. If the answer you're looking for isn't here, talk with us [on our Slack channel](https://join.slack.com/t/infectionmonkey/shared_invite/zt-2cm5qiayf-yiEg5RPau0zQhki9xTlORA), email us at [support@infectionmonkey.com](mailto:support@infectionmonkey.com) or [open an issue on GitHub](https://github.com/guardicore/monkey).
+Below are some of the most common questions we receive about Infection Monkey. If the answer you're looking for isn't here, talk with us [on our Slack channel](https://join.slack.com/t/infectionmonkey/shared_invite/zt-2cm5qiayf-yiEg5RPau0zQhki9xTlORA), email us at [support@infectionmonkey.com](mailto:support@infectionmonkey.com) or [open an issue on GitHub](https://github.com/guardicore/monkey).
 
 {{< table_of_contents >}}
 
-## Where can I get the latest version of the Infection Monkey?
+## Where can I get the latest version of Infection Monkey?
 
 For the latest **stable** release, visit [our downloads
 page](https://github.com/guardicore/monkey/releases/latest). **This is the
@@ -17,9 +17,9 @@ recommended and supported version**!
 
 If you want to see what has changed between versions, refer to the [releases page on GitHub](https://github.com/guardicore/monkey/releases). For the latest development version, visit the [develop version on GitHub](https://github.com/guardicore/monkey/tree/develop).
 
-## I updated to a new version of the Infection Monkey and I'm being asked to delete my existing data directory. Why?
+## I updated to a new version of Infection Monkey and I'm being asked to delete my existing data directory. Why?
 
-The [data directory](/reference/data-directory) contains the Infection Monkey's
+The [data directory](/reference/data-directory) contains Infection Monkey's
 database and other internal data. For the new version of Infection Monkey to
 work flawlessly, a data directory with a compatible structure needs to be set
 up.
@@ -43,36 +43,36 @@ On the Infection Map page, when <b>Kill All Monkeys</b> is pressed, the Agents
 try to finish execution safely. This can take up to 2 minutes, but will be much
 shorter on average.
 
-## Is the Infection Monkey a malware/virus?
+## Is Infection Monkey a malware/virus?
 
-The Infection Monkey is not malware, but it uses similar techniques to safely
+Infection Monkey is not malware, but it uses similar techniques to safely
 simulate malware on your network.
 
-Because of this, the Infection Monkey gets flagged as malware by some antivirus
+Because of this, Infection Monkey gets flagged as malware by some antivirus
 solutions during installation. If this happens, [verify the integrity of the
 downloaded installer](/reference/release-artifact-hashes) first. Then,
 create a new folder and disable antivirus scan for that folder. Lastly,
-re-install the Infection Monkey in the newly created folder.
+re-install Infection Monkey in the newly created folder.
 
 ## How do I reset the Monkey Island password?
 
 In order to reset the Monkey Island password, you'll need to [perform a factory
 reset](/howtos/factory-reset).
 
-## Should I run the Infection Monkey continuously?
+## Should I run Infection Monkey continuously?
 
-Yes! This will allow you to verify that the Infection Monkey identified no new security issues since the last time you ran it.
+Yes! This will allow you to verify that Infection Monkey identified no new security issues since the last time you ran it.
 
-## Does the Infection Monkey require a connection to the internet?
+## Does Infection Monkey require a connection to the internet?
 
-The Infection Monkey does not require internet access to function.
+Infection Monkey does not require internet access to function.
 
-If internet access is available, the Infection Monkey will use the internet for two purposes:
+If internet access is available, Infection Monkey will use the internet for two purposes:
 
 - To check for updates.
 - To check if machines can reach the internet.
 
-### Exactly what internet queries does the Infection Monkey perform?
+### Exactly what internet queries does Infection Monkey perform?
 
 1. While the Monkey Island Server is being set up, a GET request with the deployment
 type and version number is sent to the analytics server. This information is
@@ -98,9 +98,9 @@ to download logs](../howtos/download-logs) for more information.
 See the [logs reference page](../reference/logs).
 
 
-## Running the Infection Monkey in a production environment
+## Running Infection Monkey in a production environment
 
-### How much of a footprint does the Infection Monkey leave?
+### How much of a footprint does Infection Monkey leave?
 
 The Agent does its best to leave no trace. It will, however, leave
 [log files in temporary directories.](/reference/logs/#agent)
@@ -116,7 +116,7 @@ If you do experience any performance issues please let us know on [our Slack cha
 See the [system requirements](/reference/system-requirements) page.
 
 
-### Is it safe to use real passwords and usernames in the Infection Monkey's configuration?
+### Is it safe to use real passwords and usernames in Infection Monkey's configuration?
 
 Absolutely! User credentials are stored encrypted in the Monkey Island Server.
 This information can only be seen by individuals that have the credentials to
@@ -124,13 +124,13 @@ access the Monkey Island.
 
 ### How do you store sensitive information on Monkey Island?
 
-Sensitive data such as passwords, SSH keys and hashes are stored on the Monkey Island's database in an encrypted fashion. This data is transmitted to the Infection Monkey Agents in an encrypted fashion (HTTPS) and is not stored locally on victim machines.
+Sensitive data such as passwords, SSH keys and hashes are stored on the Monkey Island's database in an encrypted fashion. This data is transmitted to Infection Monkey Agents in an encrypted fashion (HTTPS) and is not stored locally on victim machines.
 
 When you reset the Monkey Island configuration, the Monkey Island wipes the information.
 
-### How stable are the exploits used by the Infection Monkey? Will the Infection Monkey crash my systems with its exploits?
+### How stable are the exploits used by Infection Monkey? Will Infection Monkey crash my systems with its exploits?
 
-The Infection Monkey does not use any exploits or attacks that may impact the victim system.
+Infection Monkey does not use any exploits or attacks that may impact the victim system.
 
 This means we avoid using some powerful (and famous) exploits such as [EternalBlue](https://www.guardicore.com/2017/05/detecting-mitigating-wannacry-copycat-attacks-using-guardicore-centra-platform/). This exploit was used in WannaCry and NotPetya with huge impact, but, because it may crash a production system, we aren't using it.
 
@@ -141,16 +141,16 @@ started](/usage/getting-started) guide.
 
 ## How can I make the Infection Monkey Agent propagate "deeper" into the network?
 
-If you wish to simulate a very "deep" attack into your network, you can increase the *Maximum scan depth* parameter in the configuration. This parameter tells the Infection Monkey how far to propagate into your network from the "patient zero" machine.
+If you wish to simulate a very "deep" attack into your network, you can increase the *Maximum scan depth* parameter in the configuration. This parameter tells Infection Monkey how far to propagate into your network from the "patient zero" machine.
 
 To do this, change the `Configuration -> Propagation -> General -> Maximum scan depth` configuration option:
 
 ![How to increase propagation depth](/images/island/configuration-page/max-scan-depth-configuration.png "How to increase propagation depth")
 
 
-## Can I limit how the Infection Monkey propagates through my network?
+## Can I limit how Infection Monkey propagates through my network?
 
-Yes! To limit how the Infection Monkey propagates through your network, you can:
+Yes! To limit how Infection Monkey propagates through your network, you can:
 
 ### Adjust the scan depth
 
@@ -171,13 +171,13 @@ depth")
 
 ### Enable or disable scanning the local subnet
 
-You can find the settings that define how the Infection Monkey will scan your
+You can find the settings that define how Infection Monkey will scan your
 network in `Configuration -> Propagation -> Network analysis`. If enabled,
 the `Scan Agent's networks` setting instructs an Agent to scan its entire local subnet.
 
 ### Add IPs to the IP allow list
 
-You can specify which hosts you want the Infection Monkey Agents to attempt to
+You can specify which hosts you want Infection Monkey Agents to attempt to
 scan in the `Configuration -> Propagation -> Network analysis -> Scan target list` section.
 
 ### Add IPs to the IP block list
@@ -193,8 +193,8 @@ Infection Monkey is an open-source project, and we welcome contributions and con
 
 ## About the project 🐵
 
-### How did you come up with the Infection Monkey?
+### How did you come up with Infection Monkey?
 
 Oddly enough, the idea of proactively breaking a network to test its survival wasn't born in the security industry. In 2011, the streaming giant Netflix released Chaos Monkey, a tool designed to randomly disable the company's production servers to verify that they could survive network failures without any customer impact. Netflix's Chaos Monkey became a popular network resilience tool, breaking the network in a variety of failure modes, including connectivity issues, invalid SSL certificates and randomly deleting VMs.
 
-Inspired by this concept, Guardicore Labs developed its own attack simulator - the Infection Monkey - to run non-intrusively within existing production environments. The idea was to test the resiliency of modern data centers against attacks and give security teams the insights they need to make informed decisions and enforce tighter security policies. Since its launch in 2017, the Infection Monkey has been used by hundreds of information technology teams from across the world to find weaknesses in their on-premises and cloud-based data centers.
+Inspired by this concept, Guardicore Labs developed its own attack simulator - Infection Monkey - to run non-intrusively within existing production environments. The idea was to test the resiliency of modern data centers against attacks and give security teams the insights they need to make informed decisions and enforce tighter security policies. Since its launch in 2017, Infection Monkey has been used by hundreds of information technology teams from across the world to find weaknesses in their on-premises and cloud-based data centers.

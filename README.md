@@ -24,7 +24,7 @@ Infection Monkey is comprised of two components:
 * **Agent** - A configurable network worm that can infect machines, steal
   data, and deliver payloads.
 * **Monkey Island** - A command and control server used to control and
-  visualize the Infection Monkey's progress throughout the simulation.
+  visualize Infection Monkey's progress throughout the simulation.
 
 ### Build up your malware antibodies 💉
 
@@ -76,7 +76,7 @@ Be the chimpion of your network. Learn more about the Monkey at
 
 ## Main Features
 
-The Infection Monkey uses the following techniques and exploits to propagate to
+Infection Monkey uses the following techniques and exploits to propagate to
 other machines.
 
 * Multiple propagation techniques:
@@ -100,7 +100,7 @@ page and the [Getting
 Started](https://techdocs.akamai.com/infection-monkey/docs/getting-started/)
 guide in our documentation.
 
-The Infection Monkey supports a variety of platforms, documented [in our
+Infection Monkey supports a variety of platforms, documented [in our
 documentation
 hub](https://techdocs.akamai.com/infection-monkey/docs/operating-systems/).
 

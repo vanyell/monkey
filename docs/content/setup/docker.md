@@ -7,7 +7,7 @@ tags: ["setup", "docker", "linux"]
 
 ## Supported operating systems
 
-The Infection Monkey Docker container works on Linux only. It is not compatible with Docker for Windows or Docker for Mac.
+The Infection Monkey Docker image works on Linux only. It is not compatible with Docker for Windows or Docker for Mac.
 
 ## Deployment
 
@@ -26,7 +26,7 @@ The Infection Monkey Docker container works on Linux only. It is not compatible 
 
 ### 2. Start MongoDB
 {{% notice info %}}
-If you are upgrading the Infection Monkey to a new version, be sure to remove
+If you are upgrading Infection Monkey to a new version, be sure to remove
 any MongoDB containers or volumes associated with the previous version.
 {{% /notice %}}
 

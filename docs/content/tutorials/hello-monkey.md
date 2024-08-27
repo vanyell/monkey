@@ -41,7 +41,7 @@ vulnerable container within the sandbox environment, which has the hostname
 **Propagation** tab and then select the **Network analysis** subtab.
 
 {{% notice note %}}
-The Infection Monkey will only attempt to breach the machines that you've
+Infection Monkey will only attempt to breach the machines that you've
 explicitly configured it to target. This helps to ensure that the Monkey
 doesn't run amok on your network.
 {{% /notice %}}

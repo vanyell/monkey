@@ -1,7 +1,7 @@
 ---
 title: "Credentials"
 draft: false
-description: "Configure credentials that the Infection Monkey will use for propagation."
+description: "Configure credentials that Infection Monkey will use for propagation."
 pre: "<i class='fas fa-key'></i> "
 ---
 

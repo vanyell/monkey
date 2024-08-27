@@ -46,13 +46,13 @@ which requires setting the `CAP_NET_BIND_SERVICE` capability on the AppImage pac
 {{% notice info %}}
 If you're prompted to delete your data directory and you're not sure what to
 do, see the
-[FAQ](/faq#i-updated-to-a-new-version-of-the-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why)
+[FAQ](/faq#i-updated-to-a-new-version-of-infection-monkey-and-im-being-asked-to-delete-my-existing-data-directory-why)
 for more information.
 {{% /notice %}}
 
-## Running the Infection Monkey as a service on boot
+## Running Infection Monkey as a service on boot
 
-The Infection Monkey can be installed as a service and run on boot by running the AppImage package
+Infection Monkey can be installed as a service and run on boot by running the AppImage package
 with the following parameters. This requires root permissions, so run `sudo -v` and enter your
 password before running the script, if required.
 ```bash

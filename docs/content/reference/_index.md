@@ -8,6 +8,6 @@ weight: 60
 
 # Reference
 
-Find detailed information about the Infection Monkey:
+Find detailed information about Infection Monkey:
 
 {{% children /%}}

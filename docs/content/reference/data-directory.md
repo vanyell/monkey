@@ -35,7 +35,7 @@ The location of the data directory is set in the `data_dir` field in the
     }
     ```
 
-1. Start the Infection Monkey with the `--server-config` parameter.
+1. Start Infection Monkey with the `--server-config` parameter.
 
     ```bash
     $ InfectionMonkey-VERSION.AppImage --server-config <PATH_TO_SERVER_CONFIG>

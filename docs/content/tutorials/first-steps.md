@@ -6,7 +6,7 @@ tags: ["tutorials", "first-steps"]
 ---
 
 In this tutorial, we will setup a simple sandbox environment that will be
-useful in future tutorials. We will learn how to access the Infection Monkey's
+useful in future tutorials. We will learn how to access Infection Monkey's
 command and control server and register a new user.
 
 {{% notice info %}}
