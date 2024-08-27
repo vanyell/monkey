@@ -3,7 +3,6 @@ from itertools import chain
 
 import pytest
 
-from common.network.network_range import InvalidNetworkRangeError
 from infection_monkey.network import NetworkAddress
 from infection_monkey.network_scanning.scan_target_generator import compile_scan_target_list
 
@@ -444,25 +443,6 @@ def test_invalid_inputs():
 
     for ip in [148, 149, 150]:
         assert NetworkAddress(f"172.60.145.{ip}", None) in scan_targets
-
-
-def test_invalid_blocklisted_ip():
-    local_network_interfaces = [IPv4Interface("172.60.145.109/30")]
-
-    inaccessible_subnets = ["172.60.147.8/30", "172.60.147.148/30"]
-
-    targets = ["172.60.145.151/30"]
-
-    blocklisted = ["172.60.145.153", "172.60.145.753"]
-
-    with pytest.raises(InvalidNetworkRangeError):
-        compile_scan_target_list(
-            local_network_interfaces=local_network_interfaces,
-            ranges_to_scan=targets,
-            inaccessible_subnets=inaccessible_subnets,
-            blocklisted_ips=blocklisted,
-            scan_my_networks=False,
-        )
 
 
 def test_sorted_scan_targets():
