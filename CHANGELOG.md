@@ -10,6 +10,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Configurable Island port through node proxy server. #3827
 - Ability to change wallpaper as part of the ransomware simulation on Windows.
   #1247
+- Ability to add IP ranges when specifying blocked IPs. #4276
 
 ### Changed
 - Response from `PUT /api/propagation-credentials/configured-credentials`
