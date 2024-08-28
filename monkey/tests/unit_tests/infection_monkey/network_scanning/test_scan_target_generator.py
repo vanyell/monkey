@@ -95,6 +95,35 @@ def test_blocklisted_ips():
         assert blocked_ip not in scan_targets
 
 
+def test_blocklisted_ips__subnets():
+    # Calculation:
+    #   (1) 10.1.0.1, 10.1.0.40, 10.1.0.77 should be scanned ---------------> +3
+    #       but 10.1.0.0/24 (includes all 3 above) is blocked --------------> -3
+    #   (2) 10.0.0.5/24 should be scanned ----------------------------------> +255
+    #       but 10.0.0.5, 10.0.0.32, 10.0.0.119 are blocked ----------------> -3
+    #   (3) 192.168.1.0-192.168.1.50 should be scanned ---------------------> +51
+    #       but 192.168.1.33 is blocked ------------------------------------> -1
+
+    ranges_to_scan = [
+        "10.1.0.1",
+        "10.1.0.40",
+        "10.1.0.77",
+        "10.0.0.5/24",
+        "192.168.1.0-192.168.1.50",
+    ]
+    blocklisted_ips = ["10.1.0.0/24", "10.0.0.5", "10.0.0.32", "10.0.0.119", "192.168.1.33"]
+
+    scan_targets = compile_scan_target_list(
+        local_network_interfaces=[],
+        ranges_to_scan=ranges_to_scan,
+        inaccessible_subnets=[],
+        blocklisted_ips=blocklisted_ips,
+        scan_my_networks=False,
+    )
+
+    assert len(scan_targets) == 302
+
+
 @pytest.mark.parametrize("ranges_to_scan", [["10.0.0.5"], []])
 def test_only_ip_blocklisted(ranges_to_scan):
     blocklisted_ips = ["10.0.0.5"]
