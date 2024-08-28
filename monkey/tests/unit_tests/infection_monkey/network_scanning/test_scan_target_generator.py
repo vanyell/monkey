@@ -103,6 +103,7 @@ def test_blocklisted_ips__subnets():
     #       but 10.0.0.5, 10.0.0.32, 10.0.0.119 are blocked ----------------> -3
     #   (3) 192.168.1.0-192.168.1.50 should be scanned ---------------------> +51
     #       but 192.168.1.33 is blocked ------------------------------------> -1
+    #       and 192.168.1.10-192.168.1.15 are blocked ----------------------> -6
 
     ranges_to_scan = [
         "10.1.0.1",
@@ -111,7 +112,14 @@ def test_blocklisted_ips__subnets():
         "10.0.0.5/24",
         "192.168.1.0-192.168.1.50",
     ]
-    blocklisted_ips = ["10.1.0.0/24", "10.0.0.5", "10.0.0.32", "10.0.0.119", "192.168.1.33"]
+    blocklisted_ips = [
+        "10.1.0.0/24",
+        "10.0.0.5",
+        "10.0.0.32",
+        "10.0.0.119",
+        "192.168.1.33",
+        "192.168.1.10-192.168.1.15",
+    ]
 
     scan_targets = compile_scan_target_list(
         local_network_interfaces=[],
@@ -120,8 +128,28 @@ def test_blocklisted_ips__subnets():
         blocklisted_ips=blocklisted_ips,
         scan_my_networks=False,
     )
+    ip_strs = [target.ip for target in scan_targets]
 
-    assert len(scan_targets) == 302
+    assert len(scan_targets) == 296
+    assert "10.1.0.1" not in ip_strs
+    assert "10.1.0.40" not in ip_strs
+    assert "10.1.0.77" not in ip_strs
+    assert "10.0.0.5" not in ip_strs
+    assert "10.0.0.32" not in ip_strs
+    assert "10.0.0.119" not in ip_strs
+    assert "192.168.1.33" not in ip_strs
+    assert "192.168.1.10" not in ip_strs
+    assert "192.168.1.11" not in ip_strs
+    assert "192.168.1.12" not in ip_strs
+    assert "192.168.1.13" not in ip_strs
+    assert "192.168.1.14" not in ip_strs
+    assert "192.168.1.15" not in ip_strs
+
+    assert "192.168.1.9" in ip_strs
+    assert "192.168.1.16" in ip_strs
+    assert "10.0.0.4" in ip_strs
+    assert "10.0.0.0" in ip_strs
+    assert "10.0.0.254" in ip_strs
 
 
 @pytest.mark.parametrize("ranges_to_scan", [["10.0.0.5"], []])
